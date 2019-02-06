@@ -1,0 +1,70 @@
+/*______ FOOTER ______*/
+
+.footer {
+	padding: 68px 0 42px;
+	background-color: #5d5d60;
+	font-size: 13px;
+	&__contacts {
+		a {
+			margin-bottom: 12px;
+			display: block;
+		}
+	}
+	a {
+		color: #ffffff;
+	}
+	ul {
+		@include list-reset;
+		li {
+			margin-bottom: 14px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.tel {
+		font-size: 18px;
+		font-weight: 500;
+	}
+	.call-spec,
+	.callback {
+		a {
+			font-family: $mainFont !important;
+			&:before {
+				padding-right: 18px;
+				font-family: 'icomoon' !important;
+			}
+		}
+	}
+	.call-spec {
+		margin-bottom: 24px;
+	}
+}
+
+.footer-top-bar {
+	padding-bottom: 35px;
+}
+
+.footer-bottom-bar {
+	padding: 35px 0;
+	border-top: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+.aevrika-link {
+	position: relative;
+	padding-left: 30px;
+	font-family: $mainFont !important;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $orange;
+		font-family: 'icomoon' !important;
+		font-size: 16px;
+	}
+}
+
+.footer-attantion {
+	margin-top: 10px;
+}

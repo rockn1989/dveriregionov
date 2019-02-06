@@ -1,0 +1,86 @@
+/*______ Left Sidebar ______*/
+
+.left-sidebar {
+	margin-bottom: 40px !important;
+	padding: 0 13.5px;
+	background-color: #5d5d60;
+	ul {
+		@include list-reset;
+	}
+	a {
+		position: relative;
+		display: block;
+		color: #ffffff;
+		font-size: 14px;
+		line-height: 18px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.left-sidebar-nav {
+	@include list-reset;
+	&>li {
+
+		&:last-child {
+			border-bottom: none;
+		}
+		&>a {
+			position: relative;
+			padding: 18px 0;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			i.small-arrow {
+				position: absolute;
+				top: 18px;
+				right: 0;
+				width: 20px;
+				height: 20px;
+				display: block;
+				background: url('../img/small-arrow.png') center no-repeat;
+				background-size: 5px 7px;
+				transition: transform .3s ease;
+				transform-origin: center center;
+				&.open {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+}
+
+.left-sublist-nav {
+	display: none;
+	li {
+		a {
+			padding: 12px 0 12px 20px;
+			opacity: .5;
+			&.active {
+				opacity: 1;
+				background: url('../img/small-arrow-orange.png') 0 18px no-repeat;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.sidebar-search {
+	position: relative;
+	padding: 18px 0 18px 30px;
+	display: block;
+	font-family: $mainFont !important;
+	&:before {
+		position: absolute;
+		top: 18px;
+		left: 0;
+		font-family: 'icomoon' !important;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/*______  End Left Sidebar ______*/

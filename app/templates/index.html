@@ -1,0 +1,14 @@
+{% extends "layouts/default.html" %}
+{% set title="Главная" %}
+{% block content %}
+	<section class="content">
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-1-6">
+	{% include "includes/left-sidebar.html" %}	
+				</div>
+				<div class="uk-width-5-6"></div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
