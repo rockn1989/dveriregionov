@@ -2,6 +2,18 @@
 
 $(function() {	
 
+	/*______ Lazy Load ______*/
+
+	$('.lazy').lazy({
+		scrollDirection: 'vertical',
+		effect: 'fadeIn',
+		visibleOnly: true,
+		placeholder: "../img/ajax-loader.gif",
+		onError: function(element) {
+				console.log('error loading ' + element.data('src'));
+		}
+	});
+
 	/*______ Раскрытие подменю (левая навигация) ______*/
 
 	$('.js__toggle-sublist-nav').on('click', function (e) {

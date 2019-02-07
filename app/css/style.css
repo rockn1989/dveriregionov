@@ -106,6 +106,127 @@
 
 /*______ Elements ______*/
 
+h1,
+.title-h1 {
+  margin-bottom: 25px;
+  color: #0f0f0f;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+.btn {
+  padding: 20px 42px;
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fa7f4c;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #4848bc;
+  text-decoration: none;
+}
+
+.icon-arrow-left {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+  content: "\e906";
+}
+
+.icon-arrow-right {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*______ Tabs ______*/
+
+[uk-switcher] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 40px;
+  font-size: 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+[uk-switcher] li {
+  margin-right: 92px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+[uk-switcher] li.uk-active a {
+  color: #0f0f0f;
+  font-weight: 700;
+}
+
+[uk-switcher] li.uk-active a:after {
+  background-color: #fa7f4c;
+}
+
+[uk-switcher] li a {
+  position: relative;
+  padding: 40px 0;
+  display: block;
+  color: #727271;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+[uk-switcher] li a:hover {
+  text-decoration: none;
+}
+
+[uk-switcher] li a:after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  -webkit-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
+  -moz-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+/*______ End Tabs ______*/
+
 body,
 table {
   color: #0f0f0f;
@@ -455,6 +576,158 @@ section.content {
   background: #ededed;
 }
 
+.products-short-list .item {
+  margin-bottom: 40px !important;
+  width: 100%;
+  height: 230px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.products-short-list .item.item--full-height {
+  margin-bottom: 0 !important;
+  height: 500px;
+}
+
+.products-short-list .item[data-src] {
+  -webkit-background-size: 25px 25px;
+  background-size: 25px 25px;
+}
+
+.products-short-list .item a {
+  position: relative;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.products-short-list .item a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
+  -moz-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  z-index: 10;
+}
+
+.products-short-list .item a:hover .item__text {
+  background-color: #4848bc;
+}
+
+.products-short-list .item a:hover:after {
+  background-color: transparent;
+}
+
+.products-short-list .item__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px 25px;
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  -webkit-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
+  -moz-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  z-index: 12;
+}
+
+.products-short-list .item__type {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.products-short-list .item__price {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+/*______ About manufactures ______*/
+
+.about-manufactures .title-h1 {
+  margin-bottom: 55px;
+}
+
+.about-manufactures .text {
+  padding: 100px 0 130px;
+  background: #ffffff url("../img/manufactures-bg.png") right 33px no-repeat;
+}
+
+.about-manufactures p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+/*______ End About manufactures ______*/
+
+/*______ Advantages list ______*/
+
+.advantages-list {
+  margin-top: -32px;
+  margin-bottom: 60px !important;
+  max-width: 78%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.advantages-list .item {
+  margin-right: 6.6666%;
+  width: 20%;
+}
+
+.advantages-list .item:last-child {
+  margin-right: 0;
+}
+
+.advantages-list .item__img {
+  margin-bottom: 20px;
+  height: 86px;
+}
+
+.advantages-list .item__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.advantages-list .item__text {
+  color: #727271;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+/*______ End Advantages list ______*/
+
+/*______ Manufactures tabs ______*/
+
+.manufactures-tabs ul[uk-switcher] {
+  padding-left: 17.3%;
+}
+
+/*______ End manufactures tabs ______*/
+
 /*______ Left Sidebar ______*/
 
 .left-sidebar {
@@ -647,6 +920,140 @@ section.content {
 
 /*______ SLIDERS ______*/
 
+.main-slider {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.main-slider .slider {
+  height: 540px;
+  overflow: hidden;
+}
+
+.main-slider .slide {
+  position: relative;
+  padding: 80px 120px;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  color: #ffffff;
+  min-height: 540px;
+}
+
+.main-slider .slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'object-fit: cover; object-position: cover;';
+  object-fit: cover;
+}
+
+.main-slider .slide__desc {
+  position: relative;
+  max-width: 670px;
+}
+
+.main-slider .slide__title {
+  margin-bottom: 30px;
+  font-size: 86px;
+  line-height: 90px;
+  font-weight: 300;
+}
+
+.main-slider .slide__title span {
+  display: block;
+  font-weight: 500;
+}
+
+.main-slider .slide__text {
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  max-height: 85px;
+  overflow: hidden;
+}
+
+.main-slider .slick-dots {
+  bottom: 110px;
+  right: 120px;
+  width: auto;
+  display: inline-block !important;
+}
+
+.main-slider .slick-dots li {
+  margin: 0 18px;
+}
+
+.main-slider .slick-dots li button:before {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.main-slider .slick-dots li.slick-active button:before {
+  color: #fa7f4c;
+  opacity: 1;
+}
+
+.slider__arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 450;
+}
+
+.slider__arrows .slide-prev,
+.slider__arrows .slide-next {
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  -webkit-transition: color .3s, background-color .3s, border-color .3s ease;
+  -o-transition: color .3s, background-color .3s, border-color .3s ease;
+  -moz-transition: color .3s, background-color .3s, border-color .3s ease;
+  transition: color .3s, background-color .3s, border-color .3s ease;
+}
+
+.slider__arrows .slide-prev.white,
+.slider__arrows .slide-next.white {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.slider__arrows .slide-prev.white:hover,
+.slider__arrows .slide-next.white:hover {
+  color: #0f0f0f;
+  background-color: #fa7f4c;
+  border-color: #fa7f4c;
+}
+
+.slider__arrows .slide-prev {
+  margin-left: 25px;
+  float: left;
+}
+
+.slider__arrows .slide-next {
+  margin-right: 25px;
+  float: right;
+}
+
 /*______ MODALS WINDOWS ______*/
 
 /*______ FORMS ______*/
@@ -662,5 +1069,9 @@ section.content {
 @media (min-width: 960px) {
   .uk-container {
     padding: 0 15px;
+  }
+
+  .about-manufactures p {
+    max-width: 79%;
   }
 }

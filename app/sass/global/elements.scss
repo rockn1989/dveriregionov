@@ -1,2 +1,95 @@
 /*______ Elements ______*/
 
+h1,.title-h1 {
+	margin-bottom: 25px;
+	color: $black;
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 300;
+}
+
+.btn {
+	padding: 20px 42px;
+	display: inline-block;
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 11px;
+	font-weight: 700;
+	border-radius: 3px;
+	background-color: $orange;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	&:hover {
+		color: #ffffff;
+		background-color: $purpule;
+		text-decoration: none;
+	}
+}
+
+
+.icon-arrow-left {
+	@include icomoon;
+	&:before {
+		content: "\e906";
+	}
+}
+
+.icon-arrow-right {
+	display: inline-block;
+	transform: rotate(180deg);
+}
+
+
+/*______ Tabs ______*/
+
+[uk-switcher] {
+	@include list-reset;
+	margin-bottom: 40px;
+	font-size: 0;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	li {
+		margin-right: 92px;
+		display: inline-block;
+		vertical-align: top;
+		&.uk-active {
+			a {
+				color: $black;
+				font-weight: 700;
+				&:after {
+					background-color: $orange;
+				}
+			}
+		}
+		a {
+			position: relative;
+			padding: 40px 0;
+			display: block;
+			color: #727271;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			transition: all .3s ease;
+			&:hover {
+				text-decoration: none;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -1.5px;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 3px;
+				background-color: transparent;
+				transition: background-color .3s ease;
+			}
+		}
+	}
+}
+
+/*______ End Tabs ______*/
