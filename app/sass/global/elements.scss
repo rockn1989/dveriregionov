@@ -9,7 +9,7 @@ h1,.title-h1 {
 }
 
 .btn {
-	padding: 20px 42px;
+	padding: 16px 42px;
 	display: inline-block;
 	color: #ffffff;
 	text-align: center;
@@ -42,15 +42,26 @@ h1,.title-h1 {
 	transform: rotate(180deg);
 }
 
+.show-more {
+	color: #727271;
+	font-size: 14px;
+}
+
+.gray-block {
+	padding: 110px 19.5% 90px;
+	background-color: #d1d1d1;
+}
 
 /*______ Tabs ______*/
 
 [uk-switcher] {
+	position: relative;
 	@include list-reset;
 	margin-bottom: 40px;
 	font-size: 0;
 	border-top: 1px solid #ffffff;
 	border-bottom: 1px solid #ffffff;
+	z-index: 30;
 	li {
 		margin-right: 92px;
 		display: inline-block;
@@ -93,3 +104,111 @@ h1,.title-h1 {
 }
 
 /*______ End Tabs ______*/
+
+
+/*______ Card ______*/
+
+.card {
+	position: relative;
+	padding: 40px 30px 30px;
+	background: #ffffff;
+	a {
+		display: block;
+		&:hover {
+			text-decoration: none;
+			color: #284097;
+		}
+	}
+	&__img {
+		margin-bottom: 30px;
+		text-align: center;
+		img {
+			display: inline;
+			transition: all .3s ease;
+			filter: blur(0px);
+			&[data-lazy] {
+				min-height: 316px;
+				filter: blur(3px);
+			}
+		}
+	}
+	&__article {
+		margin-bottom: 15px;
+		color: $gray-tx;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 300;
+	}
+	&__product-name {
+		margin-bottom: 40px;
+		color: $black;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 300;
+	}
+	&__price {
+		span {
+			margin-right: 16px;
+			font-size: 18px;
+			line-height: 21px;
+			font-weight: 300;
+			&:empty {
+				margin-right: 0;
+			}
+			&.current-price {
+				font-weight: 500;
+			}
+		}
+		.old-price {
+			opacity: .5;
+			text-decoration: line-through;
+		}
+	}
+}
+
+.stocks {
+	position: absolute;
+	top: 37px;
+	left: -7px;
+	z-index: 600;
+	div {
+		position: relative;
+		margin-bottom: 10px;
+		width: 40px;
+		height: 22px;
+		color: #ffffff;
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: block;
+			width: 8px;
+			height: 9px;
+		}
+		&.new {
+			background-color: $purpule;
+			&:after {
+				background: linear-gradient(45deg, transparent 0% , transparent 50%, #33339b 50% );
+			}
+		}
+		&.discount {
+			background-color: $orange;
+			&:after {
+				background: linear-gradient(45deg, transparent 0% , transparent 50%, #d96637  50% );
+			}
+		}
+		&.popular {
+			background-color: #e8656d;
+			&:after {
+				background: linear-gradient(45deg, transparent 0% , transparent 50%, #c34d54 50% );
+			}
+		}
+	}
+}
+
+/*______ End Card ______*/

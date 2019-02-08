@@ -2,6 +2,25 @@
 
 $(function() {	
 
+
+	/*______ Tabs events ______*/
+
+	var $tabSlider = $('.tab-slider .slider'),
+		$ukSwitcherTabs = $('[uk-switcher]').eq(0),
+		$ukSwitcherContent = $ukSwitcherTabs.siblings('ul.uk-switcher');
+
+	$('.tab-sw').on('click', 'li', function (e) {
+		e.preventDefault();
+		console.log();
+		var idx = $('.tab-sw li').index($(this));
+
+		var li = $ukSwitcherContent.find('li').eq(idx)
+
+		li.find($('.tab-slider .slider')).slick('reinit');
+		console.log(123);
+		//$tabSlider.slick('reinit');
+	})
+
 	/*______ Lazy Load ______*/
 
 	$('.lazy').lazy({

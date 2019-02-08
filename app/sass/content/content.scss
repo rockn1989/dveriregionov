@@ -97,6 +97,7 @@ section.content {
 /*______ Advantages list ______*/
 
 .advantages-list {
+	position: relative;
 	margin-top: -32px;
 	margin-bottom: 60px !important;
 	max-width: 78%;
@@ -125,6 +126,17 @@ section.content {
 			font-weight: 300;
 		}
 	}
+	&:after {
+		/* content: ''; */
+		position: absolute;
+		top: 50%;
+		left: -300px;
+		display: block;
+		width: 750px;
+		height: 500px;
+		background: url('../img/door.png') center -100px no-repeat;
+		z-index: 1;
+	}
 }
 
 /*______ End Advantages list ______*/
@@ -134,9 +146,133 @@ section.content {
 /*______ Manufactures tabs ______*/
 
 .manufactures-tabs {
+	position: relative;
+	margin-bottom: 100px !important;
+	z-index: 25;
 	ul[uk-switcher] {
 		padding-left: 17.3%;
+	}
+	.uk-switcher {
+		background: $gray-bg;
 	}
 }
 
 /*______ End manufactures tabs ______*/
+
+
+.white-section {
+	margin-bottom: 50px;
+	padding: 100px 0;
+	background-color: #ffffff;
+}
+
+
+/*______ Brands list ______*/
+
+.brands-list {
+	margin: 0 auto 120px;
+	max-width: 908px;
+	&__header {
+		position: relative;
+		.show-more {
+			position: absolute;
+			top: 50%;
+			right: 0;
+		}
+	}
+}
+
+/*______ End Brands list ______*/
+
+
+
+/*______ About company ______*/
+
+.about-company {
+	.gray-block {
+		margin-bottom: 130px;
+	}
+	&__title {
+		margin-bottom: 40px;
+		font-size: 86px;
+		line-height: 100px;
+		font-weight: 300;
+		span {
+			display: block;
+			font-weight: 500;
+		}
+	}
+	p {
+		line-height: 30px;
+		font-weight: 300;
+	}
+	.btn {
+		margin-top: 56px;
+	}
+	&__text {
+		margin: 0 auto;
+		max-width: 1140px;
+	}
+	.text-section {
+		margin-bottom: 80px;
+		.text,
+		.img {
+			width: 50%;
+		}
+		.title-h1 {
+			margin-bottom: 50px;
+		}
+		p {
+			max-width: 432px;
+		}
+		&:nth-child(odd) {
+			.text {
+				float: right;
+			}
+			.img {
+				float: left;
+			}
+		}
+		&:nth-child(even) {
+			.text {
+				float: left;
+			}
+			.img {
+				float: right;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*______ End About company ______*/
+
+
+/*______ Attantion block ______*/
+
+.attantion-block {
+	position: relative;
+	margin: 0 auto 35px;
+	padding-left: 75px;
+	max-width: 985px;
+	p {
+		color: #727271;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 300;
+	}
+	&:before {
+		content: '*';
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 86px;
+		line-height: 86px;
+		color: $orange;
+		font-weight: 300;
+	}
+}
+
+/*______ End Attantion block ______*/
