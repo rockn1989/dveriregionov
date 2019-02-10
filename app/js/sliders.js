@@ -41,21 +41,26 @@ $(function() {
 		]
 	});
 
+
 	$('.tab-slider').each(function (i, el) {
-		var slider = $(el).find('.slider');;
-			slider.slick({
-			arrows: true,
-			dots: false,
-			cssEase: 'linear',
-			lazyLoad: 'ondemand',
-			autoplay: false,
-			speed: 400,
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			prevArrow: $(this).find('.slide-prev'),
-			nextArrow: $(this).find('.slide-next')
-		})
+		if(i == 0 ) {
+			var slider = $(el).find('.slider');
+				slider.slick({
+				arrows: true,
+				dots: false,
+				cssEase: 'ease',
+				lazyLoad: 'ondemand',
+				autoplay: true,
+				autoplaySpeed: 4000,
+				speed: 800,
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				prevArrow: $(this).find('.slide-prev'),
+				nextArrow: $(this).find('.slide-next')
+			});
+		};
 	});
+
 
 	$('.brands-slider .slider').slick({
 		arrows: true,

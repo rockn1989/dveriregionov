@@ -5,20 +5,43 @@ $(function() {
 
 	/*______ Tabs events ______*/
 
-	var $tabSlider = $('.tab-slider .slider'),
-		$ukSwitcherTabs = $('[uk-switcher]').eq(0),
-		$ukSwitcherContent = $ukSwitcherTabs.siblings('ul.uk-switcher');
+	var $ukSwitcherTabs = $('[uk-switcher]').eq(0),
+		$ukSwitcherTabsContent = $ukSwitcherTabs.siblings('ul.uk-switcher');
 
 	$('.tab-sw').on('click', 'li', function (e) {
+
 		e.preventDefault();
-		console.log();
+
 		var idx = $('.tab-sw li').index($(this));
+		var li = $ukSwitcherTabsContent.find('li').eq(idx),
+			tabSliderWrapper = li.find($('.tab-slider')),
+			tabSlider = li.find($('.tab-slider .slider'));
 
-		var li = $ukSwitcherContent.find('li').eq(idx)
 
-		li.find($('.tab-slider .slider')).slick('reinit');
-		console.log(123);
-		//$tabSlider.slick('reinit');
+		/*______ В первом табе слайдер инициализируется при загрузке страницы ______*/
+
+		if(idx == 0) {
+			tabSlider.slick('reinit');
+		}
+
+		if(!tabSlider.hasClass('slick-initialized')) {
+			tabSlider.slick({
+				arrows: true,
+				dots: false,
+				cssEase: 'ease',
+				lazyLoad: 'ondemand',
+				autoplay: false,
+				autoplaySpeed: 4000,
+				speed: 800,
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				prevArrow: tabSliderWrapper.find('.slide-prev'),
+				nextArrow: tabSliderWrapper.find('.slide-next')
+			});
+		} else {
+			tabSlider.slick('reinit');
+			return false;
+		};
 	})
 
 	/*______ Lazy Load ______*/
@@ -133,6 +156,6 @@ $(function() {
 
 	/*______ Полифил для SVG ______*/
 
-	/*svg4everebody();*/
+	svg4everybody();
 
 });
