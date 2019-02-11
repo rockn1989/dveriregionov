@@ -200,7 +200,7 @@ h1,
 }
 
 [uk-switcher] li.uk-active a:after {
-  background-color: #fa7f4c;
+  width: 100%;
 }
 
 [uk-switcher] li a {
@@ -208,6 +208,7 @@ h1,
   padding: 40px 0;
   display: block;
   color: #727271;
+  font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 2px;
@@ -228,13 +229,13 @@ h1,
   bottom: -1.5px;
   left: 0;
   display: block;
-  width: 100%;
+  width: 0;
   height: 3px;
-  background-color: transparent;
-  -webkit-transition: background-color .3s ease;
-  -o-transition: background-color .3s ease;
-  -moz-transition: background-color .3s ease;
-  transition: background-color .3s ease;
+  background-color: #fa7f4c;
+  -webkit-transition: width .3s ease;
+  -o-transition: width .3s ease;
+  -moz-transition: width .3s ease;
+  transition: width .3s ease;
 }
 
 /*______ End Tabs ______*/
@@ -376,6 +377,64 @@ h1,
 }
 
 /*______ End Card ______*/
+
+/*______ Animations ______*/
+
+.slide-up {
+  -webkit-animation: slide-up 1.3s ease forwards;
+  -moz-animation: slide-up 1.3s ease forwards;
+  animation: slide-up 1.3s ease forwards;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/*______ End Animations ______*/
 
 body,
 table {
@@ -870,9 +929,9 @@ section.content {
 }
 
 .advantages-list:after {
-  /* content: ''; */
+  content: '';
   position: absolute;
-  top: 50%;
+  top: 200px;
   left: -300px;
   display: block;
   width: 750px;
@@ -1459,7 +1518,60 @@ section.content {
 
 /*______ MODALS WINDOWS ______*/
 
+.page-search-modal {
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.page-search-modal .uk-modal-dialog {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.page-search-modal .uk-modal-body {
+  padding: 0;
+  width: 100%;
+  max-width: 1380px !important;
+}
+
 /*______ FORMS ______*/
+
+.page-search {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+}
+
+.page-search input[type="text"] {
+  width: 100%;
+  height: 44px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #727271;
+  outline: none;
+}
+
+.page-search i.icon-search {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.page-search button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 @media (min-width: 0px) {
   html.uk-touch body [class*=uk-animation-] {

@@ -1,0 +1,23 @@
+/*______ Start Catalog ______*/
+
+.catalog-body {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.card {
+		margin-right: 2.66666%;
+		margin-bottom: 32px;
+		width: 23%;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+		&:hover {
+			z-index: 999;
+			.card__article {
+				display: none;
+			}
+		}
+	}
+}
+
+/*______ End Catalog ______*/

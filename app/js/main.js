@@ -12,10 +12,11 @@ $(function() {
 
 		e.preventDefault();
 
-		var idx = $('.tab-sw li').index($(this));
-		var li = $ukSwitcherTabsContent.find('li').eq(idx),
-			tabSliderWrapper = li.find($('.tab-slider')),
-			tabSlider = li.find($('.tab-slider .slider'));
+		var idx = $('.tab-sw li').index($(this)),
+				li = $ukSwitcherTabsContent.find('li.uk-active'),
+		tabSliderWrapper  = li.find($('.tab-slider')),
+		tabSlider = li.find('.tab-slider .slider');
+
 
 
 		/*______ В первом табе слайдер инициализируется при загрузке страницы ______*/
@@ -43,6 +44,31 @@ $(function() {
 			return false;
 		};
 	})
+
+	/*______ Modal Search ______*/
+
+
+	var $pageSeacrh = UIkit.modal('#page-search', {
+		beforeshow: function() {
+			$('.page-search-modal .uk-modal-dialog').css('marginTop',$('.js__toggle-search').offset().top +'px');
+		}
+	});
+	
+
+	$('.js__toggle-search').on('click', function (e) {
+		e.preventDefault();
+		var _self = $(this);
+
+			$pageSeacrh.beforeshow();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 350, function () {
+
+			$pageSeacrh.show();
+			$('.page-search-modal .uk-modal-dialog').find('input[type="text"]').focus();
+		});
+	});
+
 
 	/*______ Lazy Load ______*/
 

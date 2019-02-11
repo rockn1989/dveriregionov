@@ -1,1 +1,15 @@
 /*______ MODALS WINDOWS ______*/
+
+.page-search-modal {
+	padding: 0;
+	overflow-y: scroll;
+	.uk-modal-dialog {
+		transform: translateY(0);
+	}
+	.uk-modal-body {
+		padding: 0;
+		width: 100%;
+		max-width: 1380px !important;
+	}
+}
+

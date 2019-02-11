@@ -127,9 +127,9 @@ section.content {
 		}
 	}
 	&:after {
-		/* content: ''; */
+		content: '';
 		position: absolute;
-		top: 50%;
+		top: 200px;
 		left: -300px;
 		display: block;
 		width: 750px;

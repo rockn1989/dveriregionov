@@ -22,6 +22,7 @@ h1,.title-h1 {
 	cursor: pointer;
 	border: none;
 	outline: none;
+	transition: background-color .3s ease;
 	&:hover {
 		color: #ffffff;
 		background-color: $purpule;
@@ -47,10 +48,31 @@ h1,.title-h1 {
 	font-size: 14px;
 }
 
+.show-more-colors {
+	width: 19px;
+	height: 19px;
+	border-radius: 3px;
+	border: 1px solid #ededed;
+	background: url('../img/plus.png') center center no-repeat;
+	background-size: 6px 6px;
+	text-indent: -9999px;
+}
+
 .gray-block {
 	padding: 110px 19.5% 90px;
 	background-color: #d1d1d1;
 }
+
+.uk-tooltip {
+	color: #727271;
+	font-size: 13px;
+	box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+	border: 1px solid #e9ebee;
+	/* background: #ffffff url('../img/tooltip-bg.png') 0 0 no-repeat; */
+	background-color: #ffffff;
+	background-size: cover;
+}
+
 
 /*______ Tabs ______*/
 
@@ -71,7 +93,7 @@ h1,.title-h1 {
 				color: $black;
 				font-weight: 700;
 				&:after {
-					background-color: $orange;
+					width: 100%;
 				}
 			}
 		}
@@ -80,6 +102,7 @@ h1,.title-h1 {
 			padding: 40px 0;
 			display: block;
 			color: #727271;
+			font-weight: bold;
 			font-size: 18px;
 			line-height: 24px;
 			letter-spacing: 2px;
@@ -94,10 +117,10 @@ h1,.title-h1 {
 				bottom: -1.5px;
 				left: 0;
 				display: block;
-				width: 100%;
+				width: 0;
 				height: 3px;
-				background-color: transparent;
-				transition: background-color .3s ease;
+				background-color: $orange;
+				transition: width .3s ease;
 			}
 		}
 	}
@@ -110,8 +133,13 @@ h1,.title-h1 {
 
 .card {
 	position: relative;
-	padding: 40px 30px 30px;
-	background: #ffffff;
+	transition: all .3s ease;
+	&-wrapper {
+		padding: 40px 30px 30px;
+		background: #ffffff;
+		transition: all .5s ease;
+		will-change: transform;
+	}
 	a {
 		display: block;
 		&:hover {
@@ -132,6 +160,26 @@ h1,.title-h1 {
 			}
 		}
 	}
+	&__colors {
+		opacity: 0;
+		transform: translateX(100%);
+		@include list-reset;
+		position: absolute;
+		top: 40px;
+		right: 30px;
+		transition: transform .3s, opacity .3s ease;
+		z-index: 650;
+		li {
+			margin-bottom: 9px;
+			display: block;
+			a {
+				display: block;
+				width: 19px;
+				height: 19px;
+				border-radius: 3px;
+			}
+		}
+	}
 	&__article {
 		margin-bottom: 15px;
 		color: $gray-tx;
@@ -139,8 +187,33 @@ h1,.title-h1 {
 		line-height: 20px;
 		font-weight: 300;
 	}
+	&__options {
+		margin-bottom: 15px;
+		display: none;
+		ul {
+			@include list-reset;
+			li {
+				position: relative;
+				padding-left: 14px;
+				color: $black;
+				font-size: 14px;
+				font-weight: 400;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 10px;
+					left: 0;
+					display: block;
+					width: 4px;
+					height: 4px;
+					background: $orange;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
 	&__product-name {
-		margin-bottom: 40px;
+		margin-bottom: 25px;
 		color: $black;
 		font-size: 18px;
 		line-height: 24px;
@@ -162,6 +235,25 @@ h1,.title-h1 {
 		.old-price {
 			opacity: .5;
 			text-decoration: line-through;
+		}
+	}
+	&:hover {
+		z-index: 500;
+		.card__colors {
+			transform: translateX(0);
+			opacity: 1;
+		}
+		.card__options {
+			display: block;
+		}
+		.card-wrapper {
+			z-index: 999;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+			transform: scale(1.09);
 		}
 	}
 }
@@ -212,3 +304,28 @@ h1,.title-h1 {
 }
 
 /*______ End Card ______*/
+
+
+/*______ Animations ______*/
+
+.slide-up {
+	animation: slide-up 1.3s ease forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/*______ End Animations ______*/
