@@ -8,6 +8,15 @@ h1,.title-h1 {
 	font-weight: 300;
 }
 
+h2,.title-h2 {
+	margin-bottom: 25px;
+	color: $black;
+	font-size: 30px;
+	line-height: 48px;
+	font-weight: 300;
+}
+
+
 .btn {
 	padding: 16px 42px;
 	display: inline-block;
@@ -73,6 +82,54 @@ h1,.title-h1 {
 	background-size: cover;
 }
 
+.white-panel {
+	padding: 70px 0 80px;
+	background-color: #ffffff;
+	.title-h2 {
+		margin-bottom: 40px;
+	}
+}
+
+/*______ Breadcrumbs ______*/
+
+.breadcrumbs {
+	@include list-reset;
+	margin-bottom: 20px;
+	font-size: 0;
+	li {
+		position: relative;
+		padding-right: 20px;
+		padding-left: 20px;
+		display: inline-block;
+		vertical-align: top;
+		color: $gray-tx;
+		font-size: 13px;
+		line-height: 19px;
+		font-weight: 400;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0px;
+			right: 0;
+			display: block;
+			width: 1px;
+			height: 19px;
+			background-color: #d6d5d5;
+			transform: rotate(30deg);
+		}
+		&:first-child {
+			padding-left: 0;
+		}
+		a,span {
+			color: $gray-tx;
+			font-size: 13px;
+			font-weight: 400;
+		}
+	}
+}
+
+/*______ End Breadcrumbs ______*/
+
 
 /*______ Tabs ______*/
 
@@ -133,9 +190,10 @@ h1,.title-h1 {
 
 .card {
 	position: relative;
-	transition: all .3s ease;
+	display: inline-block;
+	vertical-align: top;
 	&-wrapper {
-		padding: 40px 30px 30px;
+		padding: 40px 0 30px;
 		background: #ffffff;
 		transition: all .5s ease;
 		will-change: transform;
@@ -154,7 +212,8 @@ h1,.title-h1 {
 			display: inline;
 			transition: all .3s ease;
 			filter: blur(0px);
-			&[data-lazy] {
+			&[data-lazy],
+			&[data-src] {
 				min-height: 316px;
 				filter: blur(3px);
 			}
@@ -182,6 +241,7 @@ h1,.title-h1 {
 	}
 	&__article {
 		margin-bottom: 15px;
+		padding: 0 30px;
 		color: $gray-tx;
 		font-size: 14px;
 		line-height: 20px;
@@ -189,6 +249,7 @@ h1,.title-h1 {
 	}
 	&__options {
 		margin-bottom: 15px;
+		padding: 0 30px;
 		display: none;
 		ul {
 			@include list-reset;
@@ -214,12 +275,14 @@ h1,.title-h1 {
 	}
 	&__product-name {
 		margin-bottom: 25px;
+		padding: 0 30px;
 		color: $black;
 		font-size: 18px;
 		line-height: 24px;
 		font-weight: 300;
 	}
 	&__price {
+		padding: 0 30px;
 		span {
 			margin-right: 16px;
 			font-size: 18px;
@@ -253,7 +316,7 @@ h1,.title-h1 {
 			left: 0;
 			right: 0;
 			box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
-			transform: scale(1.09);
+			transform: scale(1.05);
 		}
 	}
 }
@@ -304,6 +367,167 @@ h1,.title-h1 {
 }
 
 /*______ End Card ______*/
+
+
+
+/*______ Tags Lists______*/
+
+	.tags-list {
+		@include list-reset;
+		margin-bottom: 19px;
+		font-size: 0;
+		li {
+			margin-right: 9px;
+			margin-bottom: 9px;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			a {
+				padding: 9px 16px;
+				display: block;
+				color: $gray-tx;
+				font-size: 18px;
+				font-weight: 300;
+				background: #ffffff;
+				border-radius: 23px;
+				&:hover {
+					text-decoration: none;
+					color: #ffffff;
+					background-color: $orange;
+				}
+				&.active {
+					color: #ffffff;
+					background-color: $orange;	
+				}
+			}
+		}
+	}
+
+/*______ End Tags Lists______*/
+
+
+/*______ Custom Select ______*/
+
+.custom-select {
+	&__label {
+		margin-right: 10px;
+		display: inline-block;
+		vertical-align: top;
+		color: $gray-tx;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.select2-container--default .select2-selection--single {
+		border: none;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.select2-results__option {
+		font-size: 14px;
+	}
+	.select2-container {
+		min-width: 195px !important;
+	}
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+	background-color: $gray-bg;
+	color: $black;
+}
+
+.custom-select__label {
+
+}
+
+/*______ End Custom Select ______*/
+
+
+/*______ Pagination ______*/
+
+.uk-pagination {
+	li {
+		margin-right: 8px;
+		padding: 0;
+		display: block;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: center;
+		border-radius: 50%;
+		transition: background-color .3s, color .3s ease;
+		a {
+			color: $black;
+			&:hover {
+				color: #ffffff;
+			}
+		}
+		&:hover {
+			color: #ffffff;
+			background-color: #5d5d60;
+		}
+		&.uk-active {
+			background-color: #5d5d60;
+			color: #ffffff;
+			span {
+				color: #ffffff;
+			}
+		}
+		&.uk-pagination-prev,
+		&.uk-pagination-next {
+			position: relative;
+			width: auto;
+			height: auto;
+			color: $gray-tx;
+			&:hover {
+				color: $black;
+				background-color: transparent;
+			}
+			a {
+				color: $gray-tx;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+		&.uk-pagination-prev {
+			margin-right: 25px;
+			padding-left: 21px;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				display: block;
+				border-top: 4px solid transparent;
+				border-right: 4px solid #5d5d60;
+				border-bottom: 4px solid transparent;
+				transform: translateY(-50%);
+			}
+		}
+		&.uk-pagination-next {
+			margin-right: 0;
+			margin-left: 25px;
+			padding-right: 21px;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				display: block;
+				border-top: 4px solid transparent;
+				border-left: 4px solid #5d5d60;
+				border-bottom: 4px solid transparent;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+/*______ ENd Pagination ______*/
 
 
 /*______ Animations ______*/

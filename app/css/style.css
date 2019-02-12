@@ -115,6 +115,15 @@ h1,
   font-weight: 300;
 }
 
+h2,
+.title-h2 {
+  margin-bottom: 25px;
+  color: #0f0f0f;
+  font-size: 30px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
 .btn {
   padding: 16px 42px;
   display: inline-block;
@@ -202,6 +211,65 @@ h1,
   background-size: cover;
 }
 
+.white-panel {
+  padding: 70px 0 80px;
+  background-color: #ffffff;
+}
+
+.white-panel .title-h2 {
+  margin-bottom: 40px;
+}
+
+/*______ Breadcrumbs ______*/
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 0;
+}
+
+.breadcrumbs li {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: inline-block;
+  vertical-align: top;
+  color: #727271;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.breadcrumbs li:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0;
+  display: block;
+  width: 1px;
+  height: 19px;
+  background-color: #d6d5d5;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.breadcrumbs li:first-child {
+  padding-left: 0;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li span {
+  color: #727271;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/*______ End Breadcrumbs ______*/
+
 /*______ Tabs ______*/
 
 [uk-switcher] {
@@ -272,14 +340,12 @@ h1,
 
 .card {
   position: relative;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .card-wrapper {
-  padding: 40px 30px 30px;
+  padding: 40px 0 30px;
   background: #ffffff;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
@@ -312,7 +378,8 @@ h1,
   filter: blur(0px);
 }
 
-.card__img img[data-lazy] {
+.card__img img[data-lazy],
+.card__img img[data-src] {
   min-height: 316px;
   -webkit-filter: blur(3px);
   filter: blur(3px);
@@ -354,6 +421,7 @@ h1,
 
 .card__article {
   margin-bottom: 15px;
+  padding: 0 30px;
   color: #727271;
   font-size: 14px;
   line-height: 20px;
@@ -362,6 +430,7 @@ h1,
 
 .card__options {
   margin-bottom: 15px;
+  padding: 0 30px;
   display: none;
 }
 
@@ -394,10 +463,15 @@ h1,
 
 .card__product-name {
   margin-bottom: 25px;
+  padding: 0 30px;
   color: #0f0f0f;
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
+}
+
+.card__price {
+  padding: 0 30px;
 }
 
 .card__price span {
@@ -444,10 +518,10 @@ h1,
   right: 0;
   -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
   box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
-  -webkit-transform: scale(1.09);
-  -moz-transform: scale(1.09);
-  -ms-transform: scale(1.09);
-  transform: scale(1.09);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .stocks {
@@ -514,6 +588,192 @@ h1,
 
 /*______ End Card ______*/
 
+/*______ Tags Lists______*/
+
+.tags-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 19px;
+  font-size: 0;
+}
+
+.tags-list li {
+  margin-right: 9px;
+  margin-bottom: 9px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.tags-list li a {
+  padding: 9px 16px;
+  display: block;
+  color: #727271;
+  font-size: 18px;
+  font-weight: 300;
+  background: #ffffff;
+  -webkit-border-radius: 23px;
+  border-radius: 23px;
+}
+
+.tags-list li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #fa7f4c;
+}
+
+.tags-list li a.active {
+  color: #ffffff;
+  background-color: #fa7f4c;
+}
+
+/*______ End Tags Lists______*/
+
+/*______ Custom Select ______*/
+
+.custom-select__label {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  color: #727271;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.custom-select .select2-container--default .select2-selection--single {
+  border: none;
+}
+
+.custom-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.custom-select .select2-results__option {
+  font-size: 14px;
+}
+
+.custom-select .select2-container {
+  min-width: 195px !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #ededed;
+  color: #0f0f0f;
+}
+
+/*______ End Custom Select ______*/
+
+/*______ Pagination ______*/
+
+.uk-pagination li {
+  margin-right: 8px;
+  padding: 0;
+  display: block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: background-color .3s, color .3s ease;
+  -o-transition: background-color .3s, color .3s ease;
+  -moz-transition: background-color .3s, color .3s ease;
+  transition: background-color .3s, color .3s ease;
+}
+
+.uk-pagination li a {
+  color: #0f0f0f;
+}
+
+.uk-pagination li a:hover {
+  color: #ffffff;
+}
+
+.uk-pagination li:hover {
+  color: #ffffff;
+  background-color: #5d5d60;
+}
+
+.uk-pagination li.uk-active {
+  background-color: #5d5d60;
+  color: #ffffff;
+}
+
+.uk-pagination li.uk-active span {
+  color: #ffffff;
+}
+
+.uk-pagination li.uk-pagination-prev,
+.uk-pagination li.uk-pagination-next {
+  position: relative;
+  width: auto;
+  height: auto;
+  color: #727271;
+}
+
+.uk-pagination li.uk-pagination-prev:hover,
+.uk-pagination li.uk-pagination-next:hover {
+  color: #0f0f0f;
+  background-color: transparent;
+}
+
+.uk-pagination li.uk-pagination-prev a,
+.uk-pagination li.uk-pagination-next a {
+  color: #727271;
+}
+
+.uk-pagination li.uk-pagination-prev a:hover,
+.uk-pagination li.uk-pagination-next a:hover {
+  color: #0f0f0f;
+}
+
+.uk-pagination li.uk-pagination-prev {
+  margin-right: 25px;
+  padding-left: 21px;
+}
+
+.uk-pagination li.uk-pagination-prev:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  border-top: 4px solid transparent;
+  border-right: 4px solid #5d5d60;
+  border-bottom: 4px solid transparent;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.uk-pagination li.uk-pagination-next {
+  margin-right: 0;
+  margin-left: 25px;
+  padding-right: 21px;
+}
+
+.uk-pagination li.uk-pagination-next:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #5d5d60;
+  border-bottom: 4px solid transparent;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*______ ENd Pagination ______*/
+
 /*______ Animations ______*/
 
 .slide-up {
@@ -576,7 +836,7 @@ body,
 table {
   color: #0f0f0f;
   font-family: "SF";
-  font-size: 18px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: 400;
 }
@@ -922,7 +1182,7 @@ html.uk-touch body *.uk-invisible {
 /*______ CONTENT ______*/
 
 section.content {
-  padding: 36px 0;
+  padding: 36px 0 0;
   background: #ededed;
 }
 
@@ -1201,8 +1461,9 @@ section.content {
 
 .attantion-block {
   position: relative;
-  margin: 0 auto 35px;
+  margin: 0 auto;
   padding-left: 75px;
+  padding-bottom: 55px;
   max-width: 985px;
 }
 
@@ -1228,30 +1489,30 @@ section.content {
 
 /*______ Start Catalog ______*/
 
+.catalog {
+  position: relative;
+  padding-bottom: 10px;
+  z-index: 100;
+}
+
+.catalog__seo-text {
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.catalog-header {
+  position: relative;
+  overflow: hidden;
+  /* background: url('../img/catalog-door.png') 100% 0 no-repeat; */
+}
+
 .catalog-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  font-size: 0;
 }
 
 .catalog-body .card {
-  margin-right: 2.66666%;
   margin-bottom: 32px;
-  width: 23%;
-}
-
-.catalog-body .card:nth-child(4n) {
-  margin-right: 0;
+  width: 100%;
 }
 
 .catalog-body .card:hover {
@@ -1260,6 +1521,16 @@ section.content {
 
 .catalog-body .card:hover .card__article {
   display: none;
+}
+
+.catalog-bar {
+  margin-bottom: 28px;
+  padding: 12px 22px;
+  background-color: #ffffff;
+}
+
+.catalog-bar .custom-select {
+  margin-top: 6px;
 }
 
 /*______ End Catalog ______*/
@@ -1373,6 +1644,14 @@ section.content {
 }
 
 /*______  End Left Sidebar ______*/
+
+/*______ Filter ______*/
+
+.filter {
+  margin-bottom: 40px;
+}
+
+/*______ End Filter ______*/
 
 /*______ FOOTER ______*/
 
@@ -1776,6 +2055,17 @@ section.content {
   }
 }
 
+@media (min-width: 768px) {
+  .catalog-body .card {
+    margin-right: 10%;
+    width: 45%;
+  }
+
+  .catalog-body .card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 960px) {
   .uk-container {
     padding: 0 15px;
@@ -1783,5 +2073,30 @@ section.content {
 
   .about-manufactures p {
     max-width: 79%;
+  }
+
+  .catalog-header:after {
+    content: '';
+    position: absolute;
+    top: -41px;
+    right: -137px;
+    width: 537px;
+    height: 537px;
+    display: block;
+    background: url("../img/catalog-door.png") 100% 0 no-repeat;
+    z-index: -1;
+  }
+
+  .catalog-body .card {
+    margin-right: 2.66666%;
+    width: 23%;
+  }
+
+  .catalog-body .card:nth-child(2n) {
+    margin-right: 2.66666%;
+  }
+
+  .catalog-body .card:nth-child(4n) {
+    margin-right: 0;
   }
 }

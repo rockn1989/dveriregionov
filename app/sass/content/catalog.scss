@@ -1,22 +1,72 @@
 /*______ Start Catalog ______*/
 
+.catalog {
+	position: relative;
+	padding-bottom: 10px;
+	z-index: 100;
+	&__seo-text {
+		margin-bottom: 40px;
+		font-weight: 300;
+	}
+}
+
+.catalog-header {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		@media (min-width: $desk-w) {
+			content: '';
+			position: absolute;
+			top: -41px;
+			right: -137px;
+			width: 537px;
+			height: 537px;
+			display: block;
+			background: url('../img/catalog-door.png') 100% 0 no-repeat;
+			z-index: -1;
+		};
+	}
+	/* background: url('../img/catalog-door.png') 100% 0 no-repeat; */
+}
+
 .catalog-body {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	font-size: 0;
 	.card {
-		margin-right: 2.66666%;
+		
 		margin-bottom: 32px;
-		width: 23%;
-		&:nth-child(4n) {
-			margin-right: 0;
-		}
+		width: 100%;
+		@media (min-width: $tablet-w) {
+			margin-right: 10%;
+			width: 45%;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		};
+		@media (min-width: $desk-w) {
+			margin-right: 2.66666%;
+			width: 23%;
+			&:nth-child(2n) {
+				margin-right: 2.66666%;
+			}
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		};
 		&:hover {
 			z-index: 999;
 			.card__article {
 				display: none;
 			}
 		}
+	}
+}
+
+.catalog-bar {
+	margin-bottom: 28px;
+	padding: 12px 22px;
+	background-color: #ffffff;
+	.custom-select {
+		margin-top: 6px;
 	}
 }
 

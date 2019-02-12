@@ -1,7 +1,7 @@
 /*______ CONTENT ______*/
 
 section.content {
-	padding: 36px 0;
+	padding: 36px 0 0;
 	background: $gray-bg;
 }
 
@@ -254,8 +254,9 @@ section.content {
 
 .attantion-block {
 	position: relative;
-	margin: 0 auto 35px;
+	margin: 0 auto;
 	padding-left: 75px;
+	padding-bottom: 55px;
 	max-width: 985px;
 	p {
 		color: #727271;
