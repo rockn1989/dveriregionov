@@ -1,0 +1,25 @@
+{% include "../includes/head.html" %}
+<body>
+{% include "../includes/header.html" %}
+	
+<section class="content content-img {{img}}">
+	<div class="uk-container">
+		<div class="uk-grid">
+			<div class="uk-width-1-6@l">
+	{% include "../includes/left-sidebar.html" %}			
+			</div>
+			<div class="uk-width-5-6@l">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include "../includes/footer.html" %}
+
+{% include "../includes/modals.html" %}
+
+{% include "../includes/scripts.html" %}
+
+</body>
+</html>

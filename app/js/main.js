@@ -34,7 +34,7 @@ $(function() {
 				autoplay: false,
 				autoplaySpeed: 4000,
 				speed: 800,
-				slidesToShow: 4,
+				slidesToShow: 5,
 				slidesToScroll: 4,
 				prevArrow: tabSliderWrapper.find('.slide-prev'),
 				nextArrow: tabSliderWrapper.find('.slide-next')

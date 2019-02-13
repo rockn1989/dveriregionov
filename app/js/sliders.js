@@ -53,7 +53,7 @@ $(function() {
 				autoplay: false,
 				autoplaySpeed: 4000,
 				speed: 800,
-				slidesToShow: 4,
+				slidesToShow: 5,
 				slidesToScroll: 4,
 				prevArrow: $(this).find('.slide-prev'),
 				nextArrow: $(this).find('.slide-next')

@@ -16,7 +16,7 @@
 	overflow: hidden;
 	&:after {
 		@media (min-width: $desk-w) {
-			content: '';
+			/* content: ''; */
 			position: absolute;
 			top: -41px;
 			right: -137px;

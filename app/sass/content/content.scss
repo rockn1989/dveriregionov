@@ -1,8 +1,35 @@
 /*______ CONTENT ______*/
 
 section.content {
+	position: relative;
 	padding: 36px 0 0;
 	background: $gray-bg;
+	&.content-img {
+		&:after {
+			@media (min-width: $desk-w) {
+				content: '';
+				position: absolute;
+				top: 5px;
+				right: -137px;
+				width: 537px;
+				height: 537px;
+				display: block;
+				background-position: 100% 0;
+				background-repeat: no-repeat;
+				z-index: 1;
+			};
+		}
+		&.door {
+			&:after {
+				@media (min-width: $desk-w) {
+					background-image: url('../img/catalog-door.png');
+				};
+			}
+		}
+	}
+	p {
+		font-weight: 300;
+	}
 }
 
 .products-short-list {
@@ -191,6 +218,8 @@ section.content {
 .about-company {
 	.gray-block {
 		margin-bottom: 130px;
+		background: url('../img/map-bg.svg') center center no-repeat;
+		background-size: contain;
 	}
 	&__title {
 		margin-bottom: 40px;

@@ -1,177 +1,162 @@
-{% extends "layouts/default.html" %}
+{% extends "layouts/content.html" %}
 {% set title="Каталог" %}
 {% set bread = ["Главная", "Каталог"] %}
+{% set filter = true %}
+{% set img = "door" %}
 {% block content %}
-	<section class="content">
+
+	<div class="uk-container">
+				<div class="breadcrumbs-wrapper">
+					{% include "includes/breadcrumbs.html" %}
+				</div>
+				<!-- begin catalog -->
+				<div class="catalog">
+					<div class="catalog-header">
+						<h1 class="title-h1">Входные двери «Двери Регионов»</h1>
+
+						<div class="catalog__seo-text">
+							Интернет-магазин «Двери Регионов» предлагает качественные и недорогие межкомнатные двери от производителя с доставкой по Москве и Московской области. Мы специализируемся на изготовлении надежных и долговечных межкомнатных дверей из высококлассного сырья, которое происходит несколько стадий обработки.
+
+							Благодаря этому вся продукция, представленная в нашем каталоге, обладает прекрасными эксплуатационными параметрами. Мы гарантируем, что межкомнатные двери, заказанные в нашей компании прослужат вам долгое время и станут гармоничным дополнением интерьера дома или квартиры.
+						</div>
+
+						<ul class="tags-list">
+							<li>
+								<a href="#">Белые двери</a>
+							</li>
+							<li>
+								<a href="#" class="active">Красивые межкомнатные двери</a>
+							</li>
+							<li>
+								<a href="#">Недорогие двери</a>
+							</li>
+							<li>
+								<a href="#">Межкомнатные двери 700х2000</a>
+							</li>
+						</ul>
+					</div>
+					 
+					<!-- begin catalog-bar -->
+					<div class="catalog-bar">
+						<div class="uk-grid">
+							<div class="uk-width-1-2@m">
+								<div class="custom-select">
+									<div class="custom-select__label">Сортировать по </div>
+									<select name="" id="" class="js__custom-select" data-theme="default">
+										<option value="">цена по возрастанию</option>
+										<option value="">цена по убыванию</option>
+										<option value="">популярности</option>
+									</select>
+								</div>
+							</div>
+							<div class="uk-width-1-2@m">
+								<ul class="uk-pagination uk-float-right">
+									<li class="uk-pagination-prev">
+										<a href="">
+											Предыдущая
+										</a>
+									 </li>
+									<li class="uk-active"><span>1</span></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><a href="">4</a></li>
+									<li><a href="">...</a></li>
+									<li><a href="">12</a></li>
+									<li class="uk-pagination-next">
+										<a href="">
+											Следующая
+										</a>
+									 </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end catalog-bar -->
+
+					<div class="catalog-body">
+						{% for i in 1..16 %}
+							<div class="card">
+								<div class="card-wrapper">
+									<div class="card__img">
+										<a href=""><img class="lazy" data-src="img/catalog/catalog-img-{{i}}-316x316.png" alt=""></a>
+									</div>
+									<ul class="card__colors">
+										<li><a href="#" style="background-color: #964b02;"></a></li>
+										<li><a href="#" style="background-color: #a25f29;"></a></li>
+										<li><a href="#" style="background-color: #fff5ee;"></a></li>
+										<li><a href="#" style="background-color: #515051;"></a></li>
+										<li><a href="#" style="background-color: #442c24;"></a></li>
+										<li><a href="#" style="background-color: #442c24;"></a></li>
+										<li><a href="#" style="background-color: #232323;"></a></li>
+										<li><a href="#" style="background-color: #3d2b1e;"></a></li>
+										<li><a href="#" style="background-color: #f4e4d4;"></a></li>
+										<li><a href="#" class="show-more-colors" uk-tooltip="title: Более 25 цветов; pos: right">1</a></li>
+									</ul> 
+									<div class="card__article"><a href="">Межкомнатные двери</a></div>
+									<div class="card__options">
+										<ul>
+											<li>Стандарт</li>
+											<li>Взломостойкая</li>
+											<li>Со сменными панелями</li>
+										</ul>
+									</div>
+									<div class="card__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+									<div class="card__price">
+										<span class="old-price"></span>
+										<span class="current-price">от 1 465 р.</span>
+									</div>
+									<div class="stocks">
+										<div class="discount">- 20%</div>
+										<div class="new">New</div>
+										<div class="popular">Хит</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="catalog-bar">
+						<div class="uk-grid">
+							<div class="uk-width-1-">
+								<ul class="uk-pagination uk-flex-center">
+									<li class="uk-pagination-prev">
+										<a href="">
+											Предыдущая
+										</a>
+									 </li>
+									<li class="uk-active"><span>1</span></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><a href="">4</a></li>
+									<li><a href="">...</a></li>
+									<li><a href="">12</a></li>
+									<li class="uk-pagination-next">
+										<a href="">
+											Следующая
+										</a>
+									 </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end catalog -->
+	</div>
+
+	<!-- begin white-panel -->
+	<div class="white-panel">
 		<div class="uk-container">
 			<div class="uk-grid">
-				<div class="uk-width-1-6@l">
-	{% include "includes/left-sidebar.html" %}
-				<div class="filter">
-					<img src="img/filter.png" alt="">
-				</div>	
-				<div class="banners">
-					<div class="item">
-						<a href="">
-							<img src="img/banner.png" alt="">
-						</a>
-					</div>
-				</div>
-				</div>
+				<div class="uk-width-1-6@l"></div>
 				<div class="uk-width-5-6@l">
-					<!-- begin catalog -->
-					<div class="catalog">
-						<div class="breadcrumbs-wrapper">
-							{% include "includes/breadcrumbs.html" %}
-						</div>
-						<div class="catalog-header">
-							<h1 class="title-h1">Входные двери «Двери Регионов»</h1>
-
-							<div class="catalog__seo-text">
-								Интернет-магазин «Двери Регионов» предлагает качественные и недорогие межкомнатные двери от производителя с доставкой по Москве и Московской области. Мы специализируемся на изготовлении надежных и долговечных межкомнатных дверей из высококлассного сырья, которое происходит несколько стадий обработки.
-
-								Благодаря этому вся продукция, представленная в нашем каталоге, обладает прекрасными эксплуатационными параметрами. Мы гарантируем, что межкомнатные двери, заказанные в нашей компании прослужат вам долгое время и станут гармоничным дополнением интерьера дома или квартиры.
-							</div>
-
-							<ul class="tags-list">
-								<li>
-									<a href="#">Белые двери</a>
-								</li>
-								<li>
-									<a href="#" class="active">Красивые межкомнатные двери</a>
-								</li>
-								<li>
-									<a href="#">Недорогие двери</a>
-								</li>
-								<li>
-									<a href="#">Межкомнатные двери 700х2000</a>
-								</li>
-							</ul>
-						</div>
-						 
-						<!-- begin catalog-bar -->
-						<div class="catalog-bar">
-							<div class="uk-grid">
-								<div class="uk-width-1-2@m">
-									<div class="custom-select">
-										<div class="custom-select__label">Сортировать по </div>
-										<select name="" id="" class="js__custom-select" data-theme="default">
-											<option value="">цена по возрастанию</option>
-											<option value="">цена по убыванию</option>
-											<option value="">популярности</option>
-										</select>
-									</div>
-								</div>
-								<div class="uk-width-1-2@m">
-									<ul class="uk-pagination uk-float-right">
-										<li class="uk-pagination-prev">
-											<a href="">
-												Предыдущая
-											</a>
-										 </li>
-										<li class="uk-active"><span>1</span></li>
-										<li><a href="">2</a></li>
-										<li><a href="">3</a></li>
-										<li><a href="">4</a></li>
-										<li><a href="">...</a></li>
-										<li><a href="">12</a></li>
-										<li class="uk-pagination-next">
-											<a href="">
-												Следующая
-											</a>
-										 </li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- end catalog-bar -->
-
-						<div class="catalog-body">
-							{% for i in 1..16 %}
-								<div class="card">
-									<div class="card-wrapper">
-										<div class="card__img">
-											<a href=""><img class="lazy" data-src="img/catalog/catalog-img-{{i}}-316x316.png" alt=""></a>
-										</div>
-										<ul class="card__colors">
-											<li><a href="#" style="background-color: #964b02;"></a></li>
-											<li><a href="#" style="background-color: #a25f29;"></a></li>
-											<li><a href="#" style="background-color: #fff5ee;"></a></li>
-											<li><a href="#" style="background-color: #515051;"></a></li>
-											<li><a href="#" style="background-color: #442c24;"></a></li>
-											<li><a href="#" style="background-color: #442c24;"></a></li>
-											<li><a href="#" style="background-color: #232323;"></a></li>
-											<li><a href="#" style="background-color: #3d2b1e;"></a></li>
-											<li><a href="#" style="background-color: #f4e4d4;"></a></li>
-											<li><a href="#" class="show-more-colors" uk-tooltip="title: Более 25 цветов; pos: right">1</a></li>
-										</ul> 
-										<div class="card__article"><a href="">Межкомнатные двери</a></div>
-										<div class="card__options">
-											<ul>
-												<li>Стандарт</li>
-												<li>Взломостойкая</li>
-												<li>Со сменными панелями</li>
-											</ul>
-										</div>
-										<div class="card__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
-										<div class="card__price">
-											<span class="old-price"></span>
-											<span class="current-price">от 1 465 р.</span>
-										</div>
-										<div class="stocks">
-											<div class="discount">- 20%</div>
-											<div class="new">New</div>
-											<div class="popular">Хит</div>
-										</div>
-									</div>
-								</div>
-							{% endfor %}
-						</div>
-						<div class="catalog-bar">
-							<div class="uk-grid">
-								<div class="uk-width-1-">
-									<ul class="uk-pagination uk-flex-center">
-										<li class="uk-pagination-prev">
-											<a href="">
-												Предыдущая
-											</a>
-										 </li>
-										<li class="uk-active"><span>1</span></li>
-										<li><a href="">2</a></li>
-										<li><a href="">3</a></li>
-										<li><a href="">4</a></li>
-										<li><a href="">...</a></li>
-										<li><a href="">12</a></li>
-										<li class="uk-pagination-next">
-											<a href="">
-												Следующая
-											</a>
-										 </li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- end catalog -->
+					<div class="title-h2">Почему следует заказывать двери у нас?</div>
+					<p>
+						Купить двери в Москве через интернет – это просто, быстро и выгодно. Вам не за чем переплачивать магазинам с огромными наценками, когда под рукой такой удобный вариант. Мы уже долгое время сотрудничаем с лучшими производителями дверей в России, и смогли добиться наиболее выгодных условий, чтобы сформированные нашими специалистами цены всегда радовали клиентов и вызывали желание обратиться к нам ещё раз.
+					</p>
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- end white-panel -->
 
-		<!-- begin white-panel -->
-		<div class="white-panel">
-			<div class="uk-container">
-				<div class="uk-grid">
-					<div class="uk-width-1-6@l"></div>
-					<div class="uk-width-5-6@l">
-						<div class="title-h2">Почему следует заказывать двери у нас?</div>
-						<p>
-							Купить двери в Москве через интернет – это просто, быстро и выгодно. Вам не за чем переплачивать магазинам с огромными наценками, когда под рукой такой удобный вариант. Мы уже долгое время сотрудничаем с лучшими производителями дверей в России, и смогли добиться наиболее выгодных условий, чтобы сформированные нашими специалистами цены всегда радовали клиентов и вызывали желание обратиться к нам ещё раз.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- end white-panel -->
 
-	</section>
 {% endblock %}

@@ -29,9 +29,13 @@
 	.call-spec,
 	.callback {
 		a {
+			position: relative;
+			padding-left: 30px;
 			font-family: $mainFont !important;
 			&:before {
-				padding-right: 18px;
+				position: absolute;
+				top: 0;
+				left: 0;
 				font-family: 'icomoon' !important;
 			}
 		}

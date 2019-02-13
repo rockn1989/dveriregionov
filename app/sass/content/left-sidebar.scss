@@ -2,6 +2,10 @@
 
 .left-sidebar {
 	margin-bottom: 40px !important;
+}
+
+.left-sidebar-nav-wrapper {
+	margin-bottom: 40px;
 	padding: 0 13.5px;
 	background-color: #5d5d60;
 	ul {
@@ -29,7 +33,6 @@
 		&>a {
 			position: relative;
 			padding: 18px 0;
-			border-top: 1px solid rgba(255, 255, 255, 0.1);
 			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 			i.small-arrow {
 				position: absolute;
@@ -52,6 +55,7 @@
 
 .left-sublist-nav {
 	display: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	li {
 		a {
 			padding: 12px 0 12px 20px;
@@ -72,6 +76,7 @@
 	padding: 18px 0 18px 30px;
 	display: block;
 	font-family: $mainFont !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	&:before {
 		position: absolute;
 		top: 18px;

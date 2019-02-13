@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/fonts/icomoon.eot?85ih4s");
-  src: url("../fonts/icomoon/fonts/icomoon.eot?85ih4s#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?85ih4s") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?85ih4s") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?85ih4s#icomoon") format("svg");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?avqer8");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?avqer8#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?avqer8") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?avqer8") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?avqer8#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -832,11 +832,16 @@ h2,
 
 /*______ End Animations ______*/
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body,
 table {
   color: #0f0f0f;
   font-family: "SF";
-  font-size: 14px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: 400;
 }
@@ -1182,8 +1187,13 @@ html.uk-touch body *.uk-invisible {
 /*______ CONTENT ______*/
 
 section.content {
+  position: relative;
   padding: 36px 0 0;
   background: #ededed;
+}
+
+section.content p {
+  font-weight: 300;
 }
 
 .products-short-list .item {
@@ -1390,6 +1400,9 @@ section.content {
 
 .about-company .gray-block {
   margin-bottom: 130px;
+  background: url("../img/map-bg.svg") center center no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
 .about-company__title {
@@ -1536,21 +1549,95 @@ section.content {
 
 /*______ End Catalog ______*/
 
+/*______ Detail v1 ______*/
+
+.detail-top-bar {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.detail-top-bar > * {
+  margin-right: 35px;
+}
+
+.product-availability {
+  position: relative;
+  padding-left: 38px;
+}
+
+.product-availability:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.product-availability.check:before {
+  background: #fa7f4c url("../img/icon-svg/check.svg") center center no-repeat;
+  -webkit-background-size: 10px 8px;
+  background-size: 10px 8px;
+}
+
+.product-availability.uncheck:before {
+  background: #fa7f4c url("../img/icon-svg/close.svg") center center no-repeat;
+  -webkit-background-size: 10px 8px;
+  background-size: 10px 8px;
+}
+
+.product-compare {
+  position: relative;
+  padding-left: 35px;
+  color: #727271;
+}
+
+.product-compare i.icon-compare {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.product-compare a {
+  text-decoration: underline;
+}
+
+/*______ End Detail v1 ______*/
+
 /*______ Left Sidebar ______*/
 
 .left-sidebar {
   margin-bottom: 40px !important;
+}
+
+.left-sidebar-nav-wrapper {
+  margin-bottom: 40px;
   padding: 0 13.5px;
   background-color: #5d5d60;
 }
 
-.left-sidebar ul {
+.left-sidebar-nav-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.left-sidebar a {
+.left-sidebar-nav-wrapper a {
   position: relative;
   display: block;
   color: #ffffff;
@@ -1558,7 +1645,7 @@ section.content {
   line-height: 18px;
 }
 
-.left-sidebar a:hover {
+.left-sidebar-nav-wrapper a:hover {
   text-decoration: none;
 }
 
@@ -1575,7 +1662,6 @@ section.content {
 .left-sidebar-nav > li > a {
   position: relative;
   padding: 18px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1610,6 +1696,7 @@ section.content {
 
 .left-sublist-nav {
   display: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .left-sublist-nav li a {
@@ -1631,6 +1718,7 @@ section.content {
   padding: 18px 0 18px 30px;
   display: block;
   font-family: "SF" !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-search:before {
@@ -1692,12 +1780,16 @@ section.content {
 
 .footer .call-spec a,
 .footer .callback a {
+  position: relative;
+  padding-left: 30px;
   font-family: "SF" !important;
 }
 
 .footer .call-spec a:before,
 .footer .callback a:before {
-  padding-right: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
   font-family: 'icomoon' !important;
 }
 
@@ -1898,7 +1990,7 @@ section.content {
 
 .tab-slider {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .tab-slider .slider {
@@ -1911,7 +2003,7 @@ section.content {
 }
 
 .tab-slider .tab-slider-wrapper {
-  margin: 0 -130px 0 130px;
+  margin: 0 -33% 0 130px;
 }
 
 .tab-slider .slick-list {
@@ -1934,6 +2026,10 @@ section.content {
 .tab-slider .card:hover {
   -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
   box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+}
+
+.tab-slider .card:hover .card-wrapper {
+  position: relative;
 }
 
 .tab-slider .card:hover .card__options {
@@ -2072,12 +2168,29 @@ section.content {
     padding: 0 15px;
   }
 
+  section.content.content-img:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -137px;
+    width: 537px;
+    height: 537px;
+    display: block;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  section.content.content-img.door:after {
+    background-image: url("../img/catalog-door.png");
+  }
+
   .about-manufactures p {
     max-width: 79%;
   }
 
   .catalog-header:after {
-    content: '';
+    /* content: ''; */
     position: absolute;
     top: -41px;
     right: -137px;

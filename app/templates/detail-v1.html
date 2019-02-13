@@ -1,0 +1,31 @@
+{% extends "layouts/content.html" %}
+{% set title="Входные двери «Двери Регионов»" %}
+{% set bread = ["Главная", "Каталог", "Входные двери «Двери Регионов»"] %}
+{% set filter = false %}
+{% set img = "door" %}
+{% block content %}
+	<div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.html" %}
+		</div>
+
+		<!-- begin detail-wrapper -->
+		<div class="detail-wrapper">
+			<h1 class="title-h1">Дверь Браво ПЧО Леон Ваниль (Т-18)</h1>
+
+			<div class="detail-top-bar">
+				<div class="product-availability uncheck">В наличии</div>
+				<div class="product-compare">
+					<i class="icon-compare"></i>
+					<div class="product-compare__text">
+						<div class="added">Добавлено 	<a href="">в сравнение</a></div>
+						<div class="add uk-hidden">Добавить 	<a href="">в сравнение</a></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- end detail-wrapper -->
+
+	</div>
+{% endblock %}
