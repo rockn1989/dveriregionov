@@ -203,3 +203,127 @@
 }
 
 /*______ End Brands Slider ______*/
+
+
+
+/*______ Detail Sliders ______*/
+
+.style-door {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	color: $black;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $orange;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	@media (min-width: $desk-w) {
+		margin-left: 36%;
+	};
+}
+
+.detail-card-sliders-wrapper {
+	position: relative;
+	padding-bottom: 34px;
+	border-right: 2px solid $gray-bg;
+	.icon-zoom {
+		position: absolute;
+		bottom: 50px;
+		right: 0;
+		z-index: 300;
+	}
+}
+
+.detail-card-sliders {
+	padding: 54px 40px 34px 30px;
+}
+
+.detail-big-slider {
+	@media (min-width: $desk-w) {
+		margin-right: 0;
+		width: 87%;
+		float: right;
+		.slide {
+			
+			a {
+				min-width: 384px;
+				display: block;
+				text-align: center;
+			}
+			img {
+				display: inline;
+			}
+		}
+	};
+}
+
+.detail-preview-slider {
+	@media (min-width: $desk-w) {
+		margin-top: 72px;
+		
+		width: 13%;
+		float: left;
+	};
+	.slider {
+		padding: 88px 0;
+	}
+	.slide {
+		margin-bottom: 25px;
+		width: 58px;
+		height: 127px;
+		transition: opacity .3s ease;
+		img {
+			max-height: 100%;
+		}
+		&.slick-current {
+			opacity: .5;
+		}
+	}
+	.slick-prev, .slick-next {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		border-radius: 50%;
+		background-color: #ededed;
+		text-align: center;
+		z-index: 320;
+		&:before {
+			display: none;
+		}
+		i {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			font-size: 16px;
+			color: #0f0f0f;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.slick-prev {
+		@media (min-width: $desk-w) {
+			transform: rotate(90deg) translateY(50%);
+			top: 0;
+			left: 50%;
+		};
+	}
+	.slick-next {
+		@media (min-width: $desk-w) {
+			transform: rotate(-90deg) translateY(50%);
+			top: auto;
+			bottom: 26px;
+			right: 50%;
+
+		};
+	}
+}
+
+/*______ End Detail Sliders ______*/
