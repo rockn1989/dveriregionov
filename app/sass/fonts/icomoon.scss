@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon/fonts/icomoon.eot?avqer8');
-  src:  url('../fonts/icomoon/fonts/icomoon.eot?avqer8#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/fonts/icomoon.ttf?avqer8') format('truetype'),
-    url('../fonts/icomoon/fonts/icomoon.woff?avqer8') format('woff'),
-    url('../fonts/icomoon/fonts/icomoon.svg?avqer8#icomoon') format('svg');
+  src:  url('../fonts/icomoon/fonts/icomoon.eot?pnxlnt');
+  src:  url('../fonts/icomoon/fonts/icomoon.eot?pnxlnt#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/fonts/icomoon.ttf?pnxlnt') format('truetype'),
+    url('../fonts/icomoon/fonts/icomoon.woff?pnxlnt') format('woff'),
+    url('../fonts/icomoon/fonts/icomoon.svg?pnxlnt#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -61,5 +61,9 @@
 }
 .icon-pin:before {
   content: "\e909";
+  color: #fa7f4c;
+}
+.icon-calendar:before {
+  content: "\e90a";
   color: #fa7f4c;
 }

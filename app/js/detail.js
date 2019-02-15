@@ -15,6 +15,13 @@ $(function () {
 	});
 
 
+	/*______ Тип открытия двери ______*/
+
+	$('.type-of-doors').on('click', '.item', function () {
+		$(this).addClass('active').siblings('.item').removeClass('active');
+	});
+
+
 	/*______ Переключение цветов (квадраты) ______*/
 
 	var $colorName = $('.color-square-value span');

@@ -3,6 +3,7 @@
 
 .detail-card {
 	position: relative;
+	margin-bottom: 10px;
 	background-color: #ffffff;
 	z-index: 250;
 }
@@ -18,9 +19,14 @@
 }
 
 .detail-title {
-	margin-bottom: 8px;
+	margin-bottom: 15px;
 	font-size: 14px;
 	font-weight: 400;
+}
+
+.detail-section {
+	padding: 30px 40px;
+	border-bottom: 2px solid #ededed;
 }
 
 .product-availability {
@@ -67,6 +73,7 @@
 		position: relative;
 		width: 100%;
 		cursor: pointer;
+		min-height: 114px;
 		&.left-pos {
 			border-right: 1px solid $gray-bg;
 			&:hover {
@@ -273,6 +280,123 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+	}
+}
+
+
+.type-of-doors {
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		.item {
+			position: relative;
+			margin: 0;
+			margin-right: 10%;
+			width: 25%;
+			text-align: center;
+			cursor: pointer;
+			&:first-child {
+				margin-right: 5%;
+				text-align: left;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			&__img {
+				margin-bottom: 10px;
+			}
+			figcaption {
+				color: $gray-tx;
+				font-size: 12px;
+				line-height: 14px;
+				font-weight: 300;
+			}
+			.active {
+				display: none;
+			}
+			&.active {
+				.disabled {
+					display: none;
+				}
+				.active {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+.links-wrapper {
+	a {
+    position: relative;
+    padding-left: 30px;
+    font-family: "SF" !important;
+    font-size: 13px;
+    color: $gray-tx;
+    &:before {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    font-family: 'icomoon' !important;
+    }
+	}
+}
+
+.detail-controls {
+	.detail-section {
+		padding-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		border: none;
+	}
+	.calc-controls {
+		margin-right: 13px;
+	}
+	.btn-wrapper {
+		margin-right: 13px;
+		min-width: 198px;
+	}
+	.links-wrapper {
+		a {
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+	}
+	.btn {
+		display: block;
+	}
+}
+
+
+.detail-tabs {
+	margin-bottom: 60px;
+	.tab-sw {
+		margin-bottom: 2px;
+		padding: 0 36px;
+		background-color: #ffffff;
+		border-top: none;
+		li {
+			a {
+				padding: 25px 0;
+				text-transform: none;
+			}
+		}
+	}
+	ul.uk-switcher {
+		padding: 40px 36px;
+		background-color: #ffffff;
+	}
+	table {
+		tr {
+			td {
+				&:first-child {
+					color: #7f7f7e;
+					width: 30%;
+					text-align: right;
+					border-right: 1px solid #e9ebee;
+				}
+			}
+		}
 	}
 }
 

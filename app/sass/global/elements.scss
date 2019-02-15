@@ -37,6 +37,18 @@ h2,.title-h2 {
 		background-color: $purpule;
 		text-decoration: none;
 	}
+	&--transparent {
+		padding: 16px 0;
+		text-transform: none;
+		background-color: transparent;
+		color: #727271;
+		font-weight: 400;
+		font-size: 14px;
+		&:hover {
+			color: #727271;
+			background-color: transparent;
+		}
+	}
 }
 
 
@@ -598,6 +610,111 @@ h2,.title-h2 {
 }
 
 /*______ ENd Pagination ______*/
+
+
+
+/*______ Calc Controls ______*/
+
+.calc-controls {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 105px;
+	color: #5d5d60;
+	font-size: 0;
+	user-select: none;
+	span {
+		display: inline-block;
+		vertical-align: top;
+		width: 36px;
+		height: 56px;
+		background-color: $gray-bg;
+		font-size: 20px;
+		line-height: 56px;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		&.minus {
+			border-radius: 3px 0 0 3px;
+		}
+		&.plus {
+			border-radius: 0 3px 3px 0;
+		}
+		&:active {
+			color: #ffffff;
+			background-color: $orange;
+		}
+	}
+	input {
+		display: inline-block;
+		vertical-align: top;
+		height: 56px;
+		width: 33px;
+		text-align: center;
+		background-color: $gray-bg;
+		border: none;
+		outline: none;
+	}
+}
+
+/*______ End Calc Controls ______*/
+
+
+
+/*______ Facilities block ______*/
+
+.facilities-block {
+	margin-bottom: 10px;
+}
+
+.facility {
+	padding: 30px 40px;
+	height: 100%;
+	border-right: 2px solid $gray-bg;
+	background-color: #ffffff;
+	&__title {
+		margin-bottom: 25px;
+		display: flex;
+		align-items: center;
+		span {
+			margin-left: 40px;
+			display: block;
+			color: $black;
+			font-size: 18px;
+			line-height: 24px;
+			font-weight: 500;	
+		}
+	}
+	&__text {
+		margin-bottom: 20px;
+		color: $gray-tx;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	&__read-more {
+		position: relative;
+		padding-right: 15px;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 300;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 7px;
+			right: 0;
+			display: block;
+			border-left: 6px solid #5d5d60;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+		}
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+/*______ End Facilities block ______*/
+
 
 
 /*______ Animations ______*/

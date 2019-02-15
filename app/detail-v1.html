@@ -23,8 +23,8 @@
 		<script src="libs/placeholders.min.js"></script>
 	<![endif]-->
 </head>
-<body>
 
+<body>
 <header class="header">
 
 		<!-- begin header-desktop -->
@@ -131,8 +131,7 @@
 	<div class="uk-container">
 		<div class="uk-grid">
 			<div class="uk-width-1-6@l">
-					
-<div class="left-sidebar">
+					<div class="left-sidebar">
 	<div class="left-sidebar-nav-wrapper">
 		<a href="" uk-toggle="target: #page-search" class="sidebar-search icon-search js__toggle-search">Поиск</a>
 		<ul class="left-sidebar-nav">
@@ -210,7 +209,6 @@
 								</li>
 		</ul>
 	</div>
-
 							
 					<div class="banners">
 						<div class="item">
@@ -220,27 +218,16 @@
 						</div>
 					</div>
 				</div>
-
 			
 			</div>
 			<div class="uk-width-5-6@l">
 					<div class="uk-container">
 		<div class="breadcrumbs-wrapper">
 			<ul class="breadcrumbs">
-	
-	
-	<li><a href="">Главная</a></li>
-	
-
-	
-	<li><a href="">Каталог</a></li>
-	
-
-	
-	<li>Входные двери «Двери Регионов»</li>
-		
-
-</ul>
+			<li><a href="">Главная</a></li>
+			<li><a href="">Каталог</a></li>
+			<li>Входные двери «Двери Регионов»</li>
+		</ul>
 		</div>
 
 		<!-- begin detail-wrapper -->
@@ -265,26 +252,26 @@
 						<div class="detail-card-sliders-wrapper">
 							<div class="detail-card-sliders uk-clearfix">
 								<div class="detail-big-slider uk-clearfix">
-									<div class="slider">
-										<div class="slide" uk-lightbox>
+									<div class="slider" uk-lightbox="animation: scale">
+										<div class="slide">
 											<a href="img/sliders-img/detail-big-img-1-314x768.png">
 												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
 											</a>
 											<i class="icon-zoom"></i>
 										</div>
-										<div class="slide" uk-lightbox>
+										<div class="slide">
 											<a href="img/sliders-img/detail-big-img-1-314x768.png">
 												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
 											</a>
 											<i class="icon-zoom"></i>
 										</div>
-										<div class="slide" uk-lightbox>
+										<div class="slide">
 											<a href="img/sliders-img/detail-big-img-1-314x768.png">
 												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
 											</a>
 											<i class="icon-zoom"></i>
 										</div>
-										<div class="slide" uk-lightbox>
+										<div class="slide">
 											<a href="img/sliders-img/detail-big-img-1-314x768.png">
 												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
 											</a>
@@ -420,21 +407,428 @@
 							</div>
 						</div>
 						<!-- end detail-product-selects-list -->
+						
+						<!-- begin type-of-door -->
+						<div class="type-of-doors">
+							<div class="detail-section">
+								<div class="detail-title">Тип открывания двери</div>
+								<div class="list">
+									<figure class="item">
+										<div class="item__img">
+											<svg width="54px" height="81px" class="disabled">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-1"></use>
+											</svg>
+											<svg width="54px" height="81px" class="active">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-1-focus"></use>
+											</svg>
+										</div>
+										<figcaption>Распашная</figcaption>
+									</figure>
+									<figure class="item active">
+										<div class="item__img">
+											<svg width="85px" height="81px" class="disabled">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-2"></use>
+											</svg>
+											<svg width="85px" height="81px" class="active">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-2-focus"></use>
+											</svg>
+										</div>
+										<figcaption>Симметричная двустворчатая арка</figcaption>
+									</figure>
+									<figure class="item">
+										<div class="item__img">
+											<svg width="65px" height="81px" class="disabled">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-3"></use>
+											</svg>
+											<svg width="65px" height="81px" class="active">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-3-focus"></use>
+											</svg>
+										</div>
+										<figcaption>Откатная</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+						<!-- end type-of-door -->
+						
+						<!-- begin detail-controls -->
+						<div class="detail-controls">
+							<div class="detail-section">
+								<div class="calc-controls">
+									<span class="minus">-</span>
+									<input type="text" value="1">
+									<span class="plus">+</span>
+								</div>
+								<div class="btn-wrapper">
+									<a href="" class="btn">Купить</a>
+									<a href="" class="btn btn--transparent">Купить в 1 клик</a>
+								</div>
+								<div class="links-wrapper">
+									<a href="" class="icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
+									<a href="" class="icon-calendar" uk-toggle="target: #call-spec">Рассрочка</a>
+								</div>
+							</div>
+						</div>
+						<!-- end detail-controls -->
 
 					</div>
 				</div>
+
 			</div>
 			<!-- end detail-card -->
+
+			<!-- begin facilities-block -->
+			<div class="facilities-block">
+				<div class="uk-grid uk-grid-collapse">
+
+					<div class="uk-width-1-2@m uk-width-1-4@l">
+						<div class="facility">
+							<div class="facility__title">
+								<img class="lazy" data-src="img/icon-svg/truck.svg" width="64" height="46" alt="">
+								<span>Доставка</span>
+							</div>
+							<div class="facility__text">
+								Доставка от 650 до 1250 рублей в пределах МКАД. Возим и в Подмосковье!
+							</div>
+							<a href="" class="facility__read-more">Подробнее</a>
+						</div>
+					</div>
+
+					<div class="uk-width-1-2@m uk-width-1-4@l">
+						<div class="facility">
+							<div class="facility__title">
+								<img class="lazy" data-src="img/icon-svg/wallet-2.svg" width="54" height="52" alt="">
+								<span>Оплата</span>
+							</div>
+							<div class="facility__text">
+								Оплата наличными. Возможно оплата картой при самовывозе.
+							</div>
+							<a href="" class="facility__read-more">Подробнее</a>
+						</div>
+					</div>
+
+					<div class="uk-width-1-2@m uk-width-1-4@l">
+						<div class="facility">
+							<div class="facility__title">
+								<img class="lazy" data-src="img/icon-svg/picup.svg" width="56" height="56" alt="">
+								<span>Самовывоз</span>
+							</div>
+							<div class="facility__text">
+								м. Молодёжная, ул. Молодогвардейская, д.54, стр 4.
+							</div>
+							<a href="" class="facility__read-more">Подробнее</a>
+						</div>
+					</div>
+
+					<div class="uk-width-1-2@m uk-width-1-4@l">
+						<div class="facility">
+							<div class="facility__title">
+								<img class="lazy" data-src="img/icon-svg/door.svg" width="42" height="56" alt="">
+								<span>Установка</span>
+							</div>
+							<div class="facility__text">
+								Установка межкомнатных дверей с гарантией — от 1800 рублей.
+							</div>
+							<a href="" class="facility__read-more">Подробнее</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- end facilities-block -->
+			
+			<!-- begin detail-tabs -->
+			<div class="detail-tabs">
+				<ul class="tab-sw" uk-switcher>
+						<li><a href="">Описание</a></li>
+						<li class="uk-active"><a href="">Характеристики</a></li>
+						<li><a href="">Отзывы</a></li>
+						<li><a href="">Комплектующие двери</a></li>
+				</ul>
+				<ul class="uk-switcher">
+					<li></li>
+					<li>
+						<table>
+							<tbody>
+								<tr>
+									<td>Страна</td>
+									<td>Беларусь</td>
+								</tr>
+								<tr>
+									<td>Гарантия производителя</td>
+									<td>1 год</td>
+								</tr>
+								<tr>
+									<td>Материал</td>
+									<td>Дерево</td>
+								</tr>		
+							</tbody>
+						</table>
+					</li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- end detail-tabs -->
+
+			<!-- begin products-slider -->
+			<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="title-h1">Фурнитура к этой двери</div>
+				<div class="slider">
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-1-260x260.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+					 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 990 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-2-260x260.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+					 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 990 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-3-260x260.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+					 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 990 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-4-260x260.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+					 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 990 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-1-260x260.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+					 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 990 р.</span>
+					 	</div>
+					</div>
+				</div>
+				<div class="slider__arrows">
+					<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
+					<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
+				</div>
+			</div>
+			<!-- end products-slider -->
+
+			<!-- begin products-slider -->
+			<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="title-h1">Фурнитура к этой двери</div>
+				<div class="slider">
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-1-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-2-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-3-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-4-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-1-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+				</div>
+				<div class="slider__arrows">
+					<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
+					<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
+				</div>
+			</div>
+			<!-- end products-slider -->
+
+			<!-- begin products-slider -->
+			<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="title-h1">Фурнитура к этой двери</div>
+				<div class="slider">
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-5-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-6-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-7-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-8-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+					<div class="slide">
+					 	<div class="slide__img">
+					 		<a href="">
+					 			<img data-lazy="img/sliders-img/products-img-5-146x316.png" alt="">
+					 		</a>
+					 	</div>
+					 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+					 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+					 	<div class="slide__price">
+							<span class="old-price"></span>
+							<span class="current-price">от 1 465 р.</span>
+					 	</div>
+					</div>
+				</div>
+				<div class="slider__arrows">
+					<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
+					<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
+				</div>
+			</div>
+			<!-- end products-slider -->
 
 		</div>
 		<!-- end detail-wrapper -->
 
 	</div>
+
 			</div>
 		</div>
 	</div>
-	</section>
+	
+	<!-- begin white-panel -->
+<div class="white-panel">
+	<div class="uk-container">
+		<div class="uk-grid">
+			<div class="uk-width-1-6@l"></div>
+			<div class="uk-width-5-6@l">
+				<div class="title-h2">Почему следует заказывать двери у нас?</div>
+				<p>
+					Купить двери в Москве через интернет – это просто, быстро и выгодно. Вам не за чем переплачивать магазинам с огромными наценками, когда под рукой такой удобный вариант. Мы уже долгое время сотрудничаем с лучшими производителями дверей в России, и смогли добиться наиболее выгодных условий, чтобы сформированные нашими специалистами цены всегда радовали клиентов и вызывали желание обратиться к нам ещё раз.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end white-panel -->
 
+	
+</section>
 
 <footer class="footer">
 	<div class="uk-container">
@@ -523,7 +917,6 @@
 
 
 
-
 <div id="page-search" uk-modal class="page-search-modal">
     <div class="uk-modal-dialog uk-modal-body">
         <div class="uk-modal-body">
@@ -551,6 +944,7 @@
 <script src="js/catalog.js" defer></script>
 <script src="js/detail.js" defer></script>
 <script src="js/main.js" defer></script>
+
 
 </body>
 </html>

@@ -172,4 +172,59 @@ $(function() {
 		$('.detail-product-preview-slider').slick('resize');
 	});
 
+
+	/*______ Products Slider ______*/
+
+	var sliderWrapper = $('.products-slider');
+
+	$('.products-slider').each(function (i, el) {
+		var slider = $(el).find('.slider');
+		slider.slick({
+			arrows: true,
+			dots: false,
+			autoplay: true,
+			fade: false,
+			autoplaySpeed: 2000,
+			speed: 600,
+			slidesToShow: 4,
+			lazyLoad: 'ondemand',
+			prevArrow: $(this).find('.slide-prev'),
+			nextArrow: $(this).find('.slide-next'),
+			responsive: [
+				{
+					breakpoint: 1220,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+					}
+				},
+				{
+					breakpoint: 1220,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+					}
+				},
+				{
+					breakpoint: 960,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});	
+
+	})
+
+
 });

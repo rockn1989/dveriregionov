@@ -238,7 +238,7 @@
 		position: absolute;
 		bottom: 50px;
 		right: 0;
-		z-index: 300;
+		z-index: 100;
 	}
 }
 
@@ -251,12 +251,21 @@
 		margin-right: 0;
 		width: 87%;
 		float: right;
+		.slider {
+			height: 768px;
+			overflow: hidden;
+			&.slick-initialized {
+				overflow: visible;
+				height: auto;
+			}
+		}
 		.slide {
-			
 			a {
+				position: relative;
 				min-width: 384px;
 				display: block;
 				text-align: center;
+				z-index: 200;
 			}
 			img {
 				display: inline;
@@ -268,7 +277,6 @@
 .detail-preview-slider {
 	@media (min-width: $desk-w) {
 		margin-top: 72px;
-		
 		width: 13%;
 		float: left;
 	};
@@ -327,3 +335,71 @@
 }
 
 /*______ End Detail Sliders ______*/
+
+
+
+/*______ Products Slider ______*/
+
+.products-slider {
+	position: relative;
+	margin-bottom: 50px;
+	.slider {
+		height: 565px;
+		overflow: hidden;
+		&.slick-initialized {
+			height: auto;
+			overflow: visible;
+		}
+		.slick-list {
+			margin: 0 -16px;
+		}
+		.slide {
+			margin: 0 16px;
+			padding: 40px 0 30px;
+			background-color: #ffffff;
+			&__img {
+				margin-bottom: 30px;
+				min-height: 260px;
+				text-align: center;
+				img {
+					display: inline;
+				}
+			}
+			&__article {
+				margin-bottom: 15px;
+				padding: 0 30px;
+				color: #727271;
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 300;
+			}
+			&__product-name {
+				margin-bottom: 25px;
+				padding: 0 30px;
+				color: #0f0f0f;
+				font-size: 18px;
+				line-height: 24px;
+				font-weight: 300;
+			}
+			&__price {
+				padding: 0 30px;
+				span {
+			    margin-right: 16px;
+			    font-size: 18px;
+			    line-height: 21px;
+			    &.current-price {
+			    	font-weight: 500;
+			    }
+				}
+			}
+		}
+		.slide-prev {
+			margin-left: 15px;
+		}
+		.slide-right {
+			margin-right: 15px;
+		}
+	}
+}
+
+/*______ End Products Slider ______*/

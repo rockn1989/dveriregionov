@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="82" viewBox="0 0 54 82">
+		<defs>
+				<path id="d9o9a" d="M928 1009v-67h19v67z" />
+				<path id="d9o9b" d="M923 1014v-77h29v77z" />
+				<path id="d9o9d" d="M944 975.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z" />
+				<path id="d9o9e" d="M910 1016v-1h54v1z" />
+				<path id="d9o9f" d="M940.5 975h4.585a1.502 1.502 0 0 1 1.415-1 1.5 1.5 0 1 1-1.415 2H940.5a.5.5 0 0 1 0-1z" />
+				<path id="d9o9g" d="M921 1014v-79h33v79" />
+				<clipPath id="d9o9c">
+						<use fill="#fff" xlink:href="#d9o9a" />
+				</clipPath>
+		</defs>
+		<g>
+				<g transform="translate(-910 -934)">
+						<g>
+								<use fill="#fa7f4c" xlink:href="#d9o9b" />
+						</g>
+						<g opacity=".5">
+								<use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#d9o9c&quot;)" xlink:href="#d9o9a" />
+						</g>
+						<g>
+								<use fill="#fa7f4c" xlink:href="#d9o9d" />
+						</g>
+						<g>
+								<use fill="#ededed" xlink:href="#d9o9e" />
+						</g>
+						<g>
+								<use fill="#fff" xlink:href="#d9o9f" />
+						</g>
+						<g>
+								<use fill="#fff" fill-opacity="0" stroke="#fa7f4c" stroke-miterlimit="50" stroke-width="2" xlink:href="#d9o9g" />
+						</g>
+				</g>
+		</g>
+</svg>
