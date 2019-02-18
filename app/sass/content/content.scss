@@ -26,6 +26,17 @@ section.content {
 				};
 			}
 		}
+		&.faq-door {
+			&:after {
+				@media (min-width: $desk-w) {
+					background-image: url('../img/faq-bg-img.png');
+				};
+			}
+		}
+	}
+	&>.uk-container {
+		position: relative;
+		z-index: 2;
 	}
 	p {
 		font-weight: 300;
@@ -44,6 +55,51 @@ section.content {
 		}
 		td {
 			padding: 12px 45px;
+		}
+	}
+	ul:not([class]) {
+		@include list-reset;
+		margin-bottom: 25px;
+		li {
+			position: relative;
+			padding-left: 33px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 10px;
+				left: 0;
+				width: 5px;
+				height: 5px;
+				display: block;
+				background-color: $orange;
+				border-radius: 50%;
+			}
+		}
+	}
+	ol:not([class]) {
+		@include list-reset;
+		margin-bottom: 25px;
+		counter-reset: section;
+		li {
+			position: relative;
+			margin-bottom: 10px;
+			padding-left: 35px;
+			&:before {
+				content: counter(section);
+				counter-increment: section;
+				position: absolute;
+				top: 4px;
+				left: 0;
+				display: block;
+				width: 18px;
+				height: 18px;
+				text-align: center;
+				font-size: 14px;
+				line-height: 18px;
+				border-radius: 50%;
+				color: #ffffff;
+				background-color: $orange;
+			}
 		}
 	}
 }

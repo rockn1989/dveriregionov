@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/fonts/icomoon.eot?pnxlnt");
-  src: url("../fonts/icomoon/fonts/icomoon.eot?pnxlnt#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?pnxlnt") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?pnxlnt") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?pnxlnt#icomoon") format("svg");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?auf8fc");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?auf8fc#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?auf8fc") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?auf8fc") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?auf8fc#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -109,6 +109,11 @@
   color: #fa7f4c;
 }
 
+.icon-arrow-up:before {
+  content: "\e90b";
+  color: #fa7f4c;
+}
+
 /*______ Elements ______*/
 
 h1,
@@ -127,6 +132,15 @@ h2,
   font-size: 30px;
   line-height: 48px;
   font-weight: 300;
+}
+
+h3,
+.title-h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #0f0f0f;
 }
 
 .btn {
@@ -162,6 +176,7 @@ h2,
   background-color: transparent;
   color: #727271;
   font-weight: 400;
+  font-size: 14px;
 }
 
 .btn--transparent:hover {
@@ -273,6 +288,30 @@ h2,
   background-size: 10px 8px;
 }
 
+.link-read-more {
+  position: relative;
+  padding-right: 15px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.link-read-more:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 0;
+  display: block;
+  border-left: 6px solid #5d5d60;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.link-read-more:hover {
+  color: #0f0f0f;
+}
+
 /*______ Breadcrumbs ______*/
 
 .breadcrumbs {
@@ -330,15 +369,15 @@ h2,
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 40px;
+  margin-bottom: 7px;
+  padding: 0 36px;
+  background-color: #ffffff;
+  border-top: none;
   font-size: 0;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
-  z-index: 30;
 }
 
 [uk-switcher] li {
-  margin-right: 92px;
+  margin-right: 56px;
   display: inline-block;
   vertical-align: top;
 }
@@ -354,14 +393,14 @@ h2,
 
 [uk-switcher] li a {
   position: relative;
-  padding: 40px 0;
+  padding: 25px 0;
   display: block;
   color: #727271;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: none;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -375,7 +414,7 @@ h2,
 [uk-switcher] li a:after {
   content: '';
   position: absolute;
-  bottom: -1.5px;
+  bottom: 0;
   left: 0;
   display: block;
   width: 0;
@@ -387,7 +426,97 @@ h2,
   transition: width .3s ease;
 }
 
+ul.uk-switcher {
+  padding: 40px 36px;
+  background-color: #ffffff;
+}
+
 /*______ End Tabs ______*/
+
+/*______ Accordion ______*/
+
+ul[uk-accordion] .uk-accordion-title {
+  position: relative;
+  padding: 12px 0;
+  font-size: 24px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+ul[uk-accordion] .uk-accordion-title:before {
+  position: absolute;
+  top: 50%;
+  right: 34px;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e90b";
+  width: 16px;
+  height: 10px;
+  float: none;
+  font-size: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: color .3s ease, -webkit-transform .3s;
+  transition: color .3s ease, -webkit-transform .3s;
+  -o-transition: transform .3s, color .3s ease;
+  -moz-transition: transform .3s, color .3s ease, -moz-transform .3s;
+  transition: transform .3s, color .3s ease;
+  transition: transform .3s, color .3s ease, -webkit-transform .3s, -moz-transform .3s;
+  background-image: none;
+}
+
+ul[uk-accordion] .uk-accordion-content {
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+
+ul[uk-accordion] > li {
+  margin: 0 0 9px;
+  padding: 0 36px;
+  background-color: #ffffff;
+  -webkit-transition: -webkit-box-shadow .3s ease;
+  transition: -webkit-box-shadow .3s ease;
+  -o-transition: box-shadow .3s ease;
+  -moz-transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+}
+
+ul[uk-accordion] > li:nth-child(n+2) {
+  margin-top: 0;
+}
+
+ul[uk-accordion] > li.uk-open .uk-accordion-title:before {
+  background-image: none;
+  -webkit-transform: translateY(-50%) rotateX(180deg);
+  -moz-transform: translateY(-50%) rotateX(180deg);
+  transform: translateY(-50%) rotateX(180deg);
+  color: #fa7f4c;
+}
+
+ul[uk-accordion] > li:hover,
+ul[uk-accordion] > li:focus {
+  -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+}
+
+ul[uk-accordion] > li:hover .uk-accordion-title,
+ul[uk-accordion] > li:focus .uk-accordion-title {
+  color: #4848bc;
+}
+
+/*______ End Accordion ______*/
 
 /*______ Card ______*/
 
@@ -967,30 +1096,6 @@ h2,
   line-height: 20px;
 }
 
-.facility__read-more {
-  position: relative;
-  padding-right: 15px;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
-}
-
-.facility__read-more:after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  right: 0;
-  display: block;
-  border-left: 6px solid #5d5d60;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-}
-
-.facility__read-more:hover {
-  color: #0f0f0f;
-}
-
 /*______ End Facilities block ______*/
 
 /*______ Animations ______*/
@@ -1411,6 +1516,11 @@ section.content {
   background: #ededed;
 }
 
+section.content > .uk-container {
+  position: relative;
+  z-index: 2;
+}
+
 section.content p {
   font-weight: 300;
 }
@@ -1427,6 +1537,63 @@ section.content table tr:nth-child(odd) {
 
 section.content table td {
   padding: 12px 45px;
+}
+
+section.content ul:not([class]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+section.content ul:not([class]) li {
+  position: relative;
+  padding-left: 33px;
+}
+
+section.content ul:not([class]) li:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  display: block;
+  background-color: #fa7f4c;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+section.content ol:not([class]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 25px;
+  counter-reset: section;
+}
+
+section.content ol:not([class]) li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 35px;
+}
+
+section.content ol:not([class]) li:before {
+  content: counter(section);
+  counter-increment: section;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #fa7f4c;
 }
 
 .products-short-list .item {
@@ -1771,7 +1938,7 @@ section.content table td {
 }
 
 .catalog-bar {
-  margin-bottom: 28px;
+  margin-bottom: 28px !important;
   padding: 12px 22px;
   background-color: #ffffff;
 }
@@ -2366,6 +2533,90 @@ section.content table td {
 
 /*______ End Filter ______*/
 
+/*______ FAQ ______*/
+
+.faq-wrapper {
+  padding-bottom: 40px;
+}
+
+ul.uk-switcher.faq {
+  padding: 0;
+  background-color: transparent;
+}
+
+/*______ End FAQ ______*/
+
+/*______ News ______*/
+
+.news-main {
+  padding-bottom: 40px;
+}
+
+.news-list .news {
+  margin-bottom: 30px;
+  background: #ffffff;
+  -webkit-transition: -webkit-box-shadow .3s ease;
+  transition: -webkit-box-shadow .3s ease;
+  -o-transition: box-shadow .3s ease;
+  -moz-transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+}
+
+.news-list .news::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.news-list .news__img {
+  float: left;
+  width: 316px;
+  height: 280px;
+  display: none;
+}
+
+.news-list .news__img:empty {
+  width: 0;
+  height: 0;
+}
+
+.news-list .news__desc {
+  position: relative;
+  padding: 32px 40px;
+  overflow: hidden;
+}
+
+.news-list .news__date {
+  margin-bottom: 14px;
+  color: #7f7f7e;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.news-list .news__title {
+  margin-bottom: 15px;
+}
+
+.news-list .news__title a {
+  color: #0f0f0f;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.news-list .news:hover {
+  -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+}
+
+.news-list .news:hover .news__title a {
+  color: #4848bc;
+  text-decoration: none;
+}
+
+/*______ End News ______*/
+
 /*______ FOOTER ______*/
 
 .footer {
@@ -2612,9 +2863,25 @@ section.content table td {
 
 /*______ Tabs Slider ______*/
 
+.manufactures-tabs .tab-sw {
+  margin-bottom: 40px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  z-index: 30;
+  background-color: transparent;
+}
+
+.manufactures-tabs .tab-sw li {
+  margin-right: 92px;
+}
+
+.manufactures-tabs .tab-sw a {
+  padding: 40px 0;
+  text-transform: uppercase;
+}
+
 .tab-slider {
   position: relative;
-  /* overflow: hidden; */
 }
 
 .tab-slider .slider {
@@ -2959,6 +3226,16 @@ section.content table td {
   .catalog-body .card:nth-child(2n) {
     margin-right: 0;
   }
+
+  .news-list .news__img img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'object-fit: cover; object-position: cover;';
+  }
 }
 
 @media (min-width: 960px) {
@@ -2981,6 +3258,10 @@ section.content table td {
 
   section.content.content-img.door:after {
     background-image: url("../img/catalog-door.png");
+  }
+
+  section.content.content-img.faq-door:after {
+    background-image: url("../img/faq-bg-img.png");
   }
 
   .about-manufactures p {
@@ -3010,6 +3291,29 @@ section.content table td {
 
   .catalog-body .card:nth-child(4n) {
     margin-right: 0;
+  }
+
+  .news-list .news__img {
+    display: block;
+  }
+
+  .news-list .news__desc {
+    max-height: 280px;
+  }
+
+  .news-list .news__desc:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(50%, rgba(255, 255, 255, 0.4)));
+    background-image: -webkit-linear-gradient(bottom, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%);
+    background-image: -moz-linear-gradient(bottom, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%);
+    background-image: -o-linear-gradient(bottom, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%);
+    background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%);
   }
 
   .style-door {

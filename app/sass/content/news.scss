@@ -1,0 +1,76 @@
+/*______ News ______*/
+
+.news-main {
+	padding-bottom: 40px;
+}
+
+.news-list {
+	.news {
+		margin-bottom: 30px;
+		background: #ffffff;
+		transition: box-shadow .3s ease;
+		@include clearfix;
+		&__img {
+				float: left;
+				width: 316px;
+				height: 280px;
+				display: none;
+				img {
+					@media (min-width: $tablet-w) {
+						@include object-fit;
+					};
+				}
+			&:empty {
+				width: 0;
+				height: 0;
+			}
+			@media (min-width: $desk-w) {
+				display: block;
+			};
+		}
+		&__desc {
+			position: relative;
+			padding: 32px 40px;
+			overflow: hidden;
+			@media (min-width: $desk-w) {
+				max-height: 280px;
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					display: block;
+					width: 100%;
+					height: 40px;
+					background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, .4) 50%);
+				}
+			};
+		}
+		&__date {
+			margin-bottom: 14px;
+			color: #7f7f7e;
+			font-size: 16px;
+			font-weight: 300;
+		}
+		&__title {
+			margin-bottom: 15px;
+			a {
+				color: $black;
+				font-size: 24px;
+				line-height: 30px;
+				font-weight: 400;
+			}
+		}
+		&:hover {
+			box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+			.news__title {
+				a {
+					color: #4848bc;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/*______ End News ______*/

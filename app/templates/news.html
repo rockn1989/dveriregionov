@@ -1,0 +1,116 @@
+{% extends "layouts/content.html" %}
+{% set title="Новости" %}
+{% set bread = ["Главная", "Новости"] %}
+{% set filter = false %}
+{% set img = "faq-door" %}
+{% set panel = false %}
+{% block content %}
+
+	<div class="breadcrumbs-wrapper">
+		{% include "includes/breadcrumbs.html" %}
+	</div>
+
+	<!-- begin news-main -->
+	<div class="news-main">
+		<div class="title-h1">Новости</div>
+		
+		<!-- begin news-list -->
+		<div class="news-list">
+			<div class="news uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="news__img">
+					<a href=""><img data-src="img/news-img-1-316x280.png" alt="" uk-img></a>
+				</div>
+				<div class="news__desc">
+					<div class="news__date">26—30 апреля 2019</div>
+					<div class="news__title"><a href="">Скидка 10 процентов за регистрация на сайте</a></div>
+					<div class="news__text">
+						<p>
+							До Нового года осталось всего 15 дней. За это время можно успеть немало: закончить важные дела, спланировать праздничное путешествие, купить подарки для своих близких и даже приобрести квартиру в жилых комплексах Urban Group: «Лайково», «Лесобережный», «Митино О2», «Видный город» и «Солнечная система 2» — c праздничной скидкой до 18%!
+						</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="news uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="news__img"></div>
+				<div class="news__desc">
+					<div class="news__date">14 марта 2019</div>
+					<div class="news__title"><a href="">Владельцы клубных карт получаю скидку в наших магазинах</a></div>
+					<div class="news__text">
+						<p>
+							Для получения скидки Вам необходимо позвонить по телефонному номеру +7-495-106-28-06. После завершения телефонного разговора Вам будет направлен индивидуальный код на скидку.
+						</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="news uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="news__img">
+					<a href=""><img data-src="img/news-img-2-316x280.png" alt="" uk-img></a>
+				</div>
+				<div class="news__desc">
+					<div class="news__date">Скидка 45% на замки и фурнитуру Abben Dau</div>
+					<div class="news__title"><a href="">Компания Двери Регионов является партнёром программы Urban Share</a></div>
+					<div class="news__text">
+						<p>
+							«Новогодний SALE» продлится до 31 декабря 2017 года. Это идеальный момент, чтобы приобрести квартиру по выгодной цене не только для Вас, но и для Ваших друзей и знакомых!
+						</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="news uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="news__img"></div>
+				<div class="news__desc">
+					<div class="news__date">6 февраля 2019</div>
+					<div class="news__title"><a href="">Ваш друг или знакомый получит скидку на квартиру до 18%</a></div>
+					<div class="news__text">
+						<p>
+							Для того, чтобы стать участником программы и начать зарабатывать, потребуется менее 20 секунд, а бонус в зависимости от стоимости жилья может достигать 200 000 рублей!
+						</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="news uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+				<div class="news__img"></div>
+				<div class="news__desc">
+					<div class="news__date">19 января 2019</div>
+					<div class="news__title"><a href="">Компания Двери Регионов является партнёром программы Urban Share</a></div>
+					<div class="news__text">
+						<p>
+							До Нового года осталось всего 15 дней. За это время можно успеть немало: закончить важные дела, спланировать праздничное путешествие, купить подарки для своих близких и даже приобрести квартиру в жилых комплексах Urban Group: «Лайково», «Лесобережный», «Митино О2», «Видный город» и «Солнечная система 2» — c праздничной скидкой до 18%!
+						</p>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<!-- end news-list -->
+		<div class="catalog-bar">
+			<div class="uk-grid">
+				<div class="uk-width-1-">
+					<ul class="uk-pagination uk-flex-center">
+						<li class="uk-pagination-prev">
+							<a href="">
+								Предыдущая
+							</a>
+						 </li>
+						<li class="uk-active"><span>1</span></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">...</a></li>
+						<li><a href="">12</a></li>
+						<li class="uk-pagination-next">
+							<a href="">
+								Следующая
+							</a>
+						 </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end news-main -->
+{% endblock %}

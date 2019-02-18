@@ -1,0 +1,114 @@
+{% extends "layouts/content.html" %}
+{% set title="Вопрос-Ответ" %}
+{% set bread = ["Главная", "Вопрос-Ответ"] %}
+{% set filter = false %}
+{% set img = "faq-door" %}
+{% set panel = false %}
+{% block content %}
+	<div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.html" %}
+		</div>
+		<div class="faq-wrapper">
+			<div class="title-h1">Вопрос-Ответ</div>
+			
+			<ul class="tab-sw" uk-switcher>
+				<li class="uk-active"><a href="">Условия работы</a></li>
+				<li><a href="">Оплата и доставка</a></li>
+				<li><a href="">Возврат</a></li>
+				<li><a href="">Гарантии</a></li>
+			</ul>
+			
+			<ul class="uk-switcher faq">
+				<li>
+					<ul uk-accordion>
+						<li class="uk-open">
+							<a class="uk-accordion-title" href="#">Каковы условия и сроки возврата товара?</a>
+							<div class="uk-accordion-content">
+								<p>
+									Процедура возврата товара достаточно проста. 
+								</p>
+								<p><b>Вы можете вернуть товар если:</b></p>
+								<ul>
+									<li>со дня покупки прошло не более 100 дней;</li>
+									<li>товар входит в перечень, описанный в Законе о защите прав потребителей. </li>
+								</ul>
+								<a href="" class="link-read-more">Подробнее</a>
+							</div>
+						</li>
+						<li>
+							<a class="uk-accordion-title" href="#">Сколько стоит доставка по области?</a>
+							<div class="uk-accordion-content">
+								<p>
+									Процедура возврата товара достаточно проста. 
+								</p>
+								<p><b>Вы можете вернуть товар если:</b></p>
+								<ol>
+									<li>со дня покупки прошло не более 100 дней;</li>
+									<li>товар входит в перечень, описанный в Законе о защите прав потребителей. </li>
+								</ol>
+								<a href="" class="link-read-more">Подробнее</a>
+							</div>
+						</li>
+						<li>
+							<a class="uk-accordion-title" href="#">Какие вакансии есть в ваших магазинах?</a>
+							<div class="uk-accordion-content">
+								<p>
+									Процедура возврата товара достаточно проста. 
+								</p>
+								<p><b>Вы можете вернуть товар если:</b></p>
+								<ul>
+									<li>со дня покупки прошло не более 100 дней;</li>
+									<li>товар входит в перечень, описанный в Законе о защите прав потребителей. </li>
+								</ul>
+								<a href="" class="link-read-more">Подробнее</a>
+							</div>
+						</li>
+						<li>
+							<a class="uk-accordion-title" href="#">У вас есть сертификаты соответствия?</a>
+							<div class="uk-accordion-content">
+								<p>
+									Процедура возврата товара достаточно проста. 
+								</p>
+								<p><b>Вы можете вернуть товар если:</b></p>
+								<ul>
+									<li>со дня покупки прошло не более 100 дней;</li>
+									<li>товар входит в перечень, описанный в Законе о защите прав потребителей. </li>
+								</ul>
+								<a href="" class="link-read-more">Подробнее</a>
+							</div>
+						</li>
+						<li>
+							<a class="uk-accordion-title" href="#">Как я могу вернуть дверь?</a>
+							<div class="uk-accordion-content">
+								<p>
+									Процедура возврата товара достаточно проста. 
+								</p>
+								<p><b>Вы можете вернуть товар если:</b></p>
+								<ul>
+									<li>со дня покупки прошло не более 100 дней;</li>
+									<li>товар входит в перечень, описанный в Законе о защите прав потребителей. </li>
+								</ul>
+								<a href="" class="link-read-more">Подробнее</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<ul uk-accordion>
+						<li class="uk-open">
+							<a href="" class="uk-accordion-title">Lorem</a>
+							<div class="uk-accordion-content">
+								<ol>
+										<li>Lorem-1</li>
+										<li>Lorem-2</li>
+										<li>Lorem-3</li>
+									</ol>	
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

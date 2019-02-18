@@ -131,9 +131,25 @@
 
 /*______ Tabs Slider ______*/
 
+.manufactures-tabs {
+	.tab-sw {
+		margin-bottom: 40px;
+		border-top: 1px solid #ffffff;
+		border-bottom: 1px solid #ffffff;
+		z-index: 30;
+		background-color: transparent;
+		li {
+			margin-right: 92px;
+		}
+		a {
+			padding: 40px 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
 .tab-slider {
 	position: relative;
-	/* overflow: hidden; */
 	.slider {
 		height: 565px;
 		overflow: hidden;

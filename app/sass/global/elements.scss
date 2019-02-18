@@ -16,6 +16,13 @@ h2,.title-h2 {
 	font-weight: 300;
 }
 
+h3, .title-h3 {
+	margin-bottom: 15px;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 48px;
+	color: $black;
+}
 
 .btn {
 	padding: 16px 42px;
@@ -136,6 +143,28 @@ h2,.title-h2 {
 	}
 }
 
+.link-read-more {
+	position: relative;
+	padding-right: 15px;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 7px;
+		right: 0;
+		display: block;
+		border-left: 6px solid #5d5d60;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+	}
+	&:hover {
+		color: $black;
+	}
+}
+
 /*______ Breadcrumbs ______*/
 
 .breadcrumbs {
@@ -182,13 +211,13 @@ h2,.title-h2 {
 [uk-switcher] {
 	position: relative;
 	@include list-reset;
-	margin-bottom: 40px;
+	margin-bottom: 7px;
+	padding: 0 36px;
+	background-color: #ffffff;
+	border-top: none;
 	font-size: 0;
-	border-top: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
-	z-index: 30;
 	li {
-		margin-right: 92px;
+		margin-right: 56px;
 		display: inline-block;
 		vertical-align: top;
 		&.uk-active {
@@ -202,14 +231,14 @@ h2,.title-h2 {
 		}
 		a {
 			position: relative;
-			padding: 40px 0;
+			padding: 25px 0;
 			display: block;
 			color: #727271;
 			font-weight: bold;
 			font-size: 18px;
 			line-height: 24px;
 			letter-spacing: 2px;
-			text-transform: uppercase;
+			text-transform: none;
 			transition: all .3s ease;
 			&:hover {
 				text-decoration: none;
@@ -217,7 +246,7 @@ h2,.title-h2 {
 			&:after {
 				content: '';
 				position: absolute;
-				bottom: -1.5px;
+				bottom: 0;
 				left: 0;
 				display: block;
 				width: 0;
@@ -229,7 +258,72 @@ h2,.title-h2 {
 	}
 }
 
+ul.uk-switcher {
+	padding: 40px 36px;
+	background-color: #ffffff;
+}
+
 /*______ End Tabs ______*/
+
+
+
+/*______ Accordion ______*/
+
+ul[uk-accordion] {
+	.uk-accordion-title {
+		position: relative;
+		padding: 12px 0;
+		font-size: 24px;
+		line-height: 48px;
+		font-weight: 300;
+		&:before {
+			position: absolute;
+			top: 50%;
+			right: 34px;
+			@include icomoon;
+			content: "\e90b";	
+			width: 16px;
+			height: 10px;
+			float: none;
+			font-size: 10px;
+			transform: translateY(-50%);
+			transition: transform .3s, color .3s ease;
+			background-image: none;
+		}
+	}
+	.uk-accordion-content {
+		margin-top: 15px;
+		padding-bottom: 20px;
+	}
+	&>li {
+		margin: 0 0 9px;
+		padding: 0 36px;
+		background-color: #ffffff;
+		transition: box-shadow .3s ease;
+		&:nth-child(n+2) {
+			margin-top: 0;
+		}
+		&.uk-open {
+			.uk-accordion-title {
+				&:before {
+					background-image: none;
+					transform: translateY(-50%) rotateX(180deg);
+					color: $orange;
+				}
+			}
+		}
+		&:hover,
+		&:focus {
+			box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+			.uk-accordion-title {
+				color: #4848bc;
+			}
+		}
+	}
+
+}
+
+/*______ End Accordion ______*/
 
 
 /*______ Card ______*/
@@ -689,27 +783,6 @@ h2,.title-h2 {
 		color: $gray-tx;
 		font-size: 14px;
 		line-height: 20px;
-	}
-	&__read-more {
-		position: relative;
-		padding-right: 15px;
-		display: inline-block;
-		font-size: 14px;
-		line-height: 20px;
-		font-weight: 300;
-		&:after {
-			content: '';
-			position: absolute;
-			top: 7px;
-			right: 0;
-			display: block;
-			border-left: 6px solid #5d5d60;
-			border-top: 4px solid transparent;
-			border-bottom: 4px solid transparent;
-		}
-		&:hover {
-			color: $black;
-		}
 	}
 }
 
