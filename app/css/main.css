@@ -1510,48 +1510,50 @@ html.uk-touch body *.uk-invisible {
 
 /*______ CONTENT ______*/
 
-section.content {
+section.page-content {
   position: relative;
   padding: 36px 0 0;
   background: #ededed;
 }
 
-section.content > .uk-container {
+section.page-content > .uk-container {
   position: relative;
   z-index: 2;
 }
 
-section.content p {
+section.page-content p {
+  margin-bottom: 30px;
   font-weight: 300;
 }
 
-section.content table {
+section.page-content table {
   width: 100%;
   border-collapse: collapse;
   font-size: 16px;
 }
 
-section.content table tr:nth-child(odd) {
+section.page-content table tr:nth-child(odd) {
   background-color: #f8f8f8;
 }
 
-section.content table td {
+section.page-content table td {
   padding: 12px 45px;
 }
 
-section.content ul:not([class]) {
+section.page-content ul:not([class]) {
   margin: 0;
   padding: 0;
   list-style: none;
   margin-bottom: 25px;
 }
 
-section.content ul:not([class]) li {
+section.page-content ul:not([class]) li {
   position: relative;
+  margin-bottom: 10px;
   padding-left: 33px;
 }
 
-section.content ul:not([class]) li:before {
+section.page-content ul:not([class]) li:before {
   content: '';
   position: absolute;
   top: 10px;
@@ -1564,7 +1566,7 @@ section.content ul:not([class]) li:before {
   border-radius: 50%;
 }
 
-section.content ol:not([class]) {
+section.page-content ol:not([class]) {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1572,13 +1574,13 @@ section.content ol:not([class]) {
   counter-reset: section;
 }
 
-section.content ol:not([class]) li {
+section.page-content ol:not([class]) li {
   position: relative;
   margin-bottom: 10px;
   padding-left: 35px;
 }
 
-section.content ol:not([class]) li:before {
+section.page-content ol:not([class]) li:before {
   content: counter(section);
   counter-increment: section;
   position: absolute;
@@ -1594,6 +1596,23 @@ section.content ol:not([class]) li:before {
   border-radius: 50%;
   color: #ffffff;
   background-color: #fa7f4c;
+}
+
+section.page-content img {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+section.page-content img[data-lazy],
+section.page-content img[data-src] {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.content {
+  padding-bottom: 40px;
 }
 
 .products-short-list .item {
@@ -1794,7 +1813,79 @@ section.content ol:not([class]) li:before {
   right: 0;
 }
 
+.brands-page-list {
+  margin: 0 -30px;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.brands-page-list .brand-item {
+  margin: 0 2.6% 30px 0;
+  width: 23%;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.brands-page-list .brand-item a {
+  padding: 25px 10px;
+  display: block;
+}
+
+.brands-page-list .brand-item a:hover {
+  color: #0f0f0f;
+  text-decoration: none;
+  -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+}
+
+.brands-page-list .brand-item__img {
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.brands-page-list .brand-item__img:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.brands-page-list .brand-item__img img {
+  display: inline;
+}
+
+.brands-page-list .brand-item__name {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
 /*______ End Brands list ______*/
+
+/*______ Seo Text ______*/
+
+.seo-text {
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+/*______ End Seo Text ______*/
+
+/*______ Lead Text ______*/
+
+.lead-text {
+  font-size: 21px;
+  line-height: 32px;
+}
+
+/*______ End Lead Text ______*/
 
 /*______ About company ______*/
 
@@ -1868,7 +1959,63 @@ section.content ol:not([class]) li:before {
   margin-bottom: 0;
 }
 
+.about-company-detail .section {
+  margin-bottom: 30px;
+  padding: 45px 40px;
+  background-color: #ffffff;
+}
+
+.about-company-detail .section img {
+  margin-bottom: 30px;
+}
+
 /*______ End About company ______*/
+
+/*______ Regions List ______*/
+
+/*______ ENd Regions List ______*/
+
+.regions-list {
+  margin-bottom: 70px;
+  background-color: #ffffff;
+}
+
+.regions-list__header {
+  padding: 20px 40px;
+  border-bottom: 1px solid #ededed;
+}
+
+.regions-list__header h2,
+.regions-list__header .title-h2 {
+  margin-bottom: 0;
+}
+
+.regions-list__body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 40px;
+  border-right: 1px solid #ededed;
+}
+
+.regions-list__body ul li {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.regions-list__body ul li a {
+  color: #0f0f0f;
+}
+
+.regions-list__body ul li a:hover {
+  color: #4848bc;
+  text-decoration: none;
+}
+
+.regions-list__body ul li:before {
+  display: none;
+}
 
 /*______ Attantion block ______*/
 
@@ -1878,6 +2025,11 @@ section.content ol:not([class]) li:before {
   padding-left: 75px;
   padding-bottom: 55px;
   max-width: 985px;
+}
+
+.attantion-block.attantion-block--left {
+  margin: 0;
+  max-width: none;
 }
 
 .attantion-block p {
@@ -1906,12 +2058,6 @@ section.content ol:not([class]) li:before {
   position: relative;
   padding-bottom: 10px;
   z-index: 100;
-}
-
-.catalog__seo-text {
-  margin-bottom: 40px;
-  font-weight: 300;
-  font-size: 18px;
 }
 
 .catalog-header {
@@ -2535,10 +2681,6 @@ section.content ol:not([class]) li:before {
 
 /*______ FAQ ______*/
 
-.faq-wrapper {
-  padding-bottom: 40px;
-}
-
 ul.uk-switcher.faq {
   padding: 0;
   background-color: transparent;
@@ -2547,10 +2689,6 @@ ul.uk-switcher.faq {
 /*______ End FAQ ______*/
 
 /*______ News ______*/
-
-.news-main {
-  padding-bottom: 40px;
-}
 
 .news-list .news {
   margin-bottom: 30px;
@@ -3215,9 +3353,51 @@ ul.uk-switcher.faq {
     -moz-animation: none;
     animation: none;
   }
+
+  .brands-page-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .brands-page-list .brand-item {
+    width: 263px;
+  }
+
+  .about-company-detail .section {
+    padding: 30px 15px;
+  }
+
+  .regions-list__body ul {
+    border-bottom: 1px solid #ededed;
+  }
+
+  .attantion-block.attantion-block--left {
+    padding-left: 75px;
+  }
+
+  .attantion-block.attantion-block--left:before {
+    left: 0;
+  }
+}
+
+@media (min-width: 480px) {
+  .brands-page-list .brand-item {
+    width: 45%;
+  }
 }
 
 @media (min-width: 768px) {
+  .brands-page-list .brand-item {
+    width: 37%;
+  }
+
+  .about-company-detail .section {
+    padding: 45px 40px;
+  }
+
   .catalog-body .card {
     margin-right: 10%;
     width: 45%;
@@ -3243,7 +3423,7 @@ ul.uk-switcher.faq {
     padding: 0 15px;
   }
 
-  section.content.content-img:after {
+  section.page-content.page-content-img:after {
     content: '';
     position: absolute;
     top: 5px;
@@ -3256,16 +3436,48 @@ ul.uk-switcher.faq {
     z-index: 1;
   }
 
-  section.content.content-img.door:after {
+  section.page-content.page-content-img.door:after {
     background-image: url("../img/catalog-door.png");
   }
 
-  section.content.content-img.faq-door:after {
+  section.page-content.page-content-img.faq-door:after {
     background-image: url("../img/faq-bg-img.png");
+  }
+
+  section.page-content.page-content-img.manufac:after {
+    background-image: url("../img/manufactures-bg.png");
   }
 
   .about-manufactures p {
     max-width: 79%;
+  }
+
+  .brands-page-list {
+    -webkit-box-pack: unset;
+    -webkit-justify-content: unset;
+    -moz-box-pack: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+  }
+
+  .brands-page-list .brand-item {
+    width: 23%;
+  }
+
+  .brands-page-list .brand-item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .regions-list__body ul {
+    border-bottom: none;
+  }
+
+  .attantion-block.attantion-block--left {
+    padding-left: 0;
+  }
+
+  .attantion-block.attantion-block--left:before {
+    left: -80px;
   }
 
   .catalog-header:after {

@@ -1,0 +1,40 @@
+{% extends "layouts/content.html" %}
+{% set title="Отзывы" %}
+{% set bread = ["Главная", "Отзывы"] %}
+{% set filter = false %}
+{% set img = "faq-door" %}
+{% set panel = false %}
+{% block content %}
+
+	<!-- begin content -->
+	<div class="content">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.html" %}
+		</div>
+		<div class="title-h1">Отзывы</div>
+		
+		<div class="seo-text">
+			Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.
+		</div>
+		<a href="#" class="btn" uk-toggle="#revies-modal">Оставить отзыв</a>
+
+		<!-- begin reviews-list -->
+		<div class="reviews-list">
+			<div class="review">
+				<div class="review__top">
+					<div class="review__name">Николай,</div>
+					<div class="review__date">26 сентября 2019</div>
+					<div class="rating"></div>
+				</div>
+				<div class="review__text">
+					Своим клиентам мы предлагаем широчайший выбор моделей входных и межкомнатных дверей различных как по ценовой категории, так и дизайну.
+				</div>
+				<a href="" class="link-read-more">Подробнее</a>
+			</div>
+		</div>
+		<!-- end reviews-list -->
+
+	</div>
+	<!-- end content -->
+
+{% endblock %}

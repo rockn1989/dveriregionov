@@ -1,10 +1,10 @@
 /*______ CONTENT ______*/
 
-section.content {
+section.page-content {
 	position: relative;
 	padding: 36px 0 0;
 	background: $gray-bg;
-	&.content-img {
+	&.page-content-img {
 		&:after {
 			@media (min-width: $desk-w) {
 				content: '';
@@ -33,12 +33,20 @@ section.content {
 				};
 			}
 		}
+		&.manufac {
+			&:after {
+				@media (min-width: $desk-w) {
+					background-image: url('../img/manufactures-bg.png');
+				};
+			}
+		}
 	}
 	&>.uk-container {
 		position: relative;
 		z-index: 2;
 	}
 	p {
+		margin-bottom: 30px;
 		font-weight: 300;
 	}
 	table {
@@ -62,6 +70,7 @@ section.content {
 		margin-bottom: 25px;
 		li {
 			position: relative;
+			margin-bottom: 10px;
 			padding-left: 33px;
 			&:before {
 				content: '';
@@ -102,6 +111,17 @@ section.content {
 			}
 		}
 	}
+	img {
+		transition: all .3s ease;
+		&[data-lazy],
+		&[data-src] {
+			filter: blur(3px);
+		}
+	}
+}
+
+.content {
+	padding-bottom: 40px;
 }
 
 .products-short-list {
@@ -281,8 +301,88 @@ section.content {
 	}
 }
 
+.brands-page-list {
+	margin: 0 -30px;
+	padding: 0 30px;
+	display: flex;
+	flex-wrap: wrap;
+	@media (min-width: $mob-xs) {
+		justify-content: center;
+	};
+	@media (min-width: $desk-w) {
+		justify-content: unset;
+	};
+	.brand-item {
+		margin: 0 2.6% 30px 0;
+		width: 23%;
+		text-align: center;
+		background-color: #ffffff;
+		@media (min-width: $mob-xs) {
+			width: 263px;
+		};
+		@media (min-width: $mob-s) {
+			width: 45%;
+		};
+		@media (min-width: $tablet-w) {
+			width: 37%;
+		};
+		@media (min-width: $desk-w) {
+			width: 23%;
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		};
+		a {
+			padding: 25px 10px;
+			display: block;
+			&:hover {
+				color: $black;
+				text-decoration: none;
+				box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+			}
+		}
+		&__img {
+			margin-bottom: 10px;
+			height: 100px;
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			img {
+				display: inline;
+			}
+		}
+		&__name {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+		}
+	}
+}
+
 /*______ End Brands list ______*/
 
+
+/*______ Seo Text ______*/
+
+.seo-text {
+	margin-bottom: 40px;
+	font-weight: 300;
+}
+
+/*______ End Seo Text ______*/
+
+
+/*______ Lead Text ______*/
+
+.lead-text {
+	font-size: 21px;
+	line-height: 32px;
+}
+
+/*______ End Lead Text ______*/
 
 
 /*______ About company ______*/
@@ -348,8 +448,71 @@ section.content {
 	}
 }
 
+.about-company-detail {
+	.section {
+		margin-bottom: 30px;
+		padding: 45px 40px;
+		background-color: #ffffff;
+		@media (min-width: $mob-xs) {
+			padding: 30px 15px;
+		};
+		@media (min-width: $tablet-w) {
+			padding: 45px 40px;
+		};
+		img {
+			margin-bottom: 30px;
+		}
+	}
+}
+
 /*______ End About company ______*/
 
+
+/*______ Regions List ______*/
+
+
+
+/*______ ENd Regions List ______*/
+
+.regions-list {
+	margin-bottom: 70px;
+	background-color: #ffffff;
+	&__header {
+		padding: 20px 40px;
+		border-bottom: 1px solid #ededed;
+		h2,.title-h2 {
+			margin-bottom: 0;
+		}
+	}
+	&__body {
+		ul {
+			@include list-reset;
+			margin-bottom: 0;
+			padding: 40px;
+			border-right: 1px solid #ededed;
+			@media (min-width: $mob-xs) {
+				border-bottom: 1px solid #ededed;
+			};
+			@media (min-width: $desk-w) {
+				border-bottom: none;
+			};
+			li {
+				margin-bottom: 20px;
+				padding-left: 0;
+				a {
+					color: $black;
+					&:hover {
+						color: #4848bc;
+						text-decoration: none;
+					}
+				}
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
 
 /*______ Attantion block ______*/
 
@@ -359,6 +522,22 @@ section.content {
 	padding-left: 75px;
 	padding-bottom: 55px;
 	max-width: 985px;
+	&.attantion-block--left {
+		margin: 0;
+		max-width: none;
+		@media (min-width: $mob-xs) {
+			padding-left: 75px;
+			&:before {
+				left: 0;
+			}
+		};
+		@media (min-width: $desk-w) {
+			padding-left: 0;
+			&:before {
+				left: -80px;
+			}
+		};
+	}
 	p {
 		color: #727271;
 		font-size: 14px;

@@ -1,0 +1,71 @@
+{% extends "layouts/content.html" %}
+{% set title="Бренды" %}
+{% set bread = ["Главная", "Бренды"] %}
+{% set filter = false %}
+{% set img = "manufac" %}
+{% set panel = false %}
+{% block content %}
+
+	<!-- begin content -->
+	<div class="content">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.html" %}
+		</div>
+		<div class="title-h1">Бренды</div>
+		<div class="seo-text">
+			Если вам нужны недорогие двери в Москве, наша компания готов предложить вам лучшие модели в широком ассортименте дизайнерского исполнения. Собственные производственные ресурсы, современное оборудование и богатый профессиональный опыт наших специалистов позволяют нам производить межкомнатные двери всех видов
+		</div>
+
+		<!-- begin brands-list -->
+		<div class="brands-page-list" uk-scrollspy="target: .brand-item;cls: uk-invisible slide-up; delay: 0">
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-1.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Двери ламинированные</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-2.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Valberg</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-3.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Двери Экошпон</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-4.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Арки</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-5.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Adden Bau</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-6.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Archie</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-7.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Regidoors</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-8.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Белорусские двери</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-9.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Эксклюзивные двери</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-10.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Двери Портэ Виста</div>
+				</a></div>
+			<div class="brand-item uk-invisible"><a href="#">
+					<div class="brand-item__img"><img data-src="img/brand-img-page-11.png" alt="" class="lazy"></div>
+					<div class="brand-item__name">Фурнитура Morelli</div>
+				</a></div>
+		</div>
+		<!-- end brands-list -->
+
+	</div>
+	<!-- end content -->
+
+{% endblock %}
