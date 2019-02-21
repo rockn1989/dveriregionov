@@ -1,0 +1,185 @@
+/*______ Stores ______*/
+
+.stores {
+	margin: 30px 0;
+}
+
+.stores-map {
+	&__header {
+		margin-bottom: 2px;
+		padding: 17px 16px;
+		background-color: #ffffff;
+		.custom-select {
+			@media (min-width: $mob-xs) {
+				margin-bottom: 10px;
+				width: 100%;
+				max-width: 320px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			};
+			@media (min-width: $tablet-w) {
+				margin-right: 8px;
+				margin-bottom: 0;
+				&:last-child {
+					margin-right: 0;
+				}
+			};
+			@media (min-width: $desk-w) {
+				margin-right: 15px;
+			};
+		}
+		.custom-select .select2-container--default.gray {
+			margin-bottom: 0;
+			@media (min-width: $mob-xs) {
+				margin-right: 0;
+				width: 100% !important;
+				min-width: auto !important;
+			};
+
+		}
+	}
+}
+
+.stores-list {
+	@include list-reset;
+	.store {
+		margin-bottom: 30px;
+		display: block;
+		background-color: #ffffff;
+		transition: box-shadow .3s ease;
+		&:before {
+			display: none;
+		}
+		&:hover {
+			box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+		}
+		&__header {
+			padding: 22px 25px;
+			@include clearfix;
+			border-bottom: 1px solid #ededed;
+		}
+		&__name {
+			display: inline-block;
+			color: $black;
+			font-weight: 300;
+			&:hover {
+				color: #4848bc;
+				text-decoration: none;
+			}
+			@media (min-width: $mob-xs) {
+				font-size: 24px;
+				line-height: 30px;
+				width: 100%;
+				float: left;
+			};
+			@media (min-width: $tablet-w) {
+				font-size: 30px;
+				line-height: 48px;
+				max-width: none;
+				width: auto;
+				float: none;
+			};
+		}
+		&__show-map {
+			display: inline-block;
+			color: #727271;
+			font-size: 14px;
+			font-weight: 400;
+			&:hover {
+				color: $black;
+				text-decoration: none;
+			}
+			@media (min-width: $mob-xs) {
+				float: left;
+			};
+			@media (min-width: $mob-s) {
+				margin-top: 5px;
+			};
+			@media (min-width: $tablet-w) {
+				margin-top: 13px;
+				float: right
+			};
+		}
+		&__body {
+			font-size: 0;
+			display: flex;
+			flex-wrap: wrap;
+			&>div {
+				
+				display: inline-block;
+				vertical-align: top;
+				font-size: 18px;
+				color: #0f0f0f;
+				
+				&:last-child {
+					border: none;
+				}
+				@media (min-width: $mob-xs) {
+					padding: 20px 5.5%;
+					border-right: none;
+					border-bottom: 1px solid #ededed;
+				};
+				@media (min-width: 0) and (max-width: 959px) {
+					width: 100%;
+				}
+				@media (min-width: $desk-w) {
+					padding: 35px 5.5%;
+					border-right: 1px solid #ededed;
+					border-bottom: none;
+				};
+			}
+		}
+		&__title {
+			position: relative;
+			margin-bottom: 10px;
+			color: #848484;
+			font-family: $mainFont !important;
+			&:before {
+				font-family: 'icomoon' !important;
+				position: absolute;
+			}
+			@media (min-width: $mob-xs) {
+				padding-left: 40px;
+				&:before {
+					left: 0;
+				}
+			};
+			@media (min-width: $desk-w) {
+				padding-left: 0;
+				&:before {
+					left: -40px;
+				}
+			};
+		}
+		&__address {
+			width: 41%;
+		}
+		&__contacts {
+			width: 26%;
+			a {
+				display: block;
+				color: $black;
+			}
+		}
+		&__time-work {
+			width: 33%;
+		}
+	}
+}
+
+.stores-map {
+	margin-bottom: 30px;
+}
+
+#stores-map {
+	width: 100%;
+	@media (min-width: $mob-xs) {
+		min-height: 400px;
+	};
+	@media (min-width: $desk-w) {
+		min-height: 630px;
+	};
+}
+
+/*______ End stores ______*/

@@ -161,9 +161,79 @@ h3, .title-h3 {
 		border-bottom: 4px solid transparent;
 	}
 	&:hover {
-		color: $black;
+		color: #4848bc;
+		text-decoration: none;
 	}
 }
+
+
+/*______ Rating ______*/
+
+.rating {
+	position: relative;
+	margin-top: 3px;
+	min-width: 70px;
+	@media (min-width: $mob-xs) {
+		margin-left: 0;
+	};
+	@media (min-width: $mob-s) {
+		margin-left: 15px;
+	};
+	input[type="radio"] {
+		position: absolute;
+		margin: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:checked ~ label {
+			&:before {
+				color: $orange;
+			}
+		}
+	}
+	label {
+		cursor: pointer;
+		float: right;
+		&:before {
+			color: #a7a7ad;
+			font-size: 14px;
+			transition: color .3s ease;
+		}
+		&:hover {
+			&:before {
+				color: lighten($orange, 10%);
+			}
+		}
+	}
+}
+
+/*______ Rating ______*/
+
+
+.orange-label {
+	margin-left: auto;
+	padding: 25px 41px;
+	max-width: 320px;
+	color: #ffffff;
+	font-weight: 300;
+	background-color: $orange;
+	border-radius: 3px;
+	@media (min-width: $mob-xs) {
+		margin-top: 20px;
+		margin-left: 0;
+		font-size: 28px;
+		line-height: 34px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-top: 0;
+		margin-left: auto;
+	};
+	@media (min-width: $desk-w) {
+		font-size: 36px;
+		line-height: 48px;
+	};
+}
+
 
 /*______ Breadcrumbs ______*/
 
@@ -549,6 +619,8 @@ ul[uk-accordion] {
 /*______ Custom Select ______*/
 
 .custom-select {
+	display: inline-block;
+	vertical-align: top;
 	&__label {
 		margin-right: 10px;
 		display: inline-block;

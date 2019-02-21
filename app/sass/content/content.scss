@@ -40,6 +40,15 @@ section.page-content {
 				};
 			}
 		}
+		&.map {
+			&:after {
+				right: 0;
+				@media (min-width: $desk-w) {
+					width: 100%;
+					background-image: url('../img/map-opacity.png');
+				};
+			}
+		}
 	}
 	&>.uk-container {
 		position: relative;
@@ -557,3 +566,46 @@ section.page-content {
 }
 
 /*______ End Attantion block ______*/
+
+
+
+/*______ Revies Block ______*/
+
+.reviews-list {
+	margin-top: 30px;
+}
+
+.review {
+	margin-bottom: 10px;
+	padding: 30px;
+	background-color: #ffffff;
+	transition: box-shadow .3s ease;
+	&:hover {
+		box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+	}
+	&__top {
+		margin-bottom: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		color: #7f7f7e;
+		font-size: 16px;
+		font-weight: 300;
+	}
+	&__user {
+		&>div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		@media (min-width: $mob-xs) {
+			width: 100%;
+		};
+		@media (min-width: $mob-s) {
+			width: auto;
+		};
+	}
+	&__text {
+		margin-bottom: 20px;
+	}
+}
+
+/*______ End Revies Block ______*/

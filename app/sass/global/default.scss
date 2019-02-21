@@ -50,29 +50,7 @@ html.uk-touch {
   margin: 0 auto;
   max-width: $containerWidth;
   box-sizing: border-box;
-  @media (min-width: $desk-w) {
+  @media (min-width: $mob-xs) {
   	padding: 0 15px;
   };
 }
-
-
-@media (min-width: $mob-xs) {
-	
-};
-
-
-@media (min-width: $mob-xs) {
-	
-};
-
-@media (min-width: $mob-s) {
-	
-};
-
-@media (min-width: $tablet-w) {
-	
-};
-
-@media (min-width: $desk-w) {
-	
-};

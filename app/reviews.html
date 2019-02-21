@@ -119,7 +119,63 @@
 
 		<!-- begin header-mobile -->
 		<div class="header-mobile uk-hidden@l">
-				<div class="uk-container">123</div>
+				<div class="uk-container">
+					<div class="uk-grid">
+						<div class="uk-width-2-3">
+							<a href="/" class="mobile-logo">
+								<img src="img/logo.svg" alt="">
+							</a>
+							<span class="mobile-tel">
+								<a href="tel:+74951628202">+7 (495) 162-82-02 <span>(для розничных клиентов)</span></a>
+							</span>
+						</div>
+						<div class="uk-width-1-3">
+							<ul class="mobile-menu">
+								<li><a href="#offcanvas-menu" class="icon-menu" uk-toggle></a></li>
+								<li><a href="" class="icon-cart"></a></li>
+							</ul>
+						</div>
+						<div class="uk-width-1-1">
+							<form action="" class="mobile-search-form">
+								<input type="text" placeholder="Поиск">
+								<button type="submit" class="form-btn icon-search"></button>
+							</form>
+						</div>
+						<div class="uk-width-1-1">
+							<a href="" class="mobile-link icon-phone_copy" uk-toggle="target: #callback">Заказать звонок</a>
+							<a href="" class="mobile-link icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
+						</div>
+					</div>
+
+					<!-- begin uk-offcanvas -->
+					<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+						<div class="uk-offcanvas-bar">
+							<div class="uk-panel">
+								<div class="top-panel">
+									<a href="" class="icon-account">Вход/регистрация</a>
+									<div class="compare">
+										<a href="" class="icon-compare">
+											<span class="compare__text">Сравнение</span>
+											<span class="compare__count">(<span class="compare__count-value">2</span>)</span>
+										</a>
+									</div>
+									<a href="mailto:info@dvervdom.ru" class="icon-envelope">info@dvervdom.ru</a>
+								</div>
+								<ul class="offcanvas-nav">
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Бренды</a></li>
+									<li><a href="#">Акции и скидки</a></li>
+									<li><a href="#">Дисконт</a></li>
+									<li><a href="#">Где купить</a></li>
+									<li><a href="#">Сервис</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end uk-offcanvas -->
+
+				</div>
 		</div>
 		<!-- end header-mobile -->
 
@@ -239,17 +295,156 @@
 		<div class="reviews-list">
 			<div class="review">
 				<div class="review__top">
-					<div class="review__name">Николай,</div>
-					<div class="review__date">26 сентября 2019</div>
-					<div class="rating"></div>
+					<div class="review__user">
+						<div class="review__name">Николай,</div>
+						<div class="review__date">26 сентября 2019</div>
+					</div>
+					<div class="rating uk-clearfix">
+						<input id="" type="radio" name="" value="" checked>
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+					</div>
 				</div>
 				<div class="review__text">
 					Своим клиентам мы предлагаем широчайший выбор моделей входных и межкомнатных дверей различных как по ценовой категории, так и дизайну.
 				</div>
 				<a href="" class="link-read-more">Подробнее</a>
 			</div>
+
+			<div class="review">
+				<div class="review__top">
+					<div class="review__user">
+						<div class="review__name">Сергей Петрович,</div>
+						<div class="review__date">21 сентября 2019</div>
+					</div>
+					<div class="rating uk-clearfix">
+						<input id="" type="radio" name="" value="" checked>
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+					</div>
+				</div>
+				<div class="review__text">
+					За годы работы компания «Двери Регионов» по праву заслужила репутацию надежного партнера. Гарантированное качество предлагаемой нами продукции остается неизменно высоким. Мы стараемся поддерживать, приобретенный у наших клиентов авторитет и остаемся профессионалами в этом направлении, постоянно расширяя ассортимент и обеспечивая высокое качество каждой модели двери, вне зависимости от ее стоимости.
+				</div>
+				<a href="" class="link-read-more">Подробнее</a>
+			</div>
+
+			<div class="review">
+				<div class="review__top">
+					<div class="review__user">
+						<div class="review__name">Валентина,</div>
+						<div class="review__date">12 сентября 2019</div>
+					</div>
+					<div class="rating uk-clearfix">
+						<input id="" type="radio" name="" value="" checked>
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+					</div>
+				</div>
+				<div class="review__text">
+					Профессионалы компании ДВЕРИ РЕГИОНОВ очень внимательны к каждому клиенту. Вы можете быть уверены в том, что Ваши пожелания не просто примут к сведению, а возьмут за основу при выполнении заказа. Мы всегда заинтересованы в том, чтобы наши покупатели могли приобретать товары, оптимальные по соотношению цены и качества.
+				</div>
+				<a href="" class="link-read-more">Подробнее</a>
+			</div>
+
+			<div class="review">
+				<div class="review__top">
+					<div class="review__user">
+						<div class="review__name">Оксана,</div>
+						<div class="review__date">12 сентября 2019</div>
+					</div>
+					<div class="rating uk-clearfix">
+						<input id="" type="radio" name="" value="" checked>
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+					</div>
+				</div>
+				<div class="review__text">
+					Обращаем Ваше внимание на то, что данный веб сайт носит исключительно информационно-ознакомительный характер, и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+				</div>
+				<a href="" class="link-read-more">Подробнее</a>
+			</div>
+
+			<div class="review">
+				<div class="review__top">
+					<div class="review__user">
+						<div class="review__name">Евгений Анатольевчи,</div>
+						<div class="review__date">09 сентября 2019</div>
+					</div>
+					<div class="rating uk-clearfix">
+						<input id="" type="radio" name="" value="" checked>
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+						<input id="" type="radio" name="" value="">
+						<label for="" class="icon-star"></label>
+					</div>
+				</div>
+				<div class="review__text">
+					Любое несоответствие информации о товаре на сайте с фактической - это досадная ошибка, мы заранее за это извиняемся и просим Вас связаться с нами по почте со ссылкой и пояснением в случае обнаружения подобной ошибки.
+				</div>
+				<a href="" class="link-read-more">Подробнее</a>
+			</div>			
+
 		</div>
 		<!-- end reviews-list -->
+
+		<div class="catalog-bar">
+			<div class="uk-grid">
+				<div class="uk-width-1-">
+					<ul class="uk-pagination uk-flex-center">
+						<li class="uk-pagination-prev">
+							<a href="">
+								Предыдущая
+							</a>
+						 </li>
+						<li class="uk-active"><span>1</span></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">...</a></li>
+						<li><a href="">12</a></li>
+						<li class="uk-pagination-next">
+							<a href="">
+								Следующая
+							</a>
+						 </li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
 	</div>
 	<!-- end content -->
@@ -359,6 +554,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
@@ -370,6 +566,7 @@
 <script src="js/sliders.js" defer></script>
 <script src="js/catalog.js" defer></script>
 <script src="js/detail.js" defer></script>
+<script src="js/map.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </body>

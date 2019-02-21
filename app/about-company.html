@@ -119,7 +119,63 @@
 
 		<!-- begin header-mobile -->
 		<div class="header-mobile uk-hidden@l">
-				<div class="uk-container">123</div>
+				<div class="uk-container">
+					<div class="uk-grid">
+						<div class="uk-width-2-3">
+							<a href="/" class="mobile-logo">
+								<img src="img/logo.svg" alt="">
+							</a>
+							<span class="mobile-tel">
+								<a href="tel:+74951628202">+7 (495) 162-82-02 <span>(для розничных клиентов)</span></a>
+							</span>
+						</div>
+						<div class="uk-width-1-3">
+							<ul class="mobile-menu">
+								<li><a href="#offcanvas-menu" class="icon-menu" uk-toggle></a></li>
+								<li><a href="" class="icon-cart"></a></li>
+							</ul>
+						</div>
+						<div class="uk-width-1-1">
+							<form action="" class="mobile-search-form">
+								<input type="text" placeholder="Поиск">
+								<button type="submit" class="form-btn icon-search"></button>
+							</form>
+						</div>
+						<div class="uk-width-1-1">
+							<a href="" class="mobile-link icon-phone_copy" uk-toggle="target: #callback">Заказать звонок</a>
+							<a href="" class="mobile-link icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
+						</div>
+					</div>
+
+					<!-- begin uk-offcanvas -->
+					<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+						<div class="uk-offcanvas-bar">
+							<div class="uk-panel">
+								<div class="top-panel">
+									<a href="" class="icon-account">Вход/регистрация</a>
+									<div class="compare">
+										<a href="" class="icon-compare">
+											<span class="compare__text">Сравнение</span>
+											<span class="compare__count">(<span class="compare__count-value">2</span>)</span>
+										</a>
+									</div>
+									<a href="mailto:info@dvervdom.ru" class="icon-envelope">info@dvervdom.ru</a>
+								</div>
+								<ul class="offcanvas-nav">
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Бренды</a></li>
+									<li><a href="#">Акции и скидки</a></li>
+									<li><a href="#">Дисконт</a></li>
+									<li><a href="#">Где купить</a></li>
+									<li><a href="#">Сервис</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- end uk-offcanvas -->
+
+				</div>
 		</div>
 		<!-- end header-mobile -->
 
@@ -448,6 +504,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
@@ -459,6 +516,7 @@
 <script src="js/sliders.js" defer></script>
 <script src="js/catalog.js" defer></script>
 <script src="js/detail.js" defer></script>
+<script src="js/map.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </body>

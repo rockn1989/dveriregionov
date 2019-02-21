@@ -1,9 +1,11 @@
 /*______ FOOTER ______*/
 
 .footer {
+	position: relative;
 	padding: 68px 0 42px;
 	background-color: #5d5d60;
 	font-size: 13px;
+	z-index: 100;
 	&__contacts {
 		a {
 			margin-bottom: 12px;

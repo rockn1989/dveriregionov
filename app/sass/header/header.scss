@@ -200,3 +200,139 @@
 		}
 	}
 }
+
+
+/*______ Mobile Header ______*/
+
+.header-mobile {
+	padding: 15px 0;
+}
+
+.mobile-logo {
+	display: inline-block;
+	max-width: 80px;
+}
+
+.mobile-tel {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 16px;
+	color: $black;
+	font-weight: 500;
+	span {
+		display: block;
+		font-size: 12px;
+	}
+	@media (min-width: $mob-xs) {
+		margin-top: 5px;
+	};
+}
+
+.mobile-menu {
+	@include list-reset;
+	margin-top: 7px;
+	text-align: right;
+	li {
+		margin-left: 8px;
+		padding: 3px;
+		display: inline-block;
+		vertical-align: top;
+		a {
+			&:before {
+				color: $orange;
+				font-size: 20px;
+			}
+			&.icon-menu {
+				font-weight: bold;
+			}
+			&:hover,&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.mobile-link {
+	position: relative;
+	padding-left: 25px;
+	display: inline-block;
+	vertical-align: top;
+	font-family: $mainFont !important;
+	font-size: 14px;
+	@media (min-width: $mob-s) {
+		float: left;
+		margin-right: 10px;
+	};
+	&:hover {
+		text-decoration: none;
+	}
+	&:before {
+		font-family: 'icomoon' !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+	}
+}
+
+
+.uk-offcanvas-bar {
+	padding: 20px 0;
+	background-color: $gray-bg;
+	a {
+		color: $black;
+	}
+	.top-panel {
+		margin-bottom: 20px;
+		padding: 0 20px 15px;
+		border-bottom: 1px solid #d6d6d6;
+		a {
+			position: relative;
+			margin-bottom: 12px;
+			padding-left: 25px;
+			display: block;
+			font-size: 16px;
+			font-family: $mainFont !important;
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-family: 'icomoon' !important;
+				color: $orange;
+				font-size: 14px;
+			}
+			&.icon-envelope {
+				&:before {
+					top: 3px;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	.compare {
+		width: 100%;
+		a {
+			display: block;
+			width: 100%;
+		}
+		&__text {
+			font-size: 16px;
+		}
+	}
+	.compare__text {
+		margin-left: 0;
+	}
+	.offcanvas-nav {
+		@include list-reset;
+		padding: 0 20px;
+		li {
+			margin-bottom: 2px;
+			a {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+}
+
+/*______ End Mobile Header ______*/
