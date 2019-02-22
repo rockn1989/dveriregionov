@@ -162,7 +162,15 @@
 									<a href="mailto:info@dvervdom.ru" class="icon-envelope">info@dvervdom.ru</a>
 								</div>
 								<ul class="offcanvas-nav">
-									<li><a href="#">О компании</a></li>
+									<li>
+										<a href="#">О компании <i class="small-arrow icon-arrow-up js__menu-sublist-toggle"></i></a>
+										<ul class="menu-sublist">
+											<li><a href="#">Lorem-1</a></li>
+											<li><a href="#">Lorem-2</a></li>
+											<li><a href="#">Lorem-3</a></li>
+											<li><a href="#">Lorem-4</a></li>
+										</ul>
+									</li>
 									<li><a href="#">Бренды</a></li>
 									<li><a href="#">Акции и скидки</a></li>
 									<li><a href="#">Дисконт</a></li>
@@ -351,16 +359,17 @@
 		<!-- begin footer-top-bar -->
 		<div class="footer-top-bar">
 			<div class="uk-grid">
-				<div class="uk-width-1-6">
-					<a href=""><img src="img/logo-white.svg" alt="Двери регионов"></a>
+				<div class="uk-width-1-6@m">
+					<a href="" class="uk-visible@m"><img src="img/logo-white.svg" alt="Двери регионов"></a>
 				</div>
-				<div class="uk-width-5-6">
+				<div class="uk-width-5-6@m">
 			
 					<div class="uk-grid">
-						<div class="uk-width-3-5">
+						<div class="uk-width-3-5@l">
 							<div class="uk-grid">
-								<div class="uk-width-1-3">
-									<ul>
+								<div class="uk-width-1-3@m">
+									<div class="footer__title uk-hidden@m" data-role="toggle-list">О компании</div>
+									<ul class="footer__list">
 										<li><a href="#">О компании</a></li>
 										<li><a href="#">Бренды</a></li>
 										<li><a href="#">Акции и скидки</a></li>
@@ -369,33 +378,39 @@
 										<li><a href="#">Контакты</a></li>
 									</ul>
 								</div>
-								<div class="uk-width-1-3">
-									<ul>
-										<li><a href="#">Металлические двери</a></li>
-										<li><a href="#">Межкомнатные двери</a></li>
-										<li><a href="#">Фурнитура «Арчи»</a></li>
-										<li><a href="#">Фурнитура Adden Bau</a></li>
-										<li><a href="#">Фурнитура VANTAGE</a></li>
-										<li><a href="#">Фурнитура Morelli</a></li>
-									</ul>
-								</div>
-								<div class="uk-width-1-3">
-									<ul>
-										<li><a href="#">Видеоглазки</a></li>
-										<li><a href="#">Столы</a></li>
-									</ul>
+								<div class="uk-width-2-3@m">
+									<div class="footer__title uk-hidden@m" data-role="toggle-list">Интернет-магазин</div>
+									<div class="uk-grid">
+										<div class="uk-width-1-2@m">
+											<ul class="footer__list">
+												<li><a href="#">Металлические двери</a></li>
+												<li><a href="#">Межкомнатные двери</a></li>
+												<li><a href="#">Фурнитура «Арчи»</a></li>
+												<li><a href="#">Фурнитура Adden Bau</a></li>
+												<li><a href="#">Фурнитура VANTAGE</a></li>
+												<li><a href="#">Фурнитура Morelli</a></li>
+											</ul>
+										</div>
+										<div class="uk-width-1-2@m">
+											<ul class="footer__list">
+												<li><a href="#">Видеоглазки</a></li>
+												<li><a href="#">Столы</a></li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="uk-width-2-5">
+						<div class="uk-width-2-5@l">
+							<div class="footer__title uk-hidden@m">Контакты</div>
 							<div class="footer__contacts">
 								<div class="uk-grid">
-									<div class="uk-width-1-2">
+									<div class="uk-width-1-3@m uk-width-1-2@l">
 											<a href="tel:+74951628202" class="tel">+7 (495) 162-82-02</a>
 											<a href="mailto:info@dvervdom.ru">info@dvervdom.ru</a>
 											<a href="">Адреса магазинов</a>
 									</div>
-									<div class="uk-width-1-2">
+									<div class="uk-width-1-3@m uk-width-1-2@l">
 										<div class="call-spec">
 											<a href="" class="icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
 										</div>
@@ -414,15 +429,16 @@
 		<!-- begin footer-bottom-bar -->
 		<div class="footer-bottom-bar">
 			<div class="uk-grid">
-				<div class="uk-width-1-3">© Фабрика Двери регионов, 2001—2019</div>
-				<div class="uk-width-1-3">
-					<a href="https://aevrika.ru" class="aevrika-link icon-ae_logo2">Разработка и продвижение — «ЭВРИКА»</a>
+				<div class="uk-width-1-3@m">© Фабрика Двери регионов, 2001—2019</div>
+				<div class="uk-width-1-3@m">
+					<a href="https://aevrika.ru" class="aevrika-link icon-ae_logo2 uk-visible@m">Разработка и продвижение — «ЭВРИКА»</a>
 				</div>
-				<div class="uk-width-1-3">
+				<div class="uk-width-1-3@m">
 					<a href="">Политика конфиденциальности</a>
 				</div>
 				<div class="uk-width-1-1">
 					<div class="footer-attantion">Не является публичной офертой.</div>
+					<a href="https://aevrika.ru" class="aevrika-link icon-ae_logo2 uk-hidden@m">Разработка и продвижение — «ЭВРИКА»</a>
 				</div>
 			</div>
 		</div>

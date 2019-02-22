@@ -155,11 +155,11 @@ $(function() {
 
 	/*______ Открытие мобильного подменю в футере ______*/
 
-	$('[data-role="toggle-list"] i').on('click', function (e) {
+	$('[data-role="toggle-list"]').on('click', function (e) {
 		e.preventDefault();
 		var self = $(this),
-			blockParent = self.parent('[data-role="toggle-list"]'),
-			siblingsList = blockParent.parent().find('.footer__list');
+			blockParent = self.parent('div[class^="uk-width"]'),
+			siblingsList = blockParent.find('.footer__list');
 
 		self.toggleClass('open');
 		siblingsList.stop().slideToggle('350');

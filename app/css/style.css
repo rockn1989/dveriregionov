@@ -1630,6 +1630,7 @@ html.uk-touch body *.uk-invisible {
 
 .mobile-link {
   position: relative;
+  margin-right: 10px;
   padding-left: 25px;
   display: inline-block;
   vertical-align: top;
@@ -1658,7 +1659,6 @@ html.uk-touch body *.uk-invisible {
 }
 
 .uk-offcanvas-bar .top-panel {
-  margin-bottom: 20px;
   padding: 0 20px 15px;
   border-bottom: 1px solid #d6d6d6;
 }
@@ -1707,16 +1707,72 @@ html.uk-touch body *.uk-invisible {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding: 0 20px;
+  padding: 0;
 }
 
-.uk-offcanvas-bar .offcanvas-nav li {
+.uk-offcanvas-bar .offcanvas-nav > li {
   margin-bottom: 2px;
 }
 
-.uk-offcanvas-bar .offcanvas-nav li a {
+.uk-offcanvas-bar .offcanvas-nav > li > a {
+  position: relative;
+  padding: 18px 20px;
+  display: block;
   font-size: 16px;
   line-height: 22px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.uk-offcanvas-bar .offcanvas-nav > li > a:hover,
+.uk-offcanvas-bar .offcanvas-nav > li > a:focus {
+  color: #0f0f0f;
+  text-decoration: none;
+}
+
+.uk-offcanvas-bar .offcanvas-nav > li > a i.small-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.uk-offcanvas-bar .offcanvas-nav > li > a i.small-arrow:before {
+  font-size: 10px;
+}
+
+.uk-offcanvas-bar .offcanvas-nav > li > a i.small-arrow.open {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.uk-offcanvas-bar .menu-sublist {
+  display: none;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.uk-offcanvas-bar .menu-sublist li a {
+  padding: 12px 0 12px 0;
+  display: block;
+  opacity: .7;
+  font-size: 16px;
 }
 
 /*______ End Mobile Header ______*/
@@ -3164,10 +3220,51 @@ ul.uk-switcher.faq {
 
 .footer {
   position: relative;
-  padding: 68px 0 42px;
   background-color: #5d5d60;
   font-size: 13px;
   z-index: 100;
+}
+
+.footer__title {
+  position: relative;
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.footer__title[data-role].open:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.footer__title[data-role]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e90b";
+  color: #ffffff;
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  font-size: 10px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .footer__contacts a {
@@ -3213,10 +3310,6 @@ ul.uk-switcher.faq {
   font-family: 'icomoon' !important;
 }
 
-.footer .call-spec {
-  margin-bottom: 24px;
-}
-
 .footer-top-bar {
   padding-bottom: 35px;
 }
@@ -3240,10 +3333,6 @@ ul.uk-switcher.faq {
   color: #fa7f4c;
   font-family: 'icomoon' !important;
   font-size: 16px;
-}
-
-.footer-attantion {
-  margin-top: 10px;
 }
 
 /*______ SLIDERS ______*/
@@ -3883,6 +3972,19 @@ ul.uk-switcher.faq {
   #stores-map {
     min-height: 400px;
   }
+
+  .footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer ul.footer__list {
+    padding-bottom: 20px;
+    display: none;
+  }
+
+  .footer .call-spec {
+    margin: 24px 0;
+  }
 }
 
 @media (min-width: 480px) {
@@ -3892,7 +3994,6 @@ ul.uk-switcher.faq {
 
   .mobile-link {
     float: left;
-    margin-right: 10px;
   }
 
   .brands-page-list .brand-item {
@@ -3961,6 +4062,26 @@ ul.uk-switcher.faq {
   .stores-list .store__show-map {
     margin-top: 13px;
     float: right;
+  }
+
+  .footer {
+    padding: 68px 0 42px;
+  }
+
+  .footer__contacts {
+    margin-top: 30px;
+  }
+
+  .footer ul.footer__list {
+    display: block !important;
+  }
+
+  .footer .call-spec {
+    margin: 0 0 24px;
+  }
+
+  .footer-attantion {
+    margin-top: 10px;
   }
 }
 
@@ -4100,6 +4221,10 @@ ul.uk-switcher.faq {
 
   #stores-map {
     min-height: 630px;
+  }
+
+  .footer__contacts {
+    margin-top: 0;
   }
 
   .style-door {

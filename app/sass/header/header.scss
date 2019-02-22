@@ -255,6 +255,7 @@
 
 .mobile-link {
 	position: relative;
+	margin-right: 10px;
 	padding-left: 25px;
 	display: inline-block;
 	vertical-align: top;
@@ -262,7 +263,6 @@
 	font-size: 14px;
 	@media (min-width: $mob-s) {
 		float: left;
-		margin-right: 10px;
 	};
 	&:hover {
 		text-decoration: none;
@@ -283,7 +283,6 @@
 		color: $black;
 	}
 	.top-panel {
-		margin-bottom: 20px;
 		padding: 0 20px 15px;
 		border-bottom: 1px solid #d6d6d6;
 		a {
@@ -324,15 +323,63 @@
 	}
 	.offcanvas-nav {
 		@include list-reset;
-		padding: 0 20px;
-		li {
+		padding: 0;
+		&>li {
 			margin-bottom: 2px;
-			a {
+
+			&>a {
+				position: relative;
+				padding: 18px 20px;
+				display: block;
 				font-size: 16px;
 				line-height: 22px;
+				border-bottom: 1px solid #d6d6d6;
+				&:hover,&:focus {
+					color: $black;
+					text-decoration: none;
+				}
+				i.small-arrow {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					width: 20px;
+					height: 20px;
+					display: block;
+					-webkit-transition: -webkit-transform .3s ease;
+					transition: -webkit-transform .3s ease;
+					-o-transition: transform .3s ease;
+					-moz-transition: transform .3s ease, -moz-transform .3s ease;
+					transition: transform .3s ease;
+					transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+					-webkit-transform-origin: center center;
+					-moz-transform-origin: center center;
+					-ms-transform-origin: center center;
+					transform-origin: center center;
+					transform: rotate(90deg);
+					&:before {
+						font-size: 10px;
+					}
+					&.open {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+	.menu-sublist {
+		display: none;
+		border-bottom: 1px solid #d6d6d6;
+		li {
+			a {
+				padding: 12px 0 12px 0;
+				display: block;
+    		opacity: .7;
+    		font-size: 16px;
 			}
 		}
 	}
 }
+
+
 
 /*______ End Mobile Header ______*/
