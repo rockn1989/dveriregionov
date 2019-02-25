@@ -95,8 +95,14 @@ h3, .title-h3 {
 }
 
 .gray-block {
-	padding: 110px 19.5% 90px;
+	
 	background-color: #d1d1d1;
+	@media (min-width: $mob-xs) {
+		padding: 50px 5% 30px;
+	};
+	@media (min-width: $desk-w) {
+		padding: 110px 19.5% 90px;
+	};
 }
 
 .uk-tooltip {
@@ -310,6 +316,9 @@ h3, .title-h3 {
 			letter-spacing: 2px;
 			text-transform: none;
 			transition: all .3s ease;
+			@media (min-width: $mob-xs) {
+				padding: 15px 0;
+			};
 			&:hover {
 				text-decoration: none;
 			}

@@ -56,7 +56,39 @@ $(function() {
 				slidesToShow: 5,
 				slidesToScroll: 4,
 				prevArrow: $(this).find('.slide-prev'),
-				nextArrow: $(this).find('.slide-next')
+				nextArrow: $(this).find('.slide-next'),
+				responsive: [
+					{
+						breakpoint: 1300,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 1025,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 940,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
 			});
 		};
 	});
@@ -70,7 +102,7 @@ $(function() {
 		lazyLoad: 'ondemand',
 		autoplay: true,
 		fade: false,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 3500,
 		speed: 400,
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -95,7 +127,7 @@ $(function() {
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					slidesToScroll: 1
 				}
 			}

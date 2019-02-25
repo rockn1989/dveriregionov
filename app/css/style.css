@@ -246,7 +246,6 @@ h3,
 }
 
 .gray-block {
-  padding: 110px 19.5% 90px;
   background-color: #d1d1d1;
 }
 
@@ -1898,11 +1897,6 @@ section.page-content img[data-src] {
   background-position: center;
 }
 
-.products-short-list .item.item--full-height {
-  margin-bottom: 0 !important;
-  height: 500px;
-}
-
 .products-short-list .item[data-src] {
   -webkit-background-size: 25px 25px;
   background-size: 25px 25px;
@@ -1972,7 +1966,6 @@ section.page-content img[data-src] {
 }
 
 .about-manufactures .text {
-  padding: 100px 0 130px;
   background: #ffffff url("../img/manufactures-bg.png") right 33px no-repeat;
 }
 
@@ -1990,7 +1983,6 @@ section.page-content img[data-src] {
   position: relative;
   margin-top: -32px;
   margin-bottom: 60px !important;
-  max-width: 78%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2001,6 +1993,9 @@ section.page-content img[data-src] {
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .advantages-list .item {
@@ -2049,7 +2044,6 @@ section.page-content img[data-src] {
 
 .manufactures-tabs {
   position: relative;
-  margin-bottom: 100px !important;
   z-index: 25;
 }
 
@@ -2065,14 +2059,12 @@ section.page-content img[data-src] {
 
 .white-section {
   margin-bottom: 50px;
-  padding: 100px 0;
   background-color: #ffffff;
 }
 
 /*______ Brands list ______*/
 
 .brands-list {
-  margin: 0 auto 120px;
   max-width: 908px;
 }
 
@@ -2162,17 +2154,8 @@ section.page-content img[data-src] {
 
 /*______ About company ______*/
 
-.about-company .gray-block {
-  margin-bottom: 130px;
-  background: url("../img/map-bg.svg") center center no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
 .about-company__title {
   margin-bottom: 40px;
-  font-size: 86px;
-  line-height: 100px;
   font-weight: 300;
 }
 
@@ -2197,11 +2180,6 @@ section.page-content img[data-src] {
 
 .about-company .text-section {
   margin-bottom: 80px;
-}
-
-.about-company .text-section .text,
-.about-company .text-section .img {
-  width: 50%;
 }
 
 .about-company .text-section .title-h1 {
@@ -3349,13 +3327,12 @@ ul.uk-switcher.faq {
 }
 
 .main-slider .slider {
-  height: 540px;
   overflow: hidden;
 }
 
 .main-slider .slide {
   position: relative;
-  padding: 80px 120px;
+  padding: 80px 2.1%;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -3385,8 +3362,6 @@ ul.uk-switcher.faq {
 
 .main-slider .slide__title {
   margin-bottom: 30px;
-  font-size: 86px;
-  line-height: 90px;
   font-weight: 300;
 }
 
@@ -3405,9 +3380,6 @@ ul.uk-switcher.faq {
 }
 
 .main-slider .slick-dots {
-  bottom: 110px;
-  right: 120px;
-  width: auto;
   display: inline-block !important;
 }
 
@@ -3506,11 +3478,10 @@ ul.uk-switcher.faq {
 }
 
 .manufactures-tabs .tab-sw li {
-  margin-right: 92px;
+  margin-right: 8.4%;
 }
 
 .manufactures-tabs .tab-sw a {
-  padding: 40px 0;
   text-transform: uppercase;
 }
 
@@ -3525,10 +3496,6 @@ ul.uk-switcher.faq {
 
 .tab-slider .slider.slick-initialized {
   height: auto;
-}
-
-.tab-slider .tab-slider-wrapper {
-  margin: 0 -33% 0 130px;
 }
 
 .tab-slider .slick-list {
@@ -3600,6 +3567,7 @@ ul.uk-switcher.faq {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 250;
 }
 
 .brands-slider .slide-prev {
@@ -3871,6 +3839,10 @@ ul.uk-switcher.faq {
 }
 
 @media (min-width: 0px) {
+  .gray-block {
+    padding: 50px 5% 30px;
+  }
+
   .rating {
     margin-left: 0;
   }
@@ -3880,6 +3852,10 @@ ul.uk-switcher.faq {
     margin-left: 0;
     font-size: 28px;
     line-height: 34px;
+  }
+
+  [uk-switcher] li a {
+    padding: 15px 0;
   }
 
   html.uk-touch body [class*=uk-animation-] {
@@ -3896,6 +3872,50 @@ ul.uk-switcher.faq {
     margin-top: 5px;
   }
 
+  .products-short-list .item.item--full-height {
+    height: 300px;
+  }
+
+  .about-manufactures .text {
+    padding: 60px 15px 130px;
+  }
+
+  .advantages-list {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+
+  .advantages-list .item {
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 45%;
+    margin-right: 10%;
+  }
+
+  .advantages-list .item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .manufactures-tabs {
+    margin-bottom: 0 !important;
+  }
+
+  .manufactures-tabs ul[uk-switcher] {
+    padding: 0;
+  }
+
+  .manufactures-tabs .uk-switcher {
+    padding: 40px 0;
+  }
+
+  .white-section {
+    padding: 60px 0;
+  }
+
+  .brands-list {
+    margin: 0 auto 60px;
+  }
+
   .brands-page-list {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -3908,12 +3928,39 @@ ul.uk-switcher.faq {
     width: 263px;
   }
 
+  .about-company .gray-block {
+    margin-bottom: 100px;
+    background: none;
+  }
+
+  .about-company__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .about-company .text-section {
+    margin-bottom: 40px;
+  }
+
+  .about-company .text-section .text,
+  .about-company .text-section .img {
+    width: 100%;
+  }
+
+  .about-company .text-section .img {
+    margin-bottom: 15px;
+  }
+
   .about-company-detail .section {
     padding: 30px 15px;
   }
 
   .regions-list__body ul {
     border-bottom: 1px solid #ededed;
+  }
+
+  .attantion-block {
+    padding-right: 15px;
   }
 
   .attantion-block.attantion-block--left {
@@ -3985,6 +4032,58 @@ ul.uk-switcher.faq {
   .footer .call-spec {
     margin: 24px 0;
   }
+
+  .main-slider .slider {
+    height: 440px;
+  }
+
+  .main-slider .slide {
+    padding: 50px 1%;
+  }
+
+  .main-slider .slide__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .main-slider .slick-dots {
+    bottom: 30px;
+    right: auto;
+    left: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-slider .slider__arrows {
+    display: none;
+  }
+
+  .manufactures-tabs .tab-sw a {
+    padding: 15px 0;
+  }
+
+  .tab-slider .tab-slider-wrapper {
+    margin: 0 0 100px;
+  }
+
+  .tab-slider .slide {
+    padding: 0 5px;
+  }
+
+  .brands-slider a {
+    text-align: center;
+  }
+
+  .brands-slider .slide-prev {
+    left: 0;
+    margin-left: 0;
+  }
+
+  .brands-slider .slide-next {
+    right: 0;
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 480px) {
@@ -4015,8 +4114,51 @@ ul.uk-switcher.faq {
     margin-left: auto;
   }
 
+  .products-short-list .item.item--full-height {
+    margin-bottom: 0 !important;
+    height: 500px;
+  }
+
+  .advantages-list .item {
+    margin-right: 6.6666%;
+    margin-bottom: 0;
+    width: 20%;
+  }
+
+  .advantages-list .item:nth-child(2n) {
+    margin-right: 6.6666%;
+  }
+
+  .advantages-list .item:last-child {
+    margin-right: 0;
+  }
+
   .brands-page-list .brand-item {
     width: 37%;
+  }
+
+  .about-company .gray-block {
+    background: url("../img/map-bg.svg") center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .about-company__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .about-company .text-section {
+    margin-bottom: 80px;
+  }
+
+  .about-company .text-section .text,
+  .about-company .text-section .img {
+    width: 48%;
+  }
+
+  .about-company .text-section .img {
+    margin-bottom: 0;
   }
 
   .about-company-detail .section {
@@ -4083,9 +4225,22 @@ ul.uk-switcher.faq {
   .footer-attantion {
     margin-top: 10px;
   }
+
+  .main-slider .slide__title {
+    font-size: 46px;
+    line-height: 52px;
+  }
+
+  .manufactures-tabs .tab-sw a {
+    padding: 30px 0;
+  }
 }
 
 @media (min-width: 960px) {
+  .gray-block {
+    padding: 110px 19.5% 90px;
+  }
+
   .orange-label {
     font-size: 36px;
     line-height: 48px;
@@ -4121,8 +4276,38 @@ ul.uk-switcher.faq {
     background-image: url("../img/map-opacity.png");
   }
 
+  .about-manufactures .text {
+    padding: 100px 0 130px;
+  }
+
   .about-manufactures p {
     max-width: 79%;
+  }
+
+  .advantages-list {
+    padding: 0;
+    max-width: 78%;
+  }
+
+  .manufactures-tabs {
+    margin-bottom: 100px !important;
+  }
+
+  .manufactures-tabs ul[uk-switcher] {
+    padding-left: 17.3%;
+    margin-right: 36px;
+  }
+
+  .manufactures-tabs .uk-switcher {
+    padding: 40px 36px;
+  }
+
+  .white-section {
+    padding: 100px 0;
+  }
+
+  .brands-list {
+    margin: 0 auto 120px;
   }
 
   .brands-page-list {
@@ -4141,8 +4326,21 @@ ul.uk-switcher.faq {
     margin-right: 0;
   }
 
+  .about-company .gray-block {
+    margin-bottom: 130px;
+  }
+
+  .about-company__title {
+    font-size: 86px;
+    line-height: 100px;
+  }
+
   .regions-list__body ul {
     border-bottom: none;
+  }
+
+  .attantion-block {
+    padding-right: 0;
   }
 
   .attantion-block.attantion-block--left {
@@ -4227,6 +4425,30 @@ ul.uk-switcher.faq {
     margin-top: 0;
   }
 
+  .main-slider .slider {
+    height: 540px;
+  }
+
+  .main-slider .slide__title {
+    font-size: 86px;
+    line-height: 90px;
+  }
+
+  .main-slider .slick-dots {
+    display: inline-block;
+    bottom: 110px;
+    right: 120px;
+    width: auto;
+  }
+
+  .main-slider .slider__arrows {
+    display: block;
+  }
+
+  .manufactures-tabs .tab-sw a {
+    padding: 40px 0;
+  }
+
   .style-door {
     margin-left: 36%;
   }
@@ -4282,6 +4504,22 @@ ul.uk-switcher.faq {
     top: auto;
     bottom: 26px;
     right: 50%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .tab-slider .tab-slider-wrapper {
+    margin: 0 -33% 0 130px;
+  }
+
+  .brands-slider .slide-prev {
+    left: -120px;
+    margin-left: 25px;
+  }
+
+  .brands-slider .slide-next {
+    right: -120px;
+    margin-right: 25px;
   }
 }
 

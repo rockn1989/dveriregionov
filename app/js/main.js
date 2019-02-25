@@ -22,7 +22,15 @@ $(function() {
 		/*______ В первом табе слайдер инициализируется при загрузке страницы ______*/
 
 		if(idx == 0) {
+/*			if($(window).outerHeight() < 968) {
+				
+				tabSlider.slick('init');
+			} else {
+				tabSlider.slick('reinit');
+			}*/
+			tabSlider.slick('unslick');
 			tabSlider.slick('reinit');
+			console.log(123);
 		}
 
 		if(!tabSlider.hasClass('slick-initialized')) {
@@ -37,13 +45,52 @@ $(function() {
 				slidesToShow: 5,
 				slidesToScroll: 4,
 				prevArrow: tabSliderWrapper.find('.slide-prev'),
-				nextArrow: tabSliderWrapper.find('.slide-next')
+				nextArrow: tabSliderWrapper.find('.slide-next'),
+				responsive: [
+					{
+						breakpoint: 1300,
+						settings: {
+							slidesToShow: 5,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 1025,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 940,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
 			});
 		} else {
-			tabSlider.slick('reinit');
-			return false;
+			if($(window).outerWidth() < 968) {
+				console.log(123);
+				tabSlider.slick('unslick');
+				tabSlider.slick('reinit');
+			} else {
+				tabSlider.slick('reinit');
+			}
+
 		};
 	})
+
 
 	/*______ Modal Search ______*/
 

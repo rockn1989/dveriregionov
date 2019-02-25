@@ -142,8 +142,13 @@ section.page-content {
     background-repeat: no-repeat;
     background-position: center;
 		&.item--full-height {
-			margin-bottom: 0 !important;
-			height: 500px;
+			@media (min-width: $mob-xs) {
+				height: 300px;
+			};
+			@media (min-width: $tablet-w) {
+				margin-bottom: 0 !important;
+				height: 500px;
+			};
 		}
 		&[data-src] {
 			background-size: 25px 25px;
@@ -205,8 +210,13 @@ section.page-content {
 		margin-bottom: 55px;
 	}
 	.text {
-		padding: 100px 0 130px;
 		background: #ffffff url('../img/manufactures-bg.png') right 33px no-repeat;
+		@media (min-width: $mob-xs) {
+			padding: 60px 15px 130px;
+		};
+		@media (min-width: $desk-w) {
+			padding: 100px 0 130px;
+		};
 	}
 	p {
 		font-size: 18px;
@@ -228,15 +238,43 @@ section.page-content {
 	position: relative;
 	margin-top: -32px;
 	margin-bottom: 60px !important;
-	max-width: 78%;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	@media (min-width: $mob-xs) {
+		padding: 0 15px;
+		max-width: 100%;
+	};
+	@media (min-width: $desk-w) {
+		padding: 0;
+		max-width: 78%;
+	};
 	.item {
 		margin-right: 6.6666%;
 		width: 20%;
 		&:last-child {
 			margin-right: 0;
 		}
+		@media (min-width: $mob-xs) {
+			margin-right: 0;
+			margin-bottom: 30px;
+			width: 45%;
+			margin-right: 10%;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		};
+		@media (min-width: $tablet-w) {
+			margin-right: 6.6666%;
+			margin-bottom: 0;
+			width: 20%;
+			&:nth-child(2n) {
+				margin-right: 6.6666%;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		};
 		&__img {
 			margin-bottom: 20px;
 			height: 86px;
@@ -275,13 +313,31 @@ section.page-content {
 
 .manufactures-tabs {
 	position: relative;
-	margin-bottom: 100px !important;
 	z-index: 25;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 0 !important;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 100px !important;
+	};
 	ul[uk-switcher] {
 		padding-left: 17.3%;
+		@media (min-width: $mob-xs) {
+			padding: 0;
+		};
+		@media (min-width: $desk-w) {
+			padding-left: 17.3%;
+			margin-right: 36px;
+		};
 	}
 	.uk-switcher {
 		background: $gray-bg;
+		@media (min-width: $mob-xs) {
+			padding: 40px 0;
+		};
+		@media (min-width: $desk-w) {
+			padding: 40px 36px;
+		};
 	}
 }
 
@@ -290,16 +346,26 @@ section.page-content {
 
 .white-section {
 	margin-bottom: 50px;
-	padding: 100px 0;
 	background-color: #ffffff;
+	@media (min-width: $mob-xs) {
+		padding: 60px 0;
+	};
+	@media (min-width: $desk-w) {
+		padding: 100px 0;
+	};
 }
 
 
 /*______ Brands list ______*/
 
 .brands-list {
-	margin: 0 auto 120px;
 	max-width: 908px;
+	@media (min-width: $mob-xs) {
+		margin: 0 auto 60px;
+	};
+	@media (min-width: $desk-w) {
+		margin: 0 auto 120px;
+	};
 	&__header {
 		position: relative;
 		.show-more {
@@ -398,15 +464,34 @@ section.page-content {
 
 .about-company {
 	.gray-block {
-		margin-bottom: 130px;
-		background: url('../img/map-bg.svg') center center no-repeat;
-		background-size: contain;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 100px;
+			background: none;
+		};
+		@media (min-width: $tablet-w) {
+			background: url('../img/map-bg.svg') center center no-repeat;
+			background-size: cover;
+		};
+		@media (min-width: $desk-w) {
+			margin-bottom: 130px;
+		};
 	}
 	&__title {
 		margin-bottom: 40px;
-		font-size: 86px;
-		line-height: 100px;
+
 		font-weight: 300;
+		@media (min-width: $mob-xs) {
+			font-size: 36px;
+			line-height: 42px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 50px;
+			line-height: 60px;
+		};
+		@media (min-width: $desk-w) {
+			font-size: 86px;
+			line-height: 100px;
+		};
 		span {
 			display: block;
 			font-weight: 500;
@@ -425,9 +510,28 @@ section.page-content {
 	}
 	.text-section {
 		margin-bottom: 80px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 40px;
+		};
+		@media (min-width: $tablet-w) {
+			margin-bottom: 80px;
+		};
 		.text,
 		.img {
-			width: 50%;
+			@media (min-width: $mob-xs) {
+				width: 100%;
+			};
+			@media (min-width: $tablet-w) {
+				width: 48%;
+			};
+		}
+		.img {
+			@media (min-width: $mob-xs) {
+				margin-bottom: 15px;
+			};
+			@media (min-width: $tablet-w) {
+				margin-bottom: 0;
+			};
 		}
 		.title-h1 {
 			margin-bottom: 50px;
@@ -531,6 +635,12 @@ section.page-content {
 	padding-left: 75px;
 	padding-bottom: 55px;
 	max-width: 985px;
+	@media (min-width: $mob-xs) {
+		padding-right: 15px;
+	};
+	@media (min-width: $desk-w) {
+		padding-right: 0;
+	};
 	&.attantion-block--left {
 		margin: 0;
 		max-width: none;

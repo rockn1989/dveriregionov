@@ -10,17 +10,25 @@
 	position: relative;
 	margin-bottom: 40px;
 	.slider {
-		height: 540px;
 		overflow: hidden;
+		@media (min-width: $mob-xs) {
+			height: 440px;
+		};
+		@media (min-width: $desk-w) {
+			height: 540px;
+		};
 	}
 	.slide {
 		position: relative;
-		padding: 80px 120px;
+		padding: 80px 2.1%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100%;
 		color: #ffffff;
 		min-height: 540px;
+		@media (min-width: $mob-xs) {
+			padding: 50px 1%;
+		};
 		img {
 			position: absolute;
 			top: 0;
@@ -34,9 +42,20 @@
 		}
 		&__title {
 			margin-bottom: 30px;
-			font-size: 86px;
-			line-height: 90px;
+
 			font-weight: 300;
+			@media (min-width: $mob-xs) {
+				font-size: 36px;
+				line-height: 42px;
+			};
+			@media (min-width: $tablet-w) {
+				font-size: 46px;
+				line-height: 52px;
+			};
+			@media (min-width: $desk-w) {
+				font-size: 86px;
+				line-height: 90px;
+			};
 			span {
 				display: block;
 				font-weight: 500;
@@ -52,10 +71,22 @@
 		}
 	}
 	.slick-dots {
-		bottom: 110px;
-		right: 120px;	
-		width: auto;
+
 		display: inline-block !important;
+		@media (min-width: $mob-xs) {
+			bottom: 30px;
+			right: auto;
+			left: auto;
+			display: block;
+			width: 100%;
+			text-align: center;
+		};
+		@media (min-width: $desk-w) {
+			display: inline-block;
+			bottom: 110px;
+			right: 120px;	
+			width: auto;
+		};
 		li {
 			margin: 0 18px;
 			button {
@@ -73,6 +104,14 @@
 				}
 			}
 		}
+	}
+	.slider__arrows {
+		@media (min-width: $mob-xs) {
+			display: none;
+		};
+		@media (min-width: $desk-w) {
+			display: block;
+		};
 	}
 }
 
@@ -139,11 +178,19 @@
 		z-index: 30;
 		background-color: transparent;
 		li {
-			margin-right: 92px;
+			margin-right: 8.4%;
 		}
 		a {
-			padding: 40px 0;
 			text-transform: uppercase;
+			@media (min-width: $mob-xs) {
+				padding: 15px 0;
+			};
+			@media (min-width: $tablet-w) {
+				padding: 30px 0;
+			};
+			@media (min-width: $desk-w) {
+				padding: 40px 0;
+			};
 		}
 	}
 }
@@ -158,13 +205,21 @@
 		}
 	}
 	.tab-slider-wrapper {
-		margin: 0 -33% 0 130px;
+		@media (min-width: $mob-xs) {
+			margin: 0 0 100px;
+		};
+		@media (min-width: 1300px) {
+			margin: 0 -33% 0 130px;
+		}
 	}
 	.slick-list {
 		margin: 0 -18px;
 	}
 	.slide {
 		margin: 0 18px 9px;
+		@media (min-width: $mob-xs) {
+			padding: 0 5px;
+		};
 	}
 	.card {
 		transition: box-shadow .3s ease;
@@ -194,6 +249,9 @@
 	a {
 		display: block;
 		height: 100px;
+		@media (min-width: $mob-xs) {
+			text-align: center;
+		};
 		&:after {
 			content: '';
 			display: inline-block;
@@ -209,12 +267,29 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		z-index: 250;
 	}
 	.slide-prev {
 		left: -120px;
+		@media (min-width: $mob-xs) {
+			left: 0;
+			margin-left: 0;
+		};
+		@media (min-width: 1300px) {
+			left: -120px;
+			margin-left: 25px;
+		};
 	}
 	.slide-next {
 		right: -120px;
+		@media (min-width: $mob-xs) {
+			right: 0;
+			margin-right: 0;
+		};
+		@media (min-width: 1300px) {
+			right: -120px;
+			margin-right: 25px;
+		};
 	}
 }
 
