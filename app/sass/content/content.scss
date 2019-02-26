@@ -42,6 +42,7 @@ section.page-content {
 		}
 		&.map {
 			&:after {
+				top: 0;
 				right: 0;
 				@media (min-width: $desk-w) {
 					width: 100%;
@@ -656,6 +657,11 @@ section.page-content {
 				left: -80px;
 			}
 		};
+	}
+	&.attantion-block--center {
+		margin: 0 auto;
+		padding-bottom: 0;
+		max-width: 907px;
 	}
 	p {
 		color: #727271;

@@ -39,6 +39,50 @@
 
 		}
 	}
+	&__body {
+		position: relative;
+	}
+	&__toggle {
+		position: absolute;
+		right: 25px;
+		bottom: 30px;
+		padding: 16px 53px 16px 16px;
+		display: block;
+		color: #0f0f0f;
+		font-size: 14px;
+		font-weight: 400;
+		background-color: #ffffff;
+		border-radius: 3px;
+		transition: all .3s ease;
+		cursor: pointer;
+		user-select: none;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-bottom: 6px solid #5d5d60;
+			transform: translateY(-50%);
+		}
+		&:hover {
+			box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+		}
+		&.toggle {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-bottom: none;
+				border-top: 6px solid #5d5d60;
+				transform: translateY(-50%);
+			}
+		}
+	}
 }
 
 .stores-list {
@@ -174,12 +218,127 @@
 
 #stores-map {
 	width: 100%;
+	overflow: hidden;
+	transition: height .3s ease;
 	@media (min-width: $mob-xs) {
-		min-height: 400px;
+		height: 400px;
 	};
 	@media (min-width: $desk-w) {
-		min-height: 630px;
+		height: 630px;
 	};
+	&.closed {
+		height: 100px;
+	}
+}
+
+.ymaps-2-1-72-balloon__content {
+	padding: 0 !important;
+	min-width: 630px !important;
+	&>* {
+		width: 100% !important;
+	}
+}
+
+.cluster-section {
+	position: relative;
+	padding: 30px;
+	border-bottom: 1px solid #ededed;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translateY(-50%);
+	}
+	p {
+		font-size: 14px;
+		font-weight: 400;
+		color: #0f0f0f;
+		font-family: $mainFont !important;
+	}
+	&:last-child {
+		border: none;
+	}
+}
+
+.cluster-header {
+	color: #0f0f0f;
+	font-size: 30px;
+	line-height: 48px;
+	font-weight: 300;
+}
+
+.cluster-title {
+	color: #7e7e7e;
+	font-family: $mainFont !important;
+	&:before {
+		font-family: 'icomoon' !important;
+	}
 }
 
 /*______ End stores ______*/
+
+
+
+/*______ Stores Detail ______*/
+
+.stores-detail-map {
+	@include clearfix;
+	margin-bottom: 30px;
+}
+
+.stores-detail-map-wrapper {
+	float: right;
+	width: 60%;
+}
+
+.stores-detail-map-desc {
+	float: left;
+	width: 40%;
+}
+
+.stores-detail-map-desc {
+	background-color: #ffffff;
+	&>div {
+		padding: 36px 65px 36px 74px;
+		border-bottom: 2px solid #ededed;
+		&:last-child {
+			border: none;
+		}
+	}
+	.desc-title {
+		position: relative;
+		margin-bottom: 8px;
+		font-family: $mainFont !important;
+		color: #848484;
+		line-height: 24px;
+		&:before {
+			font-family: 'icomoon' !important;
+			position: absolute;
+			top: 0;
+			left: -35px;
+		}
+	}
+	.desc-section {
+		margin-bottom: 26px;
+		display: flex;
+		flex-wrap: wrap;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.desc-contacts {
+		a {
+			display: block;
+			color: $black;
+		}
+	}
+}
+
+.stores-detail-route {
+	margin-bottom: 45px;
+	padding: 35px;
+	background: #ffffff url('../img/road-bg.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+/*______ End Stores Detail ______*/

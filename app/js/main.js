@@ -21,17 +21,6 @@ $(function() {
 
 		/*______ В первом табе слайдер инициализируется при загрузке страницы ______*/
 
-		if(idx == 0) {
-/*			if($(window).outerHeight() < 968) {
-				
-				tabSlider.slick('init');
-			} else {
-				tabSlider.slick('reinit');
-			}*/
-			tabSlider.slick('unslick');
-			tabSlider.slick('reinit');
-			console.log(123);
-		}
 
 		if(!tabSlider.hasClass('slick-initialized')) {
 			tabSlider.slick({
@@ -80,14 +69,9 @@ $(function() {
 				]
 			});
 		} else {
-			if($(window).outerWidth() < 968) {
-				console.log(123);
-				tabSlider.slick('unslick');
-				tabSlider.slick('reinit');
-			} else {
+			if($(window).outerWidth() >= 968) {
 				tabSlider.slick('reinit');
 			}
-
 		};
 	})
 
@@ -238,7 +222,7 @@ $(function() {
 			$(inputList).eq(k).attr('id','star'+i+'-'+(j+1));
 			$(inputList).eq(k).prop('value',j+1);
 			$(inputList).eq(k).prop('name','rating'+i);
-			$(inputList).eq(k).next('label').attr('for','star'+i+'-'+j)
+			$(inputList).eq(k).next('label').attr('for','star'+i+'-'+(j+1));
 		}
 	});
 

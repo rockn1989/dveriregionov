@@ -20,7 +20,6 @@
 	}
 	.slide {
 		position: relative;
-		padding: 80px 2.1%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100%;
@@ -28,6 +27,9 @@
 		min-height: 540px;
 		@media (min-width: $mob-xs) {
 			padding: 50px 1%;
+		};
+		@media (min-width: $desk-w) {
+			padding: 80px 2.1%;
 		};
 		img {
 			position: absolute;
@@ -489,6 +491,16 @@
 		}
 		.slide-right {
 			margin-right: 15px;
+		}
+	}
+	&.office-slider {
+		.slide {
+			padding: 0;
+			background-color: transparent;
+		}
+		.slide__img {
+			margin-bottom: 0;
+			min-height: auto;
 		}
 	}
 }

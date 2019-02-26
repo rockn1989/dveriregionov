@@ -56,6 +56,11 @@ h3, .title-h3 {
 			background-color: transparent;
 		}
 	}
+	&--full {
+		margin-bottom: 30px;
+		width: 100%;
+		font-size: 20px;
+	}
 }
 
 
@@ -318,6 +323,9 @@ h3, .title-h3 {
 			transition: all .3s ease;
 			@media (min-width: $mob-xs) {
 				padding: 15px 0;
+			};
+			@media (min-width: $tablet-w) {
+				padding: 25px 0;
 			};
 			&:hover {
 				text-decoration: none;

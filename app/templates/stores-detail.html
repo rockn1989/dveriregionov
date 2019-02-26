@@ -1,0 +1,283 @@
+{% extends "layouts/default.html" %}
+{% set bread = ["Главная", "Где купить", "Офис-склад в Строгино"] %}
+{% set title="Офис-склад в Строгино" %}
+{% block content %}
+	<section class="page-content page-content-img map">
+		<div class="uk-container">
+			<div class="content">
+				{% include "includes/breadcrumbs.html" %}
+				<div class="title-h1">Офис-склад в Строгино</div>
+
+				<!-- begin stores-detail-map -->
+				<div class="stores-detail-map">
+					<div class="stores-detail-map-wrapper">
+						<div id="stores-detail-map">
+							<img src="img/stores-detail-map.png" alt="">
+						</div>
+					</div>
+					<div class="stores-detail-map-desc">
+						<div class="desc-address">
+							<div class="desc-section">
+								<div class="desc-title icon-pin">Адрес:</div>
+								<div class="desc-text">
+									Москва, район Строгино, ул. Маршала Прошлякова, вл. 6
+								</div>
+							</div>
+							<div class="desc-section">
+								<div class="desc-title">Метро:</div>
+								<div class="desc-text">Строгино</div>
+							</div>
+							<div class="desc-section">
+								<div class="desc-title">GPS координаты:</div>
+								<div class="desc-text">Широта 55.789859, Долгота 37.397676</div>
+							</div>
+						</div>
+						<div class="desc-contacts">
+							<div class="uk-grid">
+								<div class="uk-width-1-2@m">
+									<div class="desc-title icon-phone_copy">Телефон:</div>
+									<div class="desc-text">
+										<a href="tel:+74951628202">+7 (495) 162-82-02</a>
+										<a href="tel:+74954324775">+7 (495) 432-47-75</a>
+									</div>
+								</div>
+								<div class="uk-width-1-2@m">
+									<div class="desc-title">Оптовый отдел:</div>
+									<div class="desc-text">
+										<a href="tel:+74951628202">+7 (495) 756-38-27</a>
+										<a href="tel:+74954324775">+7 (495) 506-95-65</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="desc-time-work">
+							<div class="desc-section">
+								<div class="desc-title icon-calendar">Режим работы:</div>
+								<div class="desc-text">Понедельник—Воскресенье: с 9:00 до 21:00</div>
+							</div>
+							<div class="desc-section">
+								<div class="desc-title">Режим работы склада:</div>
+								<div class="desc-text">Понедельник—Пятница: с 9:00 до 18:00 <br>Суббота: с 9:00 до 17:00 <br> Воскресенье: выходной</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end stores-detail-map -->
+
+				<div class="stores-detail-route">
+					<div class="title-h2">Как добраться:</div>
+					<p>
+						Станция метро Строгино (первый вагон из центра). Поднимаетесь ,в переходе направо,потом на лестнице налево. Выходите к автобусной остановке.Автобус 626 или 654 до остановки "ТЦ "МЕТРО"" или маршрутное такси № 310 до остановки "Улица Маршала Прошлякова". Идёте в обратном направлении,не сворачивая,до владения 6. Ориентиром будет служить складская база красного цвета. Проходите на территорию через зелёные ворота, перед вами будет трёхэтажное красное здание. Заходите в него,поднимаетесь на 2-й этаж в выставочный зал интернет-магазина «Двери Регионов».
+					</p>
+				</div>
+				
+				<!-- begin productc-slider -->
+				<div class="products-slider office-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+					<div class="title-h1">Галерея офиса</div>
+					<div class="slider" uk-lightbox="animation: scale">
+						<div class="slide">
+							<div class="slide__img"><a href="img/sliders-img/office-img-1.png"><img src="img/sliders-img/office-img-1.png" alt=""></a></div>
+						</div>
+						<div class="slide">
+							<div class="slide__img"><a href="img/sliders-img/office-img-2.png"><img src="img/sliders-img/office-img-2.png" alt=""></a></div>
+						</div>
+						<div class="slide">
+							<div class="slide__img"><a href="img/sliders-img/office-img-3.png"><img src="img/sliders-img/office-img-3.png" alt=""></a></div>
+						</div>
+						<div class="slide">
+							<div class="slide__img"><a href="img/sliders-img/office-img-4.png"><img src="img/sliders-img/office-img-4.png" alt=""></a></div>
+						</div>
+						<div class="slide">
+							<div class="slide__img"><a href="img/sliders-img/office-img-3.png"><img src="img/sliders-img/office-img-3.png" alt=""></a></div>
+						</div>
+					</div>
+					<div class="slider__arrows">
+						<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
+						<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
+					</div>
+				</div>
+				<!-- end productc-slider -->
+
+				<!-- begin products-slider -->
+				<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+					<div class="title-h1">Металлические входные двери в Строгино </div>
+					<div class="slider">
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-1-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-2-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-3-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-4-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-1-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+					</div>
+					<div class="slider__arrows">
+						<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
+						<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
+					</div>
+				</div>
+				<!-- end products-slider -->
+
+				<!-- begin products-slider -->
+				<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
+					<div class="title-h1">Межкомнатные двери в Строгино</div>
+					<div class="slider">
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-5-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-6-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-7-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-8-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+						<div class="slide">
+						 	<div class="slide__img">
+						 		<a href="">
+						 			<img data-lazy="img/sliders-img/products-img-5-146x316.png" alt="">
+						 		</a>
+						 	</div>
+						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
+						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
+						 	<div class="slide__price">
+								<span class="old-price"></span>
+								<span class="current-price">от 1 465 р.</span>
+						 	</div>
+						</div>
+					</div>
+					<div class="slider__arrows">
+						<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
+						<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
+					</div>
+				</div>
+				<!-- end products-slider -->
+
+				<!-- begin attantion-bloc -->
+				<div class="attantion-block attantion-block--center">
+					<p>
+						Если вы заскучаете в дороге, то пусть Вас греет мысль, что скоро Вы встретитесь с дверью своей мечты. А заботливые и профессиональные менеджеры сделают все, чтобы эта встреча была приятной.
+					</p>
+				</div>
+				<!-- end attantion-bloc -->
+
+			</div>
+		</div>
+
+		<!-- begin white-panel -->
+		<div class="white-panel">
+			<div class="uk-container">
+				<div class="title-h2">
+					Межкомнатные двери в Строгино: недорого и очень удобно
+				</div>
+				<p>
+					Всех желающих приобрести двери на Ярославском шоссе мы приглашаем в наш салон, расположенный в ТРЦ XL-2. Сотрудничая с ведущими фабриками России и Белоруссии, наша компания располагает широким ассортиментом моделей и соответствующей фурнитуры. Купить двери межкомнатные в Мытищах от производителя - это отличная возможность сэкономить, поскольку цены в данном случае не являются завышенными, и даже элитные изделия стоят сравнительно дешево.
+				</p>
+				<p>
+					На сегодняшний день в нашем магазине в Мытищах можно заказать межкомнатные двери экошпон, филенчатые (1900х800 мм), ламинированные и другие. Оказать помощь в выборе всегда готовы менеджеры компании Двери Регионов. Также для вашего удобства мы предлагаем услуги профессиональных замерщиков и специалистов по установке полотен. Доставка осуществляется транспортными компаниями или посредством самовывоза.
+				</p>
+			</div>
+		</div>
+		<!-- end white-panel -->
+
+	</section>
+{% endblock %}
