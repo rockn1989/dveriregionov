@@ -284,29 +284,66 @@
 .stores-detail-map {
 	@include clearfix;
 	margin-bottom: 30px;
+	display: flex;
+	@media (min-width: $mob-xs) {
+		flex-wrap: wrap;
+	}
+	@media (min-width: $desk-w) {
+		flex-wrap: nowrap;
+	};
 }
 
 .stores-detail-map-wrapper {
 	float: right;
-	width: 60%;
+
+	@media (min-width: $mob-xs) {
+		order: 1;
+		width: 100%;
+	}
+	@media (min-width: $desk-w) {
+		width: 60%;
+		order: 2;
+	};
+	&>div {
+		@media (min-width: $desk-w) {
+			height: 100%;
+			img {
+				height: 100%;
+			}
+		};
+	}
 }
 
 .stores-detail-map-desc {
 	float: left;
-	width: 40%;
+
+	@media (min-width: $mob-xs) {
+		order: 2;
+		width: 100%;
+	}
+	@media (min-width: $desk-w) {
+		width: 40%;
+		order: 1;
+	};
 }
 
 .stores-detail-map-desc {
 	background-color: #ffffff;
 	&>div {
-		padding: 36px 65px 36px 74px;
 		border-bottom: 2px solid #ededed;
+		@media (min-width: $mob-xs) {
+			padding: 36px 46px;
+		}
+		@media (min-width: $desk-w) {
+			padding: 36px 65px 36px 74px;
+		};
 		&:last-child {
 			border: none;
 		}
 	}
 	.desc-title {
 		position: relative;
+		margin-right: 8px;
 		margin-bottom: 8px;
 		font-family: $mainFont !important;
 		color: #848484;

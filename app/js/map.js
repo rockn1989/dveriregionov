@@ -34,11 +34,10 @@ $(function () {
 			});
 
 			var	clusterer = new ymaps.Clusterer({
-				preset: '../img/cluster.png',
-				groupByCoordinates: false,
-				clusterDisableClickZoom: true,
-				clusterHideIconOnBalloonOpen: false,
-				geoObjectHideIconOnBalloonOpen: false
+				clusterIcons: {
+					href: '/img/cluster.png',
+					size: [47, 47]
+				}
 			});
 
 			var getPointData = function (index) {
@@ -89,6 +88,29 @@ $(function () {
 		}
 
 	};
+
+	if($('div').is('#stores-detail-map')) {
+	  var myMap;
+		ymaps.ready(init); 
+		function init () {
+			myMap = new ymaps.Map("stores-detail-map", {
+				center: [55.789859, 37.397676], 
+				zoom: 16,
+				controls: []
+			});
+
+			var Placemark = new ymaps.Placemark(myMap.getCenter(), {
+				hintContent: '',
+				balloonContent: ''
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/detail-map-icon.png',
+				iconImageSize: [47,55],
+				iconImageOffset:[0, 0]
+			});
+
+			myMap.geoObjects.add(Placemark);
+	}};
 
 	$('.stores-map__toggle').on('click', function (e) {
 		e.preventDefault();

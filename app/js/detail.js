@@ -47,7 +47,9 @@ $(function () {
 
 	$('.js__show-add-colors').on('click', function (e) {
 		e.preventDefault()
-		$(this).toggleClass('showed');
+		$(this)
+			.toggleClass('showed')
+			.text($(this).text() == 'Показать еще цвета' ? 'Скрыть цвета' : 'Показать еще цвета')
 		$colorsList.slideToggle('250');
 	});
 

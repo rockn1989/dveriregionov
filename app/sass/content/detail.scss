@@ -29,6 +29,43 @@
 	border-bottom: 2px solid #ededed;
 }
 
+.detail-section-controls {
+	border-bottom: 2px solid #ededed;
+	.detail-section {
+		padding: 40px 40px 20px;
+		.btn-wrapper {
+			margin-right: 0;
+		}
+	}
+
+}
+
+.no-border{
+	border: none !important;
+}
+
+.furniture-price {
+	width: 31%;
+	.old-price {
+		margin-bottom: 6px;
+		color: #0f0f0f;
+		opacity: 0.5;
+		font-size: 18px;
+		line-height: 21px;
+		font-weight: 300;
+		text-decoration: line-through;
+		&:empty {
+			margin-bottom: 0;
+		}
+	}
+	.current-price {
+		color: #0f0f0f;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 500;
+	}
+}
+
 .product-availability {
 	position: relative;
 	padding-left: 38px;
@@ -348,6 +385,12 @@
 		display: flex;
 		justify-content: space-between;
 		border: none;
+		@media (min-width: $mob-xs) {
+			flex-wrap: wrap;
+		}
+		@media (min-width: $desk-w) {
+			flex-wrap: nowrap;
+		};
 	}
 	.calc-controls {
 		margin-right: 13px;

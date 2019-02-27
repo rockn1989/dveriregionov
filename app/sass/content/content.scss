@@ -26,6 +26,15 @@ section.page-content {
 				};
 			}
 		}
+		&.furnitura {
+
+			&:after {
+				@media (min-width: $desk-w) {
+					width: 664px;
+					background-image: url('../img/furnintura-bg.png');
+				};
+			}
+		}
 		&.faq-door {
 			&:after {
 				@media (min-width: $desk-w) {
@@ -689,6 +698,12 @@ section.page-content {
 
 .reviews-list {
 	margin-top: 30px;
+	&.tabs {
+		.review {
+			padding: 0 30px;
+			border-bottom: 2px solid #ededed;
+		}
+	}
 }
 
 .review {
@@ -696,6 +711,9 @@ section.page-content {
 	padding: 30px;
 	background-color: #ffffff;
 	transition: box-shadow .3s ease;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	&:hover {
 		box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
 	}

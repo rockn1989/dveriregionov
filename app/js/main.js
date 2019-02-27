@@ -37,9 +37,17 @@ $(function() {
 				nextArrow: tabSliderWrapper.find('.slide-next'),
 				responsive: [
 					{
-						breakpoint: 1300,
+						breakpoint: 1500,
 						settings: {
 							slidesToShow: 5,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 1300,
+						settings: {
+							slidesToShow: 4,
 							slidesToScroll: 1,
 							infinite: true,
 						}
@@ -212,7 +220,6 @@ $(function() {
 	var $reviews = $('.review');
 
 	$.each($reviews, function (i, el) {
-		console.log(i);
 		var $rating = $(el).find('.rating'),
 			inputList = $(el).find('input[type="radio"]'),
 			inputLength = inputList.length,

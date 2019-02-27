@@ -1,0 +1,119 @@
+{% extends "layouts/content.html" %}
+{% set title="Каталог" %}
+{% set bread = ["Главная", "Каталог"] %}
+{% set filter = false %}
+{% set img = "door" %}
+{% set panel = true %}
+{% block content %}
+	<div class="breadcrumbs-wrapper">
+		{% include "includes/breadcrumbs.html" %}
+	</div>
+
+	<div class="catalog">
+		<div class="catalog-header">
+			<div class="title-h1">Каталог</div>
+			<div class="seo-text">
+				Если вам нужны недорогие двери в Москве, наша компания готов предложить вам лучшие модели в широком ассортименте дизайнерского исполнения. Собственные производственные ресурсы, современное оборудование и богатый профессиональный опыт наших специалистов позволяют нам производить межкомнатные двери всех видов.
+			</div>
+		</div>
+					<!-- begin products-shor-list -->
+					<div class="products-short-list">
+						<div class="uk-grid">
+							<div class="uk-width-1-1@s uk-width-1-4@m">
+								<div class="item item--full-height lazy" data-src="img/short-list-img-1.png">
+									<a href="#">
+										<div class="item__text">
+											<div class="item__type">Двери из массива дуба</div>
+											<div class="item__price">от 8 990 р.</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="uk-width-1-1@s uk-width-3-4@m">
+								<div class="uk-grid">
+
+									<div class="uk-width-3-5@m">
+										<div class="item lazy" data-src="img/short-list-img-2.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Двери ламинированные</div>
+													<div class="item__price">от 3 450 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="uk-width-2-5@m">
+										<div class="item lazy" data-src="img/short-list-img-3.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Двери строителям</div>
+													<div class="item__price">от 1 980 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="uk-width-2-5@m">
+										<div class="item lazy" data-src="img/short-list-img-4.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Двери в квартиру</div>
+													<div class="item__price">от 3 499 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="uk-width-3-5@m">
+										<div class="item lazy" data-src="img/short-list-img-5.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Эксклюзивные двери</div>
+													<div class="item__price">от 19 990 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="uk-width-1-1">
+								<div class="uk-grid">
+									<div class="uk-width-1-1@s uk-width-1-3@m">
+										<div class="item lazy" data-src="img/short-list-img-6.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Двери ламинированные</div>
+													<div class="item__price">от 3 450 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="uk-width-1-1@s uk-width-1-3@m">
+										<div class="item lazy" data-src="img/short-list-img-7.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Двери строителям</div>
+													<div class="item__price">от 1 980 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="uk-width-1-1@s uk-width-1-3@m">
+										<div class="item lazy" data-src="img/short-list-img-8.png">
+											<a href="#">
+												<div class="item__text">
+													<div class="item__type">Двери строителям</div>
+													<div class="item__price">от 1 980 р.</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end products-shor-list -->
+	</div>
+{% endblock %}

@@ -51,6 +51,7 @@ h3, .title-h3 {
 		color: #727271;
 		font-weight: 400;
 		font-size: 14px;
+		letter-spacing: 1.2px;
 		&:hover {
 			color: #727271;
 			background-color: transparent;
@@ -519,6 +520,7 @@ ul[uk-accordion] {
 				margin-right: 0;
 			}
 			&.current-price {
+				margin-right: 0;
 				font-weight: 500;
 			}
 		}
@@ -586,6 +588,7 @@ ul[uk-accordion] {
 		}
 		&.popular {
 			background-color: #e8656d;
+			letter-spacing: 1.2px;
 			&:after {
 				background: linear-gradient(45deg, transparent 0% , transparent 50%, #c34d54 50% );
 			}

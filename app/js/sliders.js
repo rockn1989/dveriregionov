@@ -200,6 +200,23 @@ $(function() {
 	]
 	});
 
+
+	$('.detail-furniture-slider .slider').slick({
+		arrows: true,
+		dots: false,
+		infinity: true,
+		cssEase: 'linear',
+		lazyLoad: 'ondemand',
+		autoplay: false,
+		fade: false,
+		autoplaySpeed: 3500,
+		speed: 400,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: $('.detail-furniture-slider').find('.slide-prev'),
+		nextArrow: $('.detail-furniture-slider').find('.slide-next')
+	});
+
 	$(window).on('orientationchange', function () {
 		$('.detail-product-preview-slider').slick('resize');
 	});
@@ -214,7 +231,7 @@ $(function() {
 		slider.slick({
 			arrows: true,
 			dots: false,
-			autoplay: true,
+			autoplay: false,
 			fade: false,
 			autoplaySpeed: 2000,
 			speed: 600,
