@@ -699,9 +699,14 @@ section.page-content {
 .reviews-list {
 	margin-top: 30px;
 	&.tabs {
+		margin: 0 -36px 30px;
 		.review {
-			padding: 0 30px;
+			margin-bottom: 0;
+			padding: 30px 30px 10px;
 			border-bottom: 2px solid #ededed;
+			&:first-child {
+				padding-top: 0;
+			}
 		}
 	}
 }

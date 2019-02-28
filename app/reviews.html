@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/select2/select2.min.css">
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if lte IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -23,9 +24,7 @@
 		<script src="libs/placeholders.min.js"></script>
 	<![endif]-->
 </head>
-
 <body>
-
 <header class="header">
 
 		<!-- begin header-desktop -->
@@ -190,15 +189,12 @@
 		<!-- end header-mobile -->
 
 </header>
-
-
 	
 <section class="page-content page-content-img faq-door">
 	<div class="uk-container">
 		<div class="uk-grid">
 			<div class="uk-width-1-6@l">
-					
-				<a href="#offcanvas-left-sidebar" class="btn btn--full uk-hidden@l" uk-toggle>Каталог товаров</a>
+									<a href="#offcanvas-left-sidebar" class="btn btn--full uk-hidden@l" uk-toggle>Каталог товаров</a>
 <div class="left-sidebar uk-visible@l">
 	<div class="left-sidebar-nav-wrapper">
 		<a href="" uk-toggle="target: #page-search" class="sidebar-search icon-search uk-visible@l js__toggle-search">Поиск</a>
@@ -277,7 +273,6 @@
 								</li>
 		</ul>
 	</div>
-
 							
 					<div class="banners">
 						<div class="item">
@@ -368,7 +363,6 @@
 								</li>
 		</ul>
 	</div>
-
 							
 					<div class="banners">
 						<div class="item">
@@ -380,7 +374,6 @@
 				</div>
 			</div>
 	</div>			
-
 			
 			</div>
 			<div class="uk-width-5-6@l">
@@ -389,16 +382,9 @@
 	<div class="content">
 		<div class="breadcrumbs-wrapper">
 			<ul class="breadcrumbs">
-	
-	
-	<li><a href="">Главная</a></li>
-	
-
-	
-	<li>Отзывы</li>
-		
-
-</ul>
+			<li><a href="">Главная</a></li>
+			<li>Отзывы</li>
+		</ul>
 		</div>
 		<div class="title-h1">Отзывы</div>
 		
@@ -565,13 +551,10 @@
 	</div>
 	<!-- end content -->
 
-
 			</div>
 		</div>
 	</div>
-	
-</section>
-
+	</section>
 
 <footer class="footer">
 	<div class="uk-container">
@@ -667,28 +650,158 @@
 
 
 
-
-
-
 <div id="page-search" uk-modal class="page-search-modal">
-    <div class="uk-modal-dialog uk-modal-body">
+		<div class="uk-modal-dialog uk-modal-body">
+				<div class="uk-modal-body">
+					<form action="" class="page-search">
+						<i class="icon-search"></i>
+						<input type="text" placeholder="Поиск по каталогу">
+						<button class="btn">Найти</button>
+					</form>
+				</div>
+		</div>
+</div>
+
+<div id="callback" class="default-modal callback-modal" uk-modal>
+		<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+						<h2 class="uk-modal-title">Заказать звонок</h2>
+				</div>
+				<div class="uk-modal-body">
+					<form action="" method="get" class="call-spec">
+						<fieldset>
+							<label for="name">Ваше имя</label>
+							<input id="name" type="text" placeholder="Алексей Иванов">
+						</fieldset>
+						<fieldset>
+							<label for="tel">Телефон</label>
+							<input id="tel" name="tel" type="text" class="tel js__input-phone" placeholder="+7" required>
+						</fieldset>
+						<button class="btn" type="submit">Отправить</button>
+					</form>
+				</div>
+		</div>
+</div>
+
+<div id="call-spec" class="default-modal call-spec-modal" uk-modal>
+		<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+						<h2 class="uk-modal-title">Вызвать замерщика</h2>
+				</div>
+				<div class="uk-modal-body">
+					<form action="" method="get" class="call-spec">
+						<fieldset>
+							<label for="name">Ваше имя</label>
+							<input id="name" type="text" placeholder="Алексей Иванов">
+						</fieldset>
+						<fieldset>
+							<label for="tel">Телефон</label>
+							<input id="tel" name="tel" type="text" class="tel js__input-phone" placeholder="+7" required>
+						</fieldset>
+						<fieldset>
+							<label for="email">Email</label>
+							<input id="email" name="email" type="text" placeholder="info@dveri.ru" required>
+						</fieldset>
+						<button class="btn" type="submit">Вызвать замерщика</button>
+					</form>
+				</div>
+		</div>
+</div>
+
+
+<div id="payment-modal" class="default-modal payment-modal" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Рассчет рассрочки</h2>
+        </div>
         <div class="uk-modal-body">
-        	<form action="" class="page-search">
-        		<i class="icon-search"></i>
-        		<input type="text" placeholder="Поиск по каталогу">
-        		<button class="btn">Найти</button>
-        	</form>
+        	<div class="payment-calc">
+        		<div class="section">
+        			<div class="section__label">Сумма заказа</div>
+        			<div class="section__field">
+        				<input type="number" class="payment-input js__ui-slider" value="50 000">
+        				<div class="ui-slider-wrapper">
+        					<div id="ui-slider" class="ui-slider"></div>
+        					<div class="ui-slider-min"><span></span>р.</div>
+        					<div class="ui-slider-max"><span></span>р.</div>
+        					<div class="ui-slider-current-value"><span></span>р.</div>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="section">
+        			<div class="section__label">Первый взнос</div>
+        			<div class="section__field">
+        				<input type="text" class="payment-input" value="10 000">
+        				<div class="checkbox-field">
+        					<label for="20">
+        						<input id="20" type="checkbox" checked>
+        						<span class="custom-checkbox"></span>20%
+        					</label>
+        					<label for="30">
+        						<input id="30" type="checkbox">
+        						<span class="custom-checkbox"></span>30%
+        					</label>
+        					<label for="40">
+        						<input id="40" type="checkbox">
+        						<span class="custom-checkbox"></span>40%
+        					</label>
+        					<label for="50">
+        						<input id="50" type="checkbox">
+        						<span class="custom-checkbox"></span>50%
+        					</label>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="section section--half">
+        			<div class="section__label">Срок рассрочки</div>
+        			<div class="section__field">
+        				<div class="finish-value time">4 месяца</div>
+        			</div>
+        		</div>
+        		<div class="section section--half">
+        			<div class="section__label">Первоначальный взнос</div>
+        			<div class="section__field">
+        				<div class="finish-value capital">10 000 р.</div>
+        			</div>
+        		</div>
+        		<div class="section section--half">
+        			<div class="section__label">Ежемесячный платеж</div>
+        			<div class="section__field">
+        				<div class="finish-value monthly-payment">8 676 р.</div>
+        			</div>
+        		</div>
+        	</div>
+        	
+        </div>
+        <div class="uk-modal-footer">
+        	<a href="" class="btn">Продолжить покупку</a>
         </div>
     </div>
 </div>
 
 
+<div id="products-added-modal" class="default-modal alert-modal" uk-modal>
+		<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+						<h2 class="uk-modal-title uk-text-center">Товар добавлен в корзину</h2>
+						<a href="" class="btn">Оформить заявку</a>
+						<span class="separate">или</span>
+						<a href="" class="style-door">Продолжить покупки</a>
+				</div>
+		</div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
-<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
+<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+<script src="libs/jquery.validate.min.js" defer></script>
+<script src="libs/jquery-ui/jquery-ui.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
 <script src="libs/svg4everybody.min.js" defer></script>
 <script src="libs/lazyLoad/jquery.lazy.min.js" defer></script>
@@ -700,7 +813,6 @@
 <script src="js/detail.js" defer></script>
 <script src="js/map.js" defer></script>
 <script src="js/main.js" defer></script>
-
 
 </body>
 </html>

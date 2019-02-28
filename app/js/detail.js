@@ -53,4 +53,46 @@ $(function () {
 		$colorsList.slideToggle('250');
 	});
 
+
+	/*______ Слайдер в калькуляторе рассрочки ______*/
+
+	$('#ui-slider').slider({
+		range: "min",
+		value: 100000,
+		min: 1,
+		max: 200000,
+		step: 1,
+		create: function (event, ui) {
+			var val = $('#ui-slider').slider("value");
+			var min = $('#ui-slider').slider("option","min");
+			var max = $('#ui-slider').slider("option","max");
+
+			$('.ui-slider-current-value span').html(val);
+			$('.js__ui-slider').val(val);
+			$('.ui-slider-min span').html(min);
+			$('.ui-slider-max span').html(max);
+
+			$('.js__ui-slider').on('change keyup', function (e) {
+					var _self = $(this),
+						inputValue = parseInt($(this).val(), 10);
+
+						if(inputValue > max) {
+							$('.ui-slider-current-value span').html(max);
+							$('#ui-slider').slider("value", inputValue)
+						} else if (inputValue < min) {
+							$('.ui-slider-current-value span').html(min);
+							$('#ui-slider').slider("value", inputValue)
+						} else {
+							$('.ui-slider-current-value span').html(inputValue);
+							$('#ui-slider').slider("value", inputValue)
+						};
+
+			});
+		},
+		slide: function (event, ui) {
+			$('.ui-slider-current-value span').html(ui.value);
+			$('.js__ui-slider').val(ui.value);
+		}
+	})
+
 });

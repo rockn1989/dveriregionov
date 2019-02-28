@@ -154,21 +154,39 @@ $(function() {
 
 	/*______ Валидация формы ______*/
 
-	if($('form').is('.default-form')) {
 
-		$('.default-form').validate({
+	if($('form').is('.call-spec')) {
+		$('form.call-spec').validate({
 			rules: {
 				email: {
 					required: true,
 					email: true
+				},
+				tel: {
+					required: true
 				}
 			},
 			messages: {
-				email: "Обязательноe поле",
-			},
+				tel: "Заполните поле",
+				email: "Заполните поле"
+			}
 		});
+
 	};
 
+	if($('form').is('.callback-modal')) {
+		$('form.callback-modal').validate({
+			rules: {
+				tel: {
+					required: true
+				}
+			},
+			messages: {
+				tel: "Заполните поле"
+			}
+		});
+
+	};
 
 	/*______ Открытие мобильного подменю ______*/
 
