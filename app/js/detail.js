@@ -54,6 +54,15 @@ $(function () {
 	});
 
 
+
+
+	$('.js__show-options-list').on('click', function (e) {
+		e.preventDefault()
+		$(this)
+			.toggleClass('showed')
+			.text($(this).text() == 'Смотреть все цвета' ? 'Скрыть цвета' : 'Смотреть все цвета')
+		$(this).parent('.options-list-wrapper').toggleClass('open');
+	});
 	/*______ Слайдер в калькуляторе рассрочки ______*/
 
 	$('#ui-slider').slider({
@@ -78,9 +87,11 @@ $(function () {
 
 						if(inputValue > max) {
 							$('.ui-slider-current-value span').html(max);
+							$('.js__ui-slider').val(max);
 							$('#ui-slider').slider("value", inputValue)
 						} else if (inputValue < min) {
 							$('.ui-slider-current-value span').html(min);
+							$('.js__ui-slider').val(min);
 							$('#ui-slider').slider("value", inputValue)
 						} else {
 							$('.ui-slider-current-value span').html(inputValue);

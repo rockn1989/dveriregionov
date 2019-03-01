@@ -27,6 +27,18 @@
 .detail-section {
 	padding: 30px 40px;
 	border-bottom: 2px solid #ededed;
+	&.uk-flex {
+		justify-content: space-between;
+		.calc-controls {
+			margin-right: 13px;
+		}
+		.btn-wrapper {
+			min-width: 198px;
+			.btn {
+				display: block;
+			}
+		}
+	}
 }
 
 .detail-section-controls {
@@ -377,6 +389,14 @@
 	    font-family: 'icomoon' !important;
     }
 	}
+	&.uk-flex {
+		padding: 15px 40px;
+		justify-content: space-between;
+	}
+}
+
+.border-bottom {
+	border-bottom: 2px solid #ededed;
 }
 
 .detail-controls {
@@ -449,3 +469,143 @@
 
 /*______ End Detail v1 ______*/
 
+
+
+/*______ Detail v2 ______*/
+
+.doors-wrapper {
+	padding: 58px 24px 48px;
+	display: flex;
+	justify-content: space-between;
+	.door-section {
+		&.front-side {
+			width: 51%;
+		}
+		&.back-side {
+			width: 45%	;
+		}
+	}
+}
+
+.door {
+	&-img {
+		margin-bottom: 40px;
+		@media (min-width: $mob-xs) {
+			height: 500px;
+		};
+	}
+	&-options {
+		color: #727271;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 300;
+		text-align: center;
+		&>div {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.complect-price {
+	width: 35%;
+	&__value {
+		margin-bottom: 10px;
+		color: $black;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 500;
+	}
+	&__text {
+		color: #727271;
+		font-size: 13px;
+		line-height: 14px;
+		font-weight: 300;
+	}
+}
+
+.detail-small-tabs {
+	.tab-sw {
+		li {
+			margin-right: 5%;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+	ul.uk-switcher {
+		border-bottom: 2px solid #ededed;
+		@media (min-width: $desk-w) {
+			min-height: 304px;
+		};
+	}
+}
+
+.detail-options-list {
+	position: relative;
+	.show-all-colors {
+		margin-top: 11px;
+		margin-left: 8px;
+	}
+}
+
+.options-list-wrapper {
+    position: absolute;
+    top: 36px;
+    left: -8px;
+    height: 190px;
+    overflow: hidden;
+    background: #fff;
+    z-index: 600;
+    &.open {
+    	height: auto;
+    	.options-list {
+    		height: 500px;
+    	}
+    }
+}
+
+.options-list {
+	height: 155px;
+	font-size: 0;
+	background-color: #ffffff;
+	z-index: 250;
+	&__item {
+		position: relative;
+		margin-right: 20px;
+		margin-bottom: 30px;
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
+		height: 154px;
+		border: 8px solid transparent;
+		transition: border-color .3s ease;
+		cursor: pointer;
+		&.active {
+			border-color: $orange;
+			&:hover {
+				border-color: $orange;
+			}
+		}
+		&.check {
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		&:hover {
+			border-color: lighten($orange, 20%);
+		}
+		@media (min-width: $desk-w) {
+			&:nth-child(5n) {
+				margin-right: 0;
+			}
+		};
+	}
+}
+
+/*______ ENd Detail v2 ______*/

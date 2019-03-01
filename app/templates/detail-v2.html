@@ -1,6 +1,6 @@
 {% extends "layouts/content.html" %}
-{% set title="Входные двери «Двери Регионов»" %}
-{% set bread = ["Главная", "Каталог", "Входные двери «Двери Регионов»"] %}
+{% set title="Входные двери «Двери Регионов» Арктика" %}
+{% set bread = ["Главная", "Каталог", "Входные двери «Двери Регионов» Арктика"] %}
 {% set filter = false %}
 {% set catalog = true %}
 {% set img = "door" %}
@@ -13,7 +13,7 @@
 
 		<!-- begin detail-wrapper -->
 		<div class="detail-wrapper">
-			<h1 class="title-h1">Дверь Браво ПЧО Леон Ваниль (Т-18)</h1>
+			<h1 class="title-h1">Входные двери «Двери Регионов» Арктика</h1>
 
 			<div class="detail-top-bar">
 				<div class="product-availability check">В наличии</div>
@@ -31,89 +31,137 @@
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-1-2@l">
 						<div class="detail-card-sliders-wrapper">
-							<div class="detail-card-sliders uk-clearfix">
-								<div class="detail-big-slider uk-clearfix">
-									<div class="slider" uk-lightbox="animation: scale">
-										<div class="slide">
-											<a href="img/sliders-img/detail-big-img-1-314x768.png">
-												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
-											</a>
-											<i class="icon-zoom"></i>
-										</div>
-										<div class="slide">
-											<a href="img/sliders-img/detail-big-img-1-314x768.png">
-												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
-											</a>
-											<i class="icon-zoom"></i>
-										</div>
-										<div class="slide">
-											<a href="img/sliders-img/detail-big-img-1-314x768.png">
-												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
-											</a>
-											<i class="icon-zoom"></i>
-										</div>
-										<div class="slide">
-											<a href="img/sliders-img/detail-big-img-1-314x768.png">
-												<img data-lazy="img/sliders-img/detail-big-img-1-314x768.png" alt="">
-											</a>
-											<i class="icon-zoom"></i>
-										</div>
+							
+							<!-- begin doors-wrapper -->
+							<div class="doors-wrapper">
+
+								<div class="door-section door front-side">
+									<div class="door-img" uk-lightbox>
+										<a href="img/door-frontside.png">
+											<img class="lazy" data-src="img/door-frontside.png" alt="">
+										</a>
+									</div>
+									<div class="door-options">
+										<div class="door__title">Внешняя сторона двери</div>
+										<div class="door__color">Цвет: <span class="value">медный антик</span></div>
+										<div class="door__picture">Рисунок: <span class="value">Optima+</span></div>
 									</div>
 								</div>
-								<div class="detail-preview-slider uk-clearfix">
-									<div class="slider">
-										<div class="slide">
-											<img data-lazy="img/sliders-img/detail-slider-preview-2-58x143.png" alt="">
-										</div>
-										<div class="slide">
-											<img data-lazy="img/sliders-img/detail-slider-preview-2-58x143.png" alt="">
-										</div>
-										<div class="slide">
-											<img data-lazy="img/sliders-img/detail-slider-preview-3-58x143.png" alt="">
-										</div>
-										<div class="slide">
-											<img data-lazy="img/sliders-img/detail-slider-preview-2-58x143.png" alt="">
-										</div>
+
+								<div class="door-section door back-side">
+									<div class="door-img" uk-lightbox>
+										<a href="img/door-frontside.png">
+											<img class="lazy" data-src="img/door-backside.png" alt="">
+										</a>
+									</div>
+									<div class="door-options">
+										<div class="door__title">Внутренняя сторона двери</div>
+										<div class="door__color">Цвет: <span class="value">Венге</span></div>
+										<div class="door__picture">Рисунок: <span class="value">Optima+</span></div>
 									</div>
 								</div>
+
 							</div>
+							<!-- end doors-wrapper -->
+
 							<div class="stocks">
 								<div class="popular">Хит</div>
 							</div>
-							<a href="" class="style-door">Подобрать входную дверь по стилю</a>
 						</div>
 					</div>
 					<div class="uk-width-1-2@l">
-						<!-- begin type-of-price -->
-						<div class="type-of-prices">
-							<div class="uk-grid uk-grid-collapse">
-								<div class="uk-width-1-2@m">
-									<div class="item left-pos">
-										<div class="item__inner">
-											<div class="detail-title">Цена за полотно</div>
-											<div class="item__value">5 866 р.</div>
-											<div class="item__text">
-												Комплект состоит из коробки полотна и наличников с двух сторон
-											</div>
-											<i class="check"></i>
-										</div>
+
+						<div class="detail-section uk-flex">
+							<div class="complect-price">
+								<div class="detail-title">Цена за комплект</div>
+								<div class="complect-price__value">10 206р.</div>
+								<div class="complect-price__text">
+									Комплект состоит из коробки полотна и наличников с двух сторон
+								</div>
+							</div>
+							<div class="calc-controls">
+								<span class="minus">-</span>
+								<input type="text" value="1">
+								<span class="plus">+</span>
+							</div>
+							<div class="btn-wrapper">
+								<a href="" class="btn">Купить</a>
+								<a href="" class="btn btn--transparent">Купить в 1 клик</a>
+							</div>
+						</div>
+						
+						<div class="links-wrapper uk-flex border-bottom">
+							<a href="" class="icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
+							<a href="" class="icon-calendar" uk-toggle="target: #payment-modal">Рассрочка</a>
+							<a href="" class="icon-calendar" uk-toggle="target: #payment-modal">Помощь при выборе</a>
+						</div>
+
+						<!-- begin detail-product-selects-list -->
+						<div class="detail-product-selects-list">
+							<div class="detail-title">Выберите параметры двери</div>
+							<div class="selects-list">
+								<div class="custom-select-wrapper">
+									<div class="custom-select">
+										<select name="" id="" class="js__custom-select" data-theme="default gray">
+											<option value="">Размер дверного блока</option>
+											<option value="">500 x 800 мм</option>
+											<option value="">400 x 700 мм</option>
+										</select>
 									</div>
 								</div>
-								<div class="uk-width-1-2@m">
-									<div class="item right-pos">
-										<div class="item__inner">
-											<div class="detail-title">Цена за комплект</div>
-											<div class="item__value">10 206 р.</div>
-											<div class="item__text">
-												Комплект состоит из коробки полотна и наличников с двух сторон
-											</div>
-											<i class="check"></i>
-										</div>
+								<div class="custom-select-wrapper">
+									<div class="custom-select">
+										<select name="" id="" class="js__custom-select" data-theme="default gray">
+											<option value="">Тип двери</option>
+											<option value="">Lorem-1</option>
+											<option value="">Lorem-2</option>
+										</select>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- end type-of-price -->
+						<!-- end detail-product-selects-list -->
+
+						<!-- begin detail-small-tabs -->
+						<div class="detail-small-tabs">
+							<ul class="tab-sw" uk-switcher>
+								<li class="uk-active"><a href="">Внешняя сторона</a></li>
+								<li><a href="">Внутренняя сторона</a></li>
+								<li><a href="">Подбор замка</a></li>
+							</ul>
+							<ul class="uk-switcher">
+								<li>									
+									<!-- begin detail-options-list -->
+									<div class="detail-options-list">
+										<div class="detail-title">Выберите цвет</div>
+										<div class="options-list-wrapper">
+											<div class="options-list">
+												<div class="options-list__item active check"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+												<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+											</div>
+											<a href="" class="show-all-colors js__show-options-list">Смотреть все цвета</a>
+										</div>
+									</div>
+									<!-- end detail-options-list -->
+								</li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<!-- end detail-small-tabs -->
 
 						<!-- begin detail-product-colors-square -->
 						<div class="detail-product-colors-square">
@@ -152,105 +200,6 @@
 							</div>
 						</div>
 						<!-- end detail-product-colors-square -->
-						
-						<!-- begin detail-product-selects-list -->
-						<div class="detail-product-selects-list">
-							<div class="detail-title">Выберите комплектующие</div>
-							<div class="selects-list">
-								<div class="custom-select">
-									<select name="" id="" class="js__custom-select" data-theme="default gray">
-										<option value="">600 x 900 мм</option>
-										<option value="">500 x 800 мм</option>
-										<option value="">400 x 700 мм</option>
-									</select>
-								</div>
-								<div class="custom-select">
-									<select name="" id="" class="js__custom-select" data-theme="default gray">
-										<option value="">Выберите коробку</option>
-										<option value="">Lorem-1</option>
-										<option value="">Lorem-2</option>
-									</select>
-								</div>
-								<div class="custom-select">
-									<select name="" id="" class="js__custom-select" data-theme="default gray">
-										<option value="">Выберите наличник</option>
-										<option value="">Lorem-1</option>
-										<option value="">Lorem-2</option>
-									</select>
-								</div>
-								<div class="custom-select">
-									<select name="" id="" class="js__custom-select" data-theme="default gray">
-										<option value="">Выберите добор</option>
-										<option value="">Lorem-1</option>
-										<option value="">Lorem-2</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<!-- end detail-product-selects-list -->
-						
-						<!-- begin type-of-door -->
-						<div class="type-of-doors">
-							<div class="detail-section">
-								<div class="detail-title">Тип открывания двери</div>
-								<div class="list">
-									<figure class="item">
-										<div class="item__img">
-											<svg width="54px" height="81px" class="disabled">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-1"></use>
-											</svg>
-											<svg width="54px" height="81px" class="active">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-1-focus"></use>
-											</svg>
-										</div>
-										<figcaption>Распашная</figcaption>
-									</figure>
-									<figure class="item active">
-										<div class="item__img">
-											<svg width="85px" height="81px" class="disabled">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-2"></use>
-											</svg>
-											<svg width="85px" height="81px" class="active">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-2-focus"></use>
-											</svg>
-										</div>
-										<figcaption>Симметричная двустворчатая арка</figcaption>
-									</figure>
-									<figure class="item">
-										<div class="item__img">
-											<svg width="65px" height="81px" class="disabled">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-3"></use>
-											</svg>
-											<svg width="65px" height="81px" class="active">
-												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite-svg.svg#type-door-3-focus"></use>
-											</svg>
-										</div>
-										<figcaption>Откатная</figcaption>
-									</figure>
-								</div>
-							</div>
-						</div>
-						<!-- end type-of-door -->
-						
-						<!-- begin detail-controls -->
-						<div class="detail-controls">
-							<div class="detail-section">
-								<div class="calc-controls">
-									<span class="minus">-</span>
-									<input type="text" value="1">
-									<span class="plus">+</span>
-								</div>
-								<div class="btn-wrapper">
-									<a href="" class="btn">Купить</a>
-									<a href="" class="btn btn--transparent">Купить в 1 клик</a>
-								</div>
-								<div class="links-wrapper">
-									<a href="" class="icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
-									<a href="" class="icon-calendar" uk-toggle="target: #payment-modal">Рассрочка</a>
-								</div>
-							</div>
-						</div>
-						<!-- end detail-controls -->
 
 					</div>
 				</div>

@@ -385,7 +385,9 @@
 		width: 58px;
 		height: 127px;
 		transition: opacity .3s ease;
+		text-align: center;
 		img {
+			display: inline;
 			max-height: 100%;
 		}
 		&.slick-current {

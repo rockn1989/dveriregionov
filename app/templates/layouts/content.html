@@ -6,7 +6,11 @@
 	<div class="uk-container">
 		<div class="uk-grid">
 			<div class="uk-width-1-6@l">
-	{% include "../includes/left-sidebar.html" %}			
+	{% if catalog == true %}			
+	{% include "../includes/left-sidebar.html" %}
+	{% else %}
+	{% include "../includes/left-sidebar-content.html" %}
+	{% endif %}
 			</div>
 			<div class="uk-width-5-6@l">
 				{% block content %}{% endblock %}

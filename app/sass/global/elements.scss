@@ -363,12 +363,15 @@ ul[uk-accordion] {
 		position: relative;
 		padding: 12px 0;
 		font-size: 24px;
-		line-height: 48px;
 		font-weight: 300;
+		@media (min-width: $mob-xs) {
+			line-height: 30px;
+		};
+		@media (min-width: $tablet-w) {
+			line-height: 48px;
+		};
 		&:before {
 			position: absolute;
-			top: 50%;
-			right: 34px;
 			@include icomoon;
 			content: "\e90b";	
 			width: 16px;
@@ -378,6 +381,14 @@ ul[uk-accordion] {
 			transform: translateY(-50%);
 			transition: transform .3s, color .3s ease;
 			background-image: none;
+			@media (min-width: $mob-xs) {
+				top: 30px;
+				right: 0;
+			};
+			@media (min-width: $tablet-w) {
+				top: 38px;
+				right: 34px;
+			};
 		}
 	}
 	.uk-accordion-content {
