@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/select2/select2.min.css">
 	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="libs/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if lte IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -190,7 +191,7 @@
 
 </header>
 	
-<section class="page-content page-content-img door">
+<section class="page-content page-content-img detail-bg-2">
 	<div class="uk-container">
 		<div class="uk-grid">
 			<div class="uk-width-1-6@l">
@@ -405,7 +406,7 @@
 			<div class="detail-card">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-1-2@l">
-						<div class="detail-card-sliders-wrapper">
+						<div class="detail-card-sliders-wrapper border-bottom">
 							
 							<!-- begin doors-wrapper -->
 							<div class="doors-wrapper">
@@ -442,6 +443,34 @@
 							<div class="stocks">
 								<div class="popular">Хит</div>
 							</div>
+						</div>
+						<div class="detail-section no-border">
+							<div class="detail-title">Дополнительные фотографии</div>
+							
+							<div class="add-photo">
+								<div class="slider-wrapper">
+									<div class="slider">
+										<div class="slide">
+											<img data-lazy="img/sliders-img/add-photo-1-130x140.png" alt="">
+										</div>
+										<div class="slide">
+											<img data-lazy="img/sliders-img/add-photo-2-130x140.png" alt="">
+										</div>
+										<div class="slide">
+											<img data-lazy="img/sliders-img/add-photo-3-130x140.png" alt="">
+										</div>
+										<div class="slide">
+											<img data-lazy="img/sliders-img/add-photo-2-130x140.png" alt="">
+										</div>
+									</div>
+									<div class="slider__arrows">
+										<div class="slide-prev gray slick-arrow"><i class="icon-arrow-left"></i></div>
+										<div class="slide-next gray slick-arrow"><i class="icon-arrow-right"></i></div>
+									</div>
+								</div>
+							</div>
+							
+							<a href="" class="style-door center">Подобрать входную дверь по стилю</a>
 						</div>
 					</div>
 					<div class="uk-width-1-2@l">
@@ -509,72 +538,125 @@
 									<!-- begin detail-options-list -->
 									<div class="detail-options-list">
 										<div class="detail-title">Выберите цвет</div>
-										<div class="options-list-wrapper">
-											<div class="options-list">
-												<div class="options-list__item active check"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
-												<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+											<div class="scroll-wrapper">
+												<a href="" class="icon-close"></a>
+												<div class="options-list-wrapper">
+													<div class="options-list">
+														<div class="options-list__item active check"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+													</div>
+												</div>
+												<a href="" class="show-all-colors js__show-options-list">Смотреть все цвета</a>
 											</div>
-											<a href="" class="show-all-colors js__show-options-list">Смотреть все цвета</a>
-										</div>
+									</div>
+									<!-- end detail-options-list -->
+
+									
+									<!-- begin detail-options-list -->
+									<div class="detail-options-list">
+										<div class="detail-title">Выберите рисунок</div>
+											<div class="scroll-wrapper">
+												<a href="" class="icon-close"></a>
+												<div class="options-list-wrapper">
+													<div class="options-list">
+														<div class="options-list__item active check"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+													</div>
+												</div>
+												<a href="" class="show-all-colors js__show-options-list">Смотреть все цвета</a>
+											</div>
+									</div>
+									<!-- end detail-options-list -->
+									
+								</li>
+								<li>
+									<!-- begin detail-options-list -->
+									<div class="detail-options-list">
+										<div class="detail-title">Выберите цвет</div>
+											<div class="scroll-wrapper">
+												<a href="" class="icon-close"></a>
+												<div class="options-list-wrapper">
+													<div class="options-list">
+														<div class="options-list__item active check"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-6-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-7-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-8-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-9-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-10-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-1-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-2-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-3-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-4-65x140.png" alt=""></div>
+														<div class="options-list__item"><img class="lazy" data-src="img/options-img-5-65x140.png" alt=""></div>
+													</div>
+												</div>
+												<a href="" class="show-all-colors js__show-options-list">Смотреть все цвета</a>
+											</div>
 									</div>
 									<!-- end detail-options-list -->
 								</li>
 								<li></li>
-								<li></li>
 							</ul>
 						</div>
 						<!-- end detail-small-tabs -->
-
-						<!-- begin detail-product-colors-square -->
-						<div class="detail-product-colors-square">
-							<div class="detail-title">Цвет</div>
-							<div class="color-square-value"><span class="value">Светло-серый</span></div>
-							<div class="colors-squares-wrapper">
-								<ul class="colors-list">
-									<li><a href="#" style="background-color: #515051;" data-color="Светло-серый"></a></li>
-									<li><a href="#" style="background-color: #964b02;" data-color="Коричневый"></a></li>
-									<li><a href="#" style="background-color: #a25f29;" data-color="Светло-коричневый"></a></li>
-									<li><a href="#" style="background-color: #fff5ee;" data-color="Бежевый"></a></li>
-									<li><a href="#" class="active" style="background-color: #ffffff;" data-color="Белый"></a></li>
-									<li><a href="#" style="background-color: #515051;" data-color="Мокрый асфальт"></a></li>
-									<li><a href="#" style="background-color: #442c24;" data-color="Темно-коричневый"></a></li>
-									<li><a href="#" style="background-color: #442c24;" data-color="Темно-коричневый"></a></li>
-									<li><a href="#" style="background-color: #f4e4d4;" data-color="Кремовый"></a></li>
-									<li><a href="#" style="background-color: #3d2b1e;" data-color="Ржавый"></a></li>
-								</ul>
-								<div class="add-colors">
-									<div class="add-colors-wrapper">
-										<ul class="colors-list">
-											<li><a href="#" style="background-color: #515051;" data-color="Светло-серый"></a></li>
-											<li><a href="#" style="background-color: #964b02;" data-color="Коричневый"></a></li>
-											<li><a href="#" style="background-color: #a25f29;" data-color="Светло-коричневый"></a></li>
-											<li><a href="#" style="background-color: #fff5ee;" data-color="Бежевый"></a></li>
-											<li><a href="#" style="background-color: #ffffff;" data-color="Белый"></a></li>
-											<li><a href="#" style="background-color: #515051;" data-color="Мокрый асфальт"></a></li>
-											<li><a href="#" style="background-color: #442c24;" data-color="Темно-коричневый"></a></li>
-											<li><a href="#" style="background-color: #442c24;" data-color="Темно-коричневый"></a></li>
-											<li><a href="#" style="background-color: #f4e4d4;" data-color="Кремовый"></a></li>
-											<li><a href="#" style="background-color: #3d2b1e;" data-color="Ржавый"></a></li>
-										</ul>
-									</div>
-									<a href="" class="show-all-colors js__show-add-colors">Показать еще цвета</a>
-								</div>
-							</div>
-						</div>
-						<!-- end detail-product-colors-square -->
 
 					</div>
 				</div>
@@ -645,13 +727,17 @@
 			<!-- begin detail-tabs -->
 			<div class="detail-tabs">
 				<ul class="tab-sw" uk-switcher>
-						<li><a href="">Описание</a></li>
-						<li class="uk-active"><a href="">Характеристики</a></li>
+						<li class="uk-active"><a href="">Описание</a></li>
+						<li><a href="">Характеристики</a></li>
 						<li><a href="">Отзывы</a></li>
 						<li><a href="">Комплектующие двери</a></li>
 				</ul>
 				<ul class="uk-switcher">
-					<li></li>
+					<li>
+						<p>
+							Современная межкомнатная дверь Гранд-1 представляет собой товар среднего ценового сегмента. Она появилась на профессиональном рынке с начала 2-х тысячных годов. Это достаточный срок для продажи дверей собственного производства. За это время на фабрике произошли большие изменения. Производимая продукция сегодня вышла на мировой уровень.
+						</p>
+					</li>
 					<li>
 						<table>
 							<tbody>
@@ -678,16 +764,16 @@
 
 			<!-- begin products-slider -->
 			<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
-				<div class="title-h1">Фурнитура к этой двери</div>
+				<div class="title-h1">Сопутствующие товары</div>
 				<div class="slider-wrapper">
 					<div class="slider">
 						<div class="slide">
 						 	<div class="slide__img">
 						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-1-260x260.png" alt="">
+						 			<img data-lazy="img/sliders-img/product-add-photo-1.png" alt="">
 						 		</a>
 						 	</div>
-						 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+						 	<div class="slide__article"><a href=""></a></div>
 						 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
 						 	<div class="slide__price">
 								<span class="old-price"></span>
@@ -697,10 +783,10 @@
 						<div class="slide">
 						 	<div class="slide__img">
 						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-2-260x260.png" alt="">
+						 			<img data-lazy="img/sliders-img/product-add-photo-2.png" alt="">
 						 		</a>
 						 	</div>
-						 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+						 	<div class="slide__article"><a href=""></a></div>
 						 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
 						 	<div class="slide__price">
 								<span class="old-price"></span>
@@ -710,10 +796,10 @@
 						<div class="slide">
 						 	<div class="slide__img">
 						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-3-260x260.png" alt="">
+						 			<img data-lazy="img/sliders-img/product-add-photo-3.png" alt="">
 						 		</a>
 						 	</div>
-						 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+						 	<div class="slide__article"><a href=""></a></div>
 						 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
 						 	<div class="slide__price">
 								<span class="old-price"></span>
@@ -723,10 +809,10 @@
 						<div class="slide">
 						 	<div class="slide__img">
 						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-4-260x260.png" alt="">
+						 			<img data-lazy="img/sliders-img/product-add-photo-4.png" alt="">
 						 		</a>
 						 	</div>
-						 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+						 	<div class="slide__article"><a href=""></a></div>
 						 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
 						 	<div class="slide__price">
 								<span class="old-price"></span>
@@ -736,10 +822,10 @@
 						<div class="slide">
 						 	<div class="slide__img">
 						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-1-260x260.png" alt="">
+						 			<img data-lazy="img/sliders-img/product-add-photo-2.png" alt="">
 						 		</a>
 						 	</div>
-						 	<div class="slide__article"><a href="">Фурнитура «Арчи»</a></div>
+						 	<div class="slide__article"><a href=""></a></div>
 						 	<div class="slide__product-name"><a href="">Ручка дверная золотого цвета из металла #57</a></div>
 						 	<div class="slide__price">
 								<span class="old-price"></span>
@@ -757,7 +843,7 @@
 
 			<!-- begin products-slider -->
 			<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
-				<div class="title-h1">Фурнитура к этой двери</div>
+				<div class="title-h1">Похожие цвета</div>
 				<div class="slider-wrapper">
 					<div class="slider">
 						<div class="slide">
@@ -816,85 +902,6 @@
 						 	<div class="slide__img">
 						 		<a href="">
 						 			<img data-lazy="img/sliders-img/products-img-1-146x316.png" alt="">
-						 		</a>
-						 	</div>
-						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
-						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
-						 	<div class="slide__price">
-								<span class="old-price"></span>
-								<span class="current-price">от 1 465 р.</span>
-						 	</div>
-						</div>
-					</div>
-					<div class="slider__arrows">
-						<div class="slide-prev gray"><i class="icon-arrow-left"></i></div>
-						<div class="slide-next gray"><i class="icon-arrow-right"></i></div>
-					</div>
-				</div>
-			</div>
-			<!-- end products-slider -->
-
-			<!-- begin products-slider -->
-			<div class="products-slider uk-invisible" uk-scrollspy="cls: uk-invisible slide-up; delay: 0">
-				<div class="title-h1">Фурнитура к этой двери</div>
-				<div class="slider-wrapper">
-					<div class="slider">
-						<div class="slide">
-						 	<div class="slide__img">
-						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-5-146x316.png" alt="">
-						 		</a>
-						 	</div>
-						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
-						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
-						 	<div class="slide__price">
-								<span class="old-price"></span>
-								<span class="current-price">от 1 465 р.</span>
-						 	</div>
-						</div>
-						<div class="slide">
-						 	<div class="slide__img">
-						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-6-146x316.png" alt="">
-						 		</a>
-						 	</div>
-						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
-						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
-						 	<div class="slide__price">
-								<span class="old-price"></span>
-								<span class="current-price">от 1 465 р.</span>
-						 	</div>
-						</div>
-						<div class="slide">
-						 	<div class="slide__img">
-						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-7-146x316.png" alt="">
-						 		</a>
-						 	</div>
-						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
-						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
-						 	<div class="slide__price">
-								<span class="old-price"></span>
-								<span class="current-price">от 1 465 р.</span>
-						 	</div>
-						</div>
-						<div class="slide">
-						 	<div class="slide__img">
-						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-8-146x316.png" alt="">
-						 		</a>
-						 	</div>
-						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
-						 	<div class="slide__product-name"><a href="">Металлическая входная дверь Министр (стальная) коричневая МДФ 003</a></div>
-						 	<div class="slide__price">
-								<span class="old-price"></span>
-								<span class="current-price">от 1 465 р.</span>
-						 	</div>
-						</div>
-						<div class="slide">
-						 	<div class="slide__img">
-						 		<a href="">
-						 			<img data-lazy="img/sliders-img/products-img-5-146x316.png" alt="">
 						 		</a>
 						 	</div>
 						 	<div class="slide__article"><a href="">Межкомнатные двери</a></div>
@@ -1183,6 +1190,7 @@
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/jquery.validate.min.js" defer></script>
 <script src="libs/jquery-ui/jquery-ui.min.js" defer></script>
+<script src="libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
 <script src="libs/svg4everybody.min.js" defer></script>
 <script src="libs/lazyLoad/jquery.lazy.min.js" defer></script>

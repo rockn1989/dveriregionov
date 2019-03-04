@@ -59,6 +59,16 @@ section.page-content {
 				};
 			}
 		}
+		&.detail-bg-2 {
+			&:after {
+				top: 0;
+				right: 0;
+				@media (min-width: $desk-w) {
+					width: 100%;
+					background-image: url('../img/detail-bg-2.png');
+				};
+			}
+		}
 	}
 	&>.uk-container {
 		position: relative;

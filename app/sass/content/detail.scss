@@ -6,6 +6,11 @@
 	margin-bottom: 10px;
 	background-color: #ffffff;
 	z-index: 250;
+	&>.uk-grid {
+		&>[class^="uk-width-1-2"]:first-child {
+			border-right: 2px solid #ededed;
+		}
+	}
 }
 
 .detail-top-bar {
@@ -474,9 +479,10 @@
 /*______ Detail v2 ______*/
 
 .doors-wrapper {
-	padding: 58px 24px 48px;
+	padding: 58px 24px 85px;
 	display: flex;
 	justify-content: space-between;
+
 	.door-section {
 		&.front-side {
 			width: 51%;
@@ -490,7 +496,11 @@
 .door {
 	&-img {
 		margin-bottom: 40px;
+		text-align: center;
 		@media (min-width: $mob-xs) {
+			height: auto;
+		};
+		@media (min-width: $tablet-w) {
 			height: 500px;
 		};
 	}
@@ -531,15 +541,29 @@
 				margin-right: 0;
 			}
 			a {
+				padding: 21px 0;
 				font-size: 14px;
+				letter-spacing: 1px;
 			}
 		}
 	}
 	ul.uk-switcher {
-		border-bottom: 2px solid #ededed;
+		padding: 0;
+		border-bottom: none;
 		@media (min-width: $desk-w) {
 			min-height: 304px;
 		};
+	}
+	.detail-options-list {
+		margin-top: 30px;
+		height: 270px;
+		border-bottom: 2px solid #ededed;
+		&:last-child {
+			border: none;
+		}
+		.detail-title {
+			padding-left: 36px;
+		}
 	}
 }
 
@@ -548,19 +572,37 @@
 	.show-all-colors {
 		margin-top: 11px;
 		margin-left: 8px;
+		opacity: .5;
+		font-size: 14px;
 	}
 }
 
-.options-list-wrapper {
+.mCSB_inside>.mCSB_container {
+	margin-right: 0;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: $orange !important;
+}
+
+.scroll-wrapper {
     position: absolute;
+    padding: 0 36px 35px;
     top: 36px;
-    left: -8px;
-    height: 190px;
+    left: 0;
+    height: 185px;
     overflow: hidden;
     background: #fff;
     z-index: 600;
+    transition: height .3s, box-shadow .3s ease;
     &.open {
     	height: auto;
+    	box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+    	z-index: 999;
+    	.options-list-wrapper {
+    		height: 500px;
+    	}
     	.options-list {
     		height: 500px;
     	}
@@ -568,10 +610,15 @@
 }
 
 .options-list {
+	position: relative;
 	height: 155px;
 	font-size: 0;
 	background-color: #ffffff;
 	z-index: 250;
+	&:after {
+		content: '';
+
+	}
 	&__item {
 		position: relative;
 		margin-right: 20px;

@@ -56,13 +56,45 @@ $(function () {
 
 
 
+	/*______ раскрытие списков с картинками в табах ______*/
+
 	$('.js__show-options-list').on('click', function (e) {
-		e.preventDefault()
+		e.preventDefault();
+		var parent = $(this).parent('.scroll-wrapper'),
+				optionsList = parent.find('.options-list');
 		$(this)
 			.toggleClass('showed')
-			.text($(this).text() == 'Смотреть все цвета' ? 'Скрыть цвета' : 'Смотреть все цвета')
-		$(this).parent('.options-list-wrapper').toggleClass('open');
+			.text($(this).text() == 'Смотреть все цвета' ? 'Свернуть' : 'Смотреть все цвета');
+		if(!parent.hasClass('open')) {
+			parent.addClass('open');
+			optionsList.mCustomScrollbar({
+				axis: "y",
+				setHeight: 500
+			});
+		} else {
+			parent.removeClass('open');
+			optionsList.mCustomScrollbar("destroy").css('height','155px');
+		}
+
 	});
+
+
+	$('.options-list').on('click','.options-list__item', function (e) {
+		e.preventDefault();
+		$(this).toggleClass('active check').siblings('.options-list__item').removeClass('active check');
+	});
+
+
+
+	/*______ Инициализация ленивой подгрузки картинок в табах ______*/
+
+
+	$('.detail-small-tabs .tab-sw').on('click', 'li', function () {
+		$('ul.uk-switcher img.lazy').lazy({
+				bind: "event"
+		});
+	});
+
 	/*______ Слайдер в калькуляторе рассрочки ______*/
 
 	$('#ui-slider').slider({

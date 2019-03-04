@@ -134,6 +134,46 @@ $(function() {
 		]
 	});
 
+	$('.add-photo .slider').slick({
+		arrows: true,
+		dots: false,
+		infinity: true,
+		cssEase: 'linear',
+		lazyLoad: 'ondemand',
+		autoplay: true,
+		fade: false,
+		autoplaySpeed: 3500,
+		speed: 400,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: $(this).find('.slide-prev'),
+		nextArrow: $(this).find('.slide-next'),
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 940,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
 
 	/*______ Detail sliders ______*/
 
