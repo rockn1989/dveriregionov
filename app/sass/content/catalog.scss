@@ -22,7 +22,6 @@
 			z-index: -1;
 		};
 	}
-	/* background: url('../img/catalog-door.png') 100% 0 no-repeat; */
 }
 
 .catalog-body {
@@ -59,11 +58,67 @@
 
 .catalog-bar {
 	margin-bottom: 28px !important;
-	padding: 12px 22px;
 	background-color: #ffffff;
+	@media (min-width: $mob-xs) {
+		padding: 12px;
+	};
+	@media (min-width: $mob-s) {
+		padding: 12px 22px;
+	};
 	.custom-select {
 		margin-top: 6px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 25px;
+			float: right;
+		};
+		@media (min-width: $tablet-w) {
+			margin-bottom: 0;
+			float: none;
+		};
 	}
+}
+
+.filter-btn {
+	position: relative;
+	margin-top: 6px;
+	display: inline-block;
+	vertical-align: top;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid $orange;
+	background-color: #ffffff;
+	z-index: 705;
+	color: $orange;
+	&:before {
+		font-size: 16px;
+	}
+	&.open {
+		border-bottom-color: #ffffff;
+		&:before {
+			content: "\e90e";
+		}
+	}
+	@media (min-width: $tablet-w) {
+		margin-right: 15px;
+	};
+}
+
+.mobile-filter {
+	position: absolute;
+	top: 46px;
+	left: 12px;
+	padding: 0;
+	width: 100%;
+	max-width: 266px;
+	z-index: 700;
+	border: 1px solid $orange;
+	background-color: #ffffff;
+	display: none;
+	@media (min-width: $tablet-w) {
+		left: 22px;
+	};
 }
 
 /*______ End Catalog ______*/

@@ -12,4 +12,10 @@ $(function () {
 		});
 	});
 
+	$('.js__toggle-filter').on('click', function (e) {
+		e.preventDefault();
+		$(this).toggleClass('open');
+		$('.mobile-filter').slideToggle('350');
+	})
+
 });

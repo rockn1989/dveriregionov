@@ -301,39 +301,6 @@
 
 /*______ Detail Sliders ______*/
 
-.style-door {
-	position: relative;
-	display: inline-block;
-	font-size: 14px;
-	color: $black;
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: $orange;
-	}
-	&:hover {
-		text-decoration: none;
-	}
-	@media (min-width: $desk-w) {
-		margin-left: 36%;
-		margin-bottom: 34px;
-	};
-	&.center {
-		margin: 0 auto;
-		display: block;
-		text-align: center;
-		&:after {
-			max-width: 232px;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
-}
-
 .detail-card-sliders-wrapper {
 	position: relative;
 	/* `padding-bottom: 34px; */
@@ -350,11 +317,19 @@
 }
 
 .detail-card-sliders {
-	padding: 54px 40px 34px 30px;
+	@media (min-width: $mob-xs) {
+		padding: 54px 30px 30px;
+	};
+	@media (min-width: $desk-w) {
+		padding: 54px 40px 0;
+	};
+	@media (min-width: 1244px) {
+		padding: 54px 40px 34px 30px;
+	};
 }
 
 .detail-big-slider {
-	@media (min-width: $desk-w) {
+	@media (min-width: 1244px) {
 		margin-right: 0;
 		width: 87%;
 		float: right;
@@ -366,36 +341,60 @@
 				height: auto;
 			}
 		}
-		.slide {
-			a {
-				position: relative;
-				min-width: 384px;
+	};
+	.slide {
+		a {
+			position: relative;
+			display: block;
+			@media (min-width: $mob-xs) {
 				display: block;
 				text-align: center;
-				z-index: 200;
-			}
-			img {
-				display: inline;
-			}
+				height: 320px;
+			};
+			@media (min-width: $desk-w) {
+				min-height: 384px;
+				height: auto;
+			};
 		}
-	};
+		img {
+			display: inline;
+			height: 100%;
+			@media (min-width: $mob-xs) {
+				max-width: 75%;
+			};
+			@media (min-width: 1244px) {
+				max-width: 100%;
+			};
+		}
+	}
 }
 
 .detail-preview-slider {
-	@media (min-width: $desk-w) {
+	@media (min-width: 1244px) {
 		margin-top: 72px;
 		width: 13%;
 		float: left;
 	};
 	.slider {
-		padding: 88px 0;
+		@media (min-width: $mob-xs) {
+			margin: 50px 0 20px;
+		};
+		@media (min-width: 1244px) {
+			margin: 0;
+			padding: 88px 0;
+		};
 	}
 	.slide {
-		margin-bottom: 25px;
 		width: 58px;
 		height: 127px;
 		transition: opacity .3s ease;
 		text-align: center;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 0;
+		};
+		@media (min-width: 1244px) {
+			margin-bottom: 25px;
+		};
 		img {
 			display: inline;
 			max-height: 100%;
@@ -426,19 +425,21 @@
 		}
 	}
 	.slick-prev {
-		@media (min-width: $desk-w) {
+		@media (min-width: 1244px) {
 			transform: rotate(90deg) translateY(50%);
 			top: 0;
 			left: 50%;
 		};
 	}
 	.slick-next {
-		@media (min-width: $desk-w) {
+		transform: rotate(180deg);
+		transform-origin: center 12px;
+		@media (min-width: 1244px) {
 			transform: rotate(-90deg) translateY(50%);
 			top: auto;
 			bottom: 26px;
 			right: 50%;
-
+			transform-origin: center center;
 		};
 	}
 }

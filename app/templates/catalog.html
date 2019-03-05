@@ -38,20 +38,22 @@
 		</div>
 		 
 		<!-- begin catalog-bar -->
-		<div class="catalog-bar">
+		<div class="catalog-bar uk-position-relative">
 			<div class="uk-grid">
 				<div class="uk-width-1-2@m">
+					<i class="icon-filter filter-btn js__toggle-filter uk-hidden@l"></i>
 					<div class="custom-select">
-						<div class="custom-select__label">Сортировать по </div>
+						<div class="custom-select__label uk-visible@l">Сортировать по </div>
 						<select name="" id="" class="js__custom-select" data-theme="default">
 							<option value="">цена по возрастанию</option>
 							<option value="">цена по убыванию</option>
 							<option value="">популярности</option>
 						</select>
 					</div>
+
 				</div>
 				<div class="uk-width-1-2@m">
-					<ul class="uk-pagination uk-float-right">
+					<ul class="uk-pagination float-right">
 						<li class="uk-pagination-prev">
 							<a href="">
 								Предыдущая
@@ -69,6 +71,9 @@
 							</a>
 						 </li>
 					</ul>
+				</div>
+				<div class="mobile-filter uk-hidden@l">
+					<img src="img/filter.png" alt="">
 				</div>
 			</div>
 		</div>

@@ -320,7 +320,7 @@
 			
 			<!-- begin detail-tabs -->
 			<div class="detail-tabs">
-				<ul class="tab-sw" uk-switcher>
+				<ul class="tab-sw" uk-switcher="swiping: false">
 						<li><a href="">Описание</a></li>
 						<li class="uk-active"><a href="">Характеристики</a></li>
 						<li><a href="">Отзывы</a></li>
@@ -329,22 +329,24 @@
 				<ul class="uk-switcher">
 					<li></li>
 					<li>
-						<table>
-							<tbody>
-								<tr>
-									<td>Страна</td>
-									<td>Беларусь</td>
-								</tr>
-								<tr>
-									<td>Гарантия производителя</td>
-									<td>1 год</td>
-								</tr>
-								<tr>
-									<td>Материал</td>
-									<td>Дерево</td>
-								</tr>		
-							</tbody>
-						</table>
+						<div class="uk-overflow-auto">
+							<table>
+								<tbody>
+									<tr>
+										<td>Страна</td>
+										<td>Беларусь</td>
+									</tr>
+									<tr>
+										<td>Гарантия производителя</td>
+										<td>1 год</td>
+									</tr>
+									<tr>
+										<td>Материал</td>
+										<td>Дерево</td>
+									</tr>		
+								</tbody>
+							</table>
+						</div>
 					</li>
 					<li></li>
 					<li></li>

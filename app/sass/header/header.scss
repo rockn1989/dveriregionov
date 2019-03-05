@@ -11,6 +11,10 @@
 	width: 32%;
 	display: flex;
 	align-items: center;
+	@media (min-width: 960px) and (max-width: 1300px) {
+		width: 20%;
+		flex-wrap: wrap;
+	}
 	span {
 		margin-right: 20px;
 		color: $gray-tx;
@@ -33,6 +37,9 @@
 	font-family: $mainFont !important;
 	font-size: 13px;
 	line-height: 16px;
+	@media (min-width: 960px) and (max-width: 1300px) {
+		width: 70%;
+	}
 	.address,
 	.call-spec,
 	.callback,
@@ -152,6 +159,9 @@
 	display: flex;
 	align-items: center;
 	width: 11.5%;
+	@media (min-width: 960px) and (max-width: 1300px) {
+		width: 14.5%;
+	}
 	a {
 		text-decoration: none;
 		font-family: $mainFont !important;
