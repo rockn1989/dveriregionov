@@ -550,6 +550,12 @@
 	position: relative;
 	height: 316px;
 	overflow: hidden;
+	@media (min-width: $mob-xs) {
+		border-bottom: 2px solid #ededed;
+	};
+	@media (min-width: $desk-w) {
+		border: none;
+	};
 	.slide {
 		text-align: center;
 		img {

@@ -79,6 +79,12 @@ h3, .title-h3 {
 		margin-bottom: 30px;
 		width: 100%;
 		font-size: 18px;
+		@media (min-width: $mob-xs) {
+			font-size: 14px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 18px;
+		};
 	}
 }
 
@@ -168,7 +174,7 @@ h3, .title-h3 {
 		width: 24px;
 		height: 24px;
 		border-radius: 50%;
-		background: $orange url('../img/icon-svg/close.svg') center center no-repeat;
+		background: #e8656d url('../img/icon-svg/close.svg') center center no-repeat;
 		background-size: 10px 8px;
 	}
 }
@@ -798,6 +804,7 @@ ul[uk-accordion] {
 	}
 }
 
+
 .select2-container--default.gray {
 	.select2-results__options {
 		font-size: 14px;
@@ -825,6 +832,7 @@ ul[uk-accordion] {
 	&.float-right {
 		@media (min-width: $mob-xs) {
 			margin: 0 auto;
+			justify-content: center;
 		};
 		@media (min-width: $tablet-w) {
 			margin: 0;
@@ -835,7 +843,6 @@ ul[uk-accordion] {
 		margin-right: 8px;
 		padding: 0;
 		display: block;
-
 		font-size: 14px;
 		font-weight: 400;
 		text-align: center;

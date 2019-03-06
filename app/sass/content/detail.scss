@@ -47,6 +47,48 @@
 	};
 	&.uk-flex {
 		justify-content: space-between;
+		@media (min-width: $mob-xs) {
+			flex-wrap: wrap;
+			justify-content: center;
+			.calc-controls {
+				margin: 0 auto 25px;
+			}
+			.btn-wrapper {
+				margin: 0 auto;
+				display: block;
+			}
+			.furniture-price {
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				min-width: 50%;
+				align-items: center;
+				.old-price:not(:empty) {
+					margin-right: 15px;
+				}
+				&~.calc-controls {
+					margin: 0;
+				}
+			}
+			.btn-wrapper {
+				margin-top: 25px;
+			}
+		};
+		@media (min-width: $tablet-w) {
+			.furniture-price {
+				min-width: auto;
+				align-items: flex-start;
+			}
+			.btn-wrapper {
+				margin-top: 0;
+			}
+		};
+		@media (min-width: $desk-w) {
+			flex-wrap: nowrap;
+			.calc-controls {
+				margin: 0 13px 0 0 !important;
+			}
+		};
 		.calc-controls {
 			margin-right: 13px;
 		}
@@ -452,6 +494,22 @@
 			min-width: 230px !important;
 		};
 	}
+	.custom-select-wrapper {
+		@media (min-width: $mob-xs) {
+			width: 100%;
+		};
+		@media (min-width: $mob-s) {
+			width: 45%;
+		};
+		.custom-select {
+			@media (min-width: $mob-xs) {
+				width: 100%;
+			};
+			@media (min-width: $mob-s) {
+				width: 100%;
+			};
+		}
+	}
 }
 
 
@@ -539,6 +597,29 @@
 	&.uk-flex {
 		padding: 15px 40px;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		@media (min-width: $mob-xs) {
+			
+			a {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		};
+		@media (min-width: $mob-s) {
+			justify-content: center;
+			a {
+				margin-left: 10px;
+				margin-bottom: 0;
+			}
+		};
+		@media (min-width: $desk-w) {
+			justify-content: space-between;
+			a {
+				margin-left: 0;
+			}
+		};
 	}
 }
 
@@ -680,7 +761,13 @@
 }
 
 .complect-price {
-	width: 35%;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 25px;
+		width: 100%;
+	};
+	@media (min-width: $tablet-w) {
+		width: 35%;
+	};
 	&__value {
 		margin-bottom: 10px;
 		color: $black;

@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/fonts/icomoon.eot?u8kvve");
-  src: url("../fonts/icomoon/fonts/icomoon.eot?u8kvve#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?u8kvve") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?u8kvve") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?u8kvve#icomoon") format("svg");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?1t4309");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?1t4309#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?1t4309") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?1t4309") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?1t4309#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -129,6 +129,11 @@
 
 .icon-filter:before {
   content: "\e90f";
+}
+
+.icon-help:before {
+  content: "\e910";
+  color: #fa7f4c;
 }
 
 /*______ Elements ______*/
@@ -300,7 +305,7 @@ h3,
   height: 24px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #fa7f4c url("../img/icon-svg/close.svg") center center no-repeat;
+  background: #e8656d url("../img/icon-svg/close.svg") center center no-repeat;
   -webkit-background-size: 10px 8px;
   background-size: 10px 8px;
 }
@@ -1487,8 +1492,22 @@ html.uk-touch body *.uk-invisible {
 }
 
 .auth {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 10%;
-  text-align: right;
   font-size: 14px;
 }
 
@@ -3036,6 +3055,9 @@ section.page-content img[data-src] {
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .border-bottom {
@@ -3149,10 +3171,6 @@ section.page-content img[data-src] {
 
 .door-options > div {
   margin-bottom: 5px;
-}
-
-.complect-price {
-  width: 35%;
 }
 
 .complect-price__value {
@@ -4953,6 +4971,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     line-height: 24px;
   }
 
+  .btn--full {
+    font-size: 14px;
+  }
+
   .gray-block {
     padding: 50px 5% 30px;
   }
@@ -5020,6 +5042,11 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .uk-pagination.float-right {
     margin: 0 auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .uk-pagination li {
@@ -5184,6 +5211,60 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     padding: 30px 15px;
   }
 
+  .detail-section.uk-flex {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .detail-section.uk-flex .calc-controls {
+    margin: 0 auto 25px;
+  }
+
+  .detail-section.uk-flex .btn-wrapper {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .detail-section.uk-flex .furniture-price {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    min-width: 50%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .detail-section.uk-flex .furniture-price .old-price:not(:empty) {
+    margin-right: 15px;
+  }
+
+  .detail-section.uk-flex .furniture-price ~ .calc-controls {
+    margin: 0;
+  }
+
+  .detail-section.uk-flex .btn-wrapper {
+    margin-top: 25px;
+  }
+
   .detail-controls {
     padding-bottom: 15px;
   }
@@ -5243,6 +5324,14 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     width: 100% !important;
   }
 
+  .detail-product-selects-list .custom-select-wrapper {
+    width: 100%;
+  }
+
+  .detail-product-selects-list .custom-select-wrapper .custom-select {
+    width: 100%;
+  }
+
   .type-of-doors .list .item {
     width: 30%;
   }
@@ -5255,6 +5344,14 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   .type-of-doors .list .item__img svg {
     width: 100px;
     height: 100px;
+  }
+
+  .links-wrapper.uk-flex a {
+    margin-bottom: 10px;
+  }
+
+  .links-wrapper.uk-flex a:last-child {
+    margin-bottom: 0;
   }
 
   .detail-controls .detail-section {
@@ -5273,6 +5370,11 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .door-img {
     height: auto;
+  }
+
+  .complect-price {
+    margin-bottom: 25px;
+    width: 100%;
   }
 
   .stores-map__header .custom-select {
@@ -5434,6 +5536,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   .detail-preview-slider .slide {
     margin-bottom: 0;
   }
+
+  .detail-furniture-slider {
+    border-bottom: 2px solid #ededed;
+  }
 }
 
 @media (min-width: 480px) {
@@ -5465,6 +5571,14 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     width: 45%;
   }
 
+  .detail-product-selects-list .custom-select-wrapper {
+    width: 45%;
+  }
+
+  .detail-product-selects-list .custom-select-wrapper .custom-select {
+    width: 100%;
+  }
+
   .type-of-doors .list .item {
     width: 25%;
     margin: 0 10% 15px 0;
@@ -5473,6 +5587,19 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   .type-of-doors .list .item:first-child {
     margin-right: 5%;
     text-align: left;
+  }
+
+  .links-wrapper.uk-flex {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .links-wrapper.uk-flex a {
+    margin-left: 10px;
+    margin-bottom: 0;
   }
 
   .stores-list .store__show-map {
@@ -5497,6 +5624,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   .title-h3 {
     font-size: 24px;
     line-height: 48px;
+  }
+
+  .btn--full {
+    font-size: 18px;
   }
 
   .orange-label {
@@ -5621,6 +5752,19 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     padding: 30px 40px;
   }
 
+  .detail-section.uk-flex .furniture-price {
+    min-width: auto;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .detail-section.uk-flex .btn-wrapper {
+    margin-top: 0;
+  }
+
   .detail-controls {
     padding-bottom: 0;
   }
@@ -5650,6 +5794,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .door-img {
     height: 500px;
+  }
+
+  .complect-price {
+    width: 35%;
   }
 
   .news-list .news__img img {
@@ -5887,6 +6035,16 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     margin-right: 0;
   }
 
+  .detail-section.uk-flex {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .detail-section.uk-flex .calc-controls {
+    margin: 0 13px 0 0 !important;
+  }
+
   .type-of-prices {
     border-top: none;
     border-bottom: 2px solid #ededed;
@@ -5921,6 +6079,18 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .type-of-prices .item i.check {
     opacity: 0;
+  }
+
+  .links-wrapper.uk-flex {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .links-wrapper.uk-flex a {
+    margin-left: 0;
   }
 
   .detail-controls .detail-section {
@@ -6065,6 +6235,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   .detail-big-slider .slide a {
     min-height: 384px;
     height: auto;
+  }
+
+  .detail-furniture-slider {
+    border: none;
   }
 }
 
