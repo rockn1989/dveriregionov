@@ -98,11 +98,11 @@ $(function() {
 		e.preventDefault();
 		var _self = $(this);
 
-			$pageSeacrh.beforeshow();
+		$pageSeacrh.beforeshow();
+		
 		$('html, body').animate({
 			scrollTop: 0
 		}, 350, function () {
-
 			$pageSeacrh.show();
 			$('.page-search-modal .uk-modal-dialog').find('input[type="text"]').focus();
 		});

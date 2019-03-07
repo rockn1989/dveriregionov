@@ -664,7 +664,7 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
 }
 
 .card__img img {
-  display: inline;
+  display: inline-block;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -1159,6 +1159,7 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
   vertical-align: top;
   height: 56px;
   width: 33px;
+  font-family: "SF";
   text-align: center;
   background-color: #ededed;
   border: none;

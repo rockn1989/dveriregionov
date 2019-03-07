@@ -528,7 +528,7 @@ ul[uk-accordion] {
 		margin-bottom: 30px;
 		text-align: center;
 		img {
-			display: inline;
+			display: inline-block;
 			transition: all .3s ease;
 			filter: blur(0px);
 			&[data-lazy],
@@ -979,6 +979,7 @@ ul[uk-accordion] {
 		vertical-align: top;
 		height: 56px;
 		width: 33px;
+		font-family: $mainFont;
 		text-align: center;
 		background-color: $gray-bg;
 		border: none;

@@ -73,18 +73,26 @@
 							
 							<div class="add-photo">
 								<div class="slider-wrapper">
-									<div class="slider">
+									<div class="slider" uk-lightbox>
 										<div class="slide">
-											<img data-lazy="img/sliders-img/add-photo-1-130x140.png" alt="">
+											<a href="img/sliders-img/add-photo-1-130x140.png">
+												<img data-lazy="img/sliders-img/add-photo-1-130x140.png" alt="">
+											</a>
 										</div>
 										<div class="slide">
-											<img data-lazy="img/sliders-img/add-photo-2-130x140.png" alt="">
+											<a href="img/sliders-img/add-photo-2-130x140.png">
+												<img data-lazy="img/sliders-img/add-photo-2-130x140.png" alt="">
+											</a>
 										</div>
 										<div class="slide">
-											<img data-lazy="img/sliders-img/add-photo-3-130x140.png" alt="">
+											<a href="img/sliders-img/add-photo-3-130x140.png">
+												<img data-lazy="img/sliders-img/add-photo-3-130x140.png" alt="">
+											</a>
 										</div>
 										<div class="slide">
-											<img data-lazy="img/sliders-img/add-photo-2-130x140.png" alt="">
+											<a href="img/sliders-img/add-photo-2-130x140.png">
+												<img data-lazy="img/sliders-img/add-photo-2-130x140.png" alt="">
+											</a>
 										</div>
 									</div>
 									<div class="slider__arrows">
@@ -114,14 +122,14 @@
 							</div>
 							<div class="btn-wrapper">
 								<a href="" class="btn">Купить</a>
-								<a href="" class="btn btn--transparent">Купить в 1 клик</a>
+								<a href="" class="btn btn--transparent" uk-toggle="target: #fast-buy">Купить в 1 клик</a>
 							</div>
 						</div>
 						
 						<div class="links-wrapper uk-flex border-bottom">
 							<a href="" class="icon-roulette" uk-toggle="target: #call-spec">Вызвать замерщика</a>
 							<a href="" class="icon-calendar" uk-toggle="target: #payment-modal">Рассрочка</a>
-							<a href="" class="icon-help" uk-toggle="target: #payment-modal">Помощь при выборе</a>
+							<a href="" class="icon-help">Помощь при выборе</a>
 						</div>
 
 						<!-- begin detail-product-selects-list -->
@@ -377,7 +385,109 @@
 							</tbody>
 						</table>
 					</li>
-					<li></li>
+					<li>
+						<!-- begin reviews-list -->
+						<div class="reviews-list tabs">
+							<div class="review">
+								<div class="review__top">
+									<div class="review__user">
+										<div class="review__name">Николай,</div>
+										<div class="review__date">26 сентября 2019</div>
+									</div>
+									<div class="rating uk-clearfix">
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+									</div>
+								</div>
+								<div class="review__text">
+									Своим клиентам мы предлагаем широчайший выбор моделей входных и межкомнатных дверей различных как по ценовой категории, так и дизайну.
+								</div>
+							</div>
+
+							<div class="review">
+								<div class="review__top">
+									<div class="review__user">
+										<div class="review__name">Сергей Петрович,</div>
+										<div class="review__date">21 сентября 2019</div>
+									</div>
+									<div class="rating uk-clearfix">
+										<input id="" type="radio" name="" value="" checked>
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+									</div>
+								</div>
+								<div class="review__text">
+									За годы работы компания «Двери Регионов» по праву заслужила репутацию надежного партнера. Гарантированное качество предлагаемой нами продукции остается неизменно высоким. Мы стараемся поддерживать, приобретенный у наших клиентов авторитет и остаемся профессионалами в этом направлении, постоянно расширяя ассортимент и обеспечивая высокое качество каждой модели двери, вне зависимости от ее стоимости.
+								</div>
+							</div>
+
+							<div class="review">
+								<div class="review__top">
+									<div class="review__user">
+										<div class="review__name">Валентина,</div>
+										<div class="review__date">12 сентября 2019</div>
+									</div>
+									<div class="rating uk-clearfix">
+										<input id="" type="radio" name="" value="" checked>
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+										<input id="" type="radio" name="" value="">
+										<label for="" class="icon-star"></label>
+									</div>
+								</div>
+								<div class="review__text">
+									Профессионалы компании ДВЕРИ РЕГИОНОВ очень внимательны к каждому клиенту. Вы можете быть уверены в том, что Ваши пожелания не просто примут к сведению, а возьмут за основу при выполнении заказа. Мы всегда заинтересованы в том, чтобы наши покупатели могли приобретать товары, оптимальные по соотношению цены и качества.
+								</div>
+							</div>	
+
+						</div>
+						<!-- end reviews-list -->
+						<a href="#reviews-modal" class="btn" uk-toggle>Оставить отзыв</a>
+						<div class="catalog-bar">
+							<div class="uk-grid">
+								<div class="uk-width-1-1">
+									<ul class="uk-pagination uk-flex-center">
+										<li class="uk-pagination-prev">
+											<a href="">
+												Предыдущая
+											</a>
+										 </li>
+										<li class="uk-active"><span>1</span></li>
+										<li><a href="">2</a></li>
+										<li><a href="">3</a></li>
+										<li><a href="">4</a></li>
+										<li><a href="">...</a></li>
+										<li><a href="">12</a></li>
+										<li class="uk-pagination-next">
+											<a href="">
+												Следующая
+											</a>
+										 </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
 					<li></li>
 				</ul>
 			</div>
