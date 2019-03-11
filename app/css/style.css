@@ -207,6 +207,10 @@ h3,
   font-size: 18px;
 }
 
+.delete-product {
+  font-weight: 700;
+}
+
 .icon-arrow-left {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -1007,6 +1011,84 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
 }
 
 /*______ End Custom Select ______*/
+
+/*______ Custom Tooltip ______*/
+
+.custom-tooltip {
+  position: absolute;
+  padding: 0 3px;
+  min-width: 130px;
+  font-size: 13px;
+  border: 1px solid #fa7f4c;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.custom-tooltip:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  display: block;
+  background-color: #ffffff;
+  border-left: 1px solid #fa7f4c;
+  border-bottom: 1px solid #fa7f4c;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+}
+
+.custom-tooltip.top {
+  top: -40px;
+}
+
+.custom-tooltip.center {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.custom-tooltip.left {
+  left: 0;
+}
+
+.custom-tooltip.left:after {
+  left: 20px;
+}
+
+.custom-tooltip.right {
+  right: 0;
+}
+
+.custom-tooltip.right:after {
+  left: auto;
+  right: 20px;
+}
+
+.custom-tooltip.error {
+  opacity: 1;
+  visibility: visible;
+  z-index: 980;
+}
+
+/*______ End Custom Tooltip ______*/
 
 /*______ Pagination ______*/
 
@@ -2512,6 +2594,64 @@ section.page-content img[data-src] {
 
 /*______ End Revies Block ______*/
 
+/*______ Compare ______*/
+
+.compare-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.compare-table {
+  min-width: 600px;
+}
+
+.compare-table thead {
+  border-bottom: 1px solid #ededed;
+}
+
+.compare-table thead tr td {
+  padding: 25px 45px;
+  min-width: 290px;
+  text-align: left;
+}
+
+.compare-table thead tr td:first-child {
+  min-width: 100px;
+  font-weight: 700;
+}
+
+.compare-table thead tr td a {
+  display: block;
+}
+
+.compare-table thead tr td a.compare-img {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.compare-table thead tr td a.btn {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.compare-table tbody tr:nth-child(odd) {
+  background-color: #ededed !important;
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.compare-table tbody tr td:first-child {
+  font-weight: 700;
+}
+
+.compare-table .btn {
+  padding: 10px 28px;
+}
+
+/*______ End Compare ______*/
+
 /*______ Start Catalog ______*/
 
 .catalog {
@@ -2980,6 +3120,10 @@ section.page-content img[data-src] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.custom-select-wrapper {
+  position: relative;
 }
 
 .type-of-doors .list {

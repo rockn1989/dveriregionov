@@ -138,4 +138,36 @@ $(function () {
 		}
 	})
 
+
+	/*______ Select Error ______*/
+
+	$('.js__card-buy').on('click', function (e) {
+		e.preventDefault();
+		$.each($('.detail-card select'), function (i, el) {
+			var optionlist = $(el).find('option');
+
+			$.each(optionlist, function (i, el) {
+
+				if($(el).prop('selected') == true && $(el).val() == 'default') {
+					console.log($(el).val());
+					$(el)
+						.parents('.custom-select-wrapper')
+						.find('.custom-tooltip')
+						.addClass('error');
+					return false;
+				} else {
+					$(el)
+						.parents('.custom-select-wrapper')
+						.find('.custom-tooltip')
+						.removeClass('error');
+				};
+			});
+		})
+	});
+
+	$('.custom-select select').on('change', function () {
+		$(this).val() != 'default' ? $(this).parent('.custom-select').siblings('.custom-tooltip').removeClass('error') 
+		: $(this).parent('.custom-select').siblings('.custom-tooltip').addClass('error');
+	});
+
 });
