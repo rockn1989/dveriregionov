@@ -90,6 +90,9 @@ h3, .title-h3 {
 
 .delete-product {
 	font-weight: 700;
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .icon-arrow-left {
@@ -127,8 +130,13 @@ h3, .title-h3 {
 	text-indent: -9999px;
 }
 
+.mob-margin-top {
+	@media (min-width: 0) and (max-width: 660px) {
+		margin-top: 25px !important;
+	}
+}
+
 .gray-block {
-	
 	background-color: #d1d1d1;
 	@media (min-width: $mob-xs) {
 		padding: 50px 5% 30px;
@@ -577,7 +585,7 @@ ul[uk-accordion] {
 			@include list-reset;
 			li {
 				position: relative;
-				padding-left: 14px;
+				padding-left: 14px !important;
 				color: $black;
 				font-size: 14px;
 				font-weight: 400;
@@ -1060,7 +1068,7 @@ ul[uk-accordion] {
 }
 
 .facility {
-	padding: 30px 40px;
+	padding: 30px 41px;
 	height: 100%;
 	border-right: 2px solid $gray-bg;
 	background-color: #ffffff;

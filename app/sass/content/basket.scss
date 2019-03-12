@@ -1,0 +1,137 @@
+/*______ Restyle Bitrix Components ______*/
+
+.basket-items-list {
+	padding: 0;
+}
+
+table.basket-items-list-table {
+	tr {
+		background-color: #ffffff;
+		td {
+			padding: 20px 45px;
+			border-bottom: 1px solid #ededed;
+		}
+	}
+	.basket-item-block-price {
+		padding-top: 0;
+	}
+	.basket-item-block-image {
+		padding-bottom: 0;
+	}
+}
+
+div.bx-green .btn.btn-default {
+	background-color: #fa7f4c;
+	border-color: #fa7f4c;
+}
+
+div.bx-green .btn.btn-default:hover {
+	border-color: #4848bc;
+	background-color: #4848bc;
+}
+
+.basket-items-list-item-price {
+	min-height: 93px;
+}
+
+.basket-items-list {
+	overflow-x: auto;
+}
+
+.basket-items-list-item-descriptions-inner {
+	min-width: 200px;
+}
+
+.basket-item-actions-remove:after, .basket-item-actions-remove:before {
+	background: #e8656d;
+}
+
+.basket-item-property, .basket-item-property-custom {
+	margin-bottom: 5px;
+}
+
+.basket-item-property-name, .basket-item-property-custom-name,
+.basket-item-property-value, .basket-item-property-custom-value {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.basket-item-property:last-child .basket-item-property-value {
+	margin-bottom: 0;
+}
+
+.basket-item-amount-btn-minus,
+.basket-item-amount-btn-plus {
+	display: inline-block;
+	vertical-align: top;
+	width: 36px;
+	height: 56px;
+	background-color: #ededed;
+	font-size: 20px;
+	line-height: 56px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	&:active,&:focus,&:hover {
+		color: #ffffff;
+		background-color: #fa7f4c;
+	}
+}
+
+.basket-item-amount-btn-minus {
+	border-radius: 3px 0 0 3px;
+}
+
+.basket-item-amount-btn-plus {
+	border-radius: 0 3px 3px 0;
+}
+
+.basket-item-amount-filed, .basket-item-block-amount.disabled .basket-item-amount-filed:hover {
+	display: inline-block;
+	vertical-align: top;
+	height: 56px;
+	width: 33px;
+	font-family: "SF";
+	font-weight: 300;
+	text-align: center;
+	background-color: #ededed;
+	border: none;
+	outline: none;
+}
+
+.bx-authform-social {
+	display: none;
+}
+
+.alert-danger {
+	color: #ffffff;
+	background-color: #e8656d;
+	border-color: #e8656d
+}
+
+@media (max-width: 480px) {
+	.basket-checkout-container {
+		.basket-checkout-block-total-price,
+		.basket-checkout-block-total-price-inner,
+		.basket-checkout-block {
+			min-width: auto;
+			width: auto;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.basket-items-list-item-container.basket-items-list-item-container-gift, .basket-items-list-item-container.basket-items-list-item-container-gift > td, .basket-items-list .basket-items-list-item-container:first-child > td {
+		margin: 0;
+		padding-top: 20px;
+		border-top: none !important;
+	}
+}
+
+@media (min-width: $desk-w) {
+	.basket-item-property-name, .basket-item-property-custom-name,
+	.basket-item-property-value, .basket-item-property-custom-value {
+		width: 100%;
+	}	
+};

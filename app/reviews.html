@@ -297,7 +297,7 @@
 		<div class="seo-text">
 			Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.
 		</div>
-		<a href="#" class="btn" uk-toggle="#revies-modal">Оставить отзыв</a>
+		<a href="" class="btn" uk-toggle="#reviews-modal">Оставить отзыв</a>
 
 		<!-- begin reviews-list -->
 		<div class="reviews-list">
@@ -583,6 +583,32 @@
 						<fieldset>
 							<label for="tel">Телефон</label>
 							<input id="tel" name="tel" type="text" class="tel js__input-phone" placeholder="+7" required>
+						</fieldset>
+						<button class="btn" type="submit">Отправить</button>
+					</form>
+				</div>
+		</div>
+</div>
+
+<div id="reviews-modal" class="default-modal reviews-modal" uk-modal>
+		<div class="uk-modal-dialog">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+						<h2 class="uk-modal-title">Оставить отзыв</h2>
+				</div>
+				<div class="uk-modal-body">
+					<form action="" method="get" class="call-spec">
+						<fieldset>
+							<label for="reviews-name">Ваше имя</label>
+							<input id="reviews-name" type="text" placeholder="Алексей Иванов">
+						</fieldset>
+						<fieldset>
+							<label for="reviews-email">Email</label>
+							<input id="reviews-email" name="reviews-email" type="text" placeholder="info@dveri.ru" required>
+						</fieldset>
+						<fieldset>
+							<label for="reviews-text">Отзыв</label>
+							<textarea name="reviews-text" id="reviews-text" required></textarea>
 						</fieldset>
 						<button class="btn" type="submit">Отправить</button>
 					</form>

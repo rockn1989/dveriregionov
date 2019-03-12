@@ -70,17 +70,11 @@
 					margin: 0;
 				}
 			}
-			.btn-wrapper {
-				margin-top: 25px;
-			}
 		};
 		@media (min-width: $tablet-w) {
 			.furniture-price {
 				min-width: auto;
 				align-items: flex-start;
-			}
-			.btn-wrapper {
-				margin-top: 0;
 			}
 		};
 		@media (min-width: $desk-w) {
@@ -610,7 +604,7 @@
 				}
 			}
 		};
-		@media (min-width: $mob-s) {
+		@media (min-width: 540px) {
 			justify-content: center;
 			a {
 				margin-left: 10px;
