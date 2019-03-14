@@ -1299,6 +1299,59 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
 
 /*______ End Facilities block ______*/
 
+/*______ Component Table ______*/
+
+.component-table {
+  display: none;
+}
+
+.component-table thead tr td {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fa7f4c;
+  color: #ffffff;
+  min-width: 75px;
+}
+
+.component-table thead tr td:nth-child(4) {
+  width: 80px;
+}
+
+.component-table td {
+  padding: 10px 5px !important;
+  font-size: 14px;
+  line-height: 16px;
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  text-align: center;
+}
+
+.component-table td:first-child {
+  text-align: left;
+}
+
+.component-table td:last-child {
+  border: none;
+}
+
+.component-table .btn {
+  padding: 5px 12px;
+}
+
+.component-table .calc-controls span,
+.component-table .calc-controls input {
+  width: 25px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.component-table.show {
+  display: block;
+}
+
+/*______ End Component Table ______*/
+
 /*______ UI Slider______*/
 
 .ui-slider-wrapper {
@@ -3277,6 +3330,22 @@ section.page-content img[data-src] {
 .detail-tabs .catalog-bar {
   margin-top: 20px;
   margin-bottom: 0 !important;
+}
+
+.detail-scroll-table {
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.detail-scroll-table .mCSB_scrollTools {
+  top: 2px;
+  width: 5px !important;
+}
+
+.detail-scroll-table .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.detail-scroll-table .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #696464 !important;
 }
 
 /*______ End Detail v1 ______*/

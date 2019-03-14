@@ -713,6 +713,19 @@
 	}
 }
 
+.detail-scroll-table {
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	.mCSB_scrollTools {
+		top: 2px;
+		width: 5px !important;
+	}
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+		background-color: #696464 !important;
+	}
+}
+
 /*______ End Detail v1 ______*/
 
 
