@@ -1215,8 +1215,8 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
 .calc-controls span {
   display: inline-block;
   vertical-align: top;
-  width: 36px;
-  height: 56px;
+  width: 36px !important;
+  height: 56px !important;
   background-color: #ededed;
   font-size: 20px;
   line-height: 56px;
@@ -1241,10 +1241,11 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
 }
 
 .calc-controls input {
+  padding: 0 !important;
   display: inline-block;
   vertical-align: top;
-  height: 56px;
-  width: 33px;
+  height: 56px !important;
+  width: 33px !important;
   font-family: "SF";
   text-align: center;
   background-color: #ededed;
@@ -1341,9 +1342,9 @@ ul[uk-accordion] > li:focus .uk-accordion-title {
 
 .component-table .calc-controls span,
 .component-table .calc-controls input {
-  width: 25px;
-  height: 40px;
-  line-height: 40px;
+  width: 25px !important;
+  height: 40px !important;
+  line-height: 40px !important;
 }
 
 .component-table.show {
@@ -2158,6 +2159,30 @@ section.page-content img[data-src] {
   filter: blur(3px);
 }
 
+section.page-content input[type="text"],
+section.page-content input[type="password"] {
+  padding: 0 14px;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  background-color: #ededed;
+  border: 1px solid #ededed;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+section.page-content textarea {
+  padding: 10px 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #ededed;
+  border: 1px solid #ededed;
+}
+
 .content {
   padding-bottom: 40px;
 }
@@ -2493,6 +2518,11 @@ section.page-content img[data-src] {
 
 .about-company-detail .section img {
   margin-bottom: 30px;
+}
+
+.contacts-company {
+  padding: 15px 25px;
+  background: #ffffff;
 }
 
 /*______ End About company ______*/
@@ -4089,6 +4119,24 @@ ul.uk-switcher.faq {
 
 /*______ Restyle Bitrix Components ______*/
 
+.bx-authform {
+  padding: 25px;
+  max-width: none;
+  background: #ffffff;
+}
+
+.bx-authform form {
+  max-width: 500px;
+}
+
+.bx-authform form label {
+  font-weight: bold;
+}
+
+.alert-danger {
+  max-width: 500px;
+}
+
 .basket-items-list {
   padding: 0;
 }
@@ -4193,7 +4241,7 @@ div.bx-green .btn.btn-default:hover {
 .basket-item-block-amount.disabled .basket-item-amount-filed:hover {
   display: inline-block;
   vertical-align: top;
-  height: 56px;
+  height: 56px !important;
   width: 33px;
   font-family: "SF";
   font-weight: 300;
@@ -4402,6 +4450,200 @@ div.bx-green .btn.btn-default:hover {
 
 .bx-filter .custom-checkbox:after {
   top: 1px;
+}
+
+.sale-order-list-title-container {
+  background-color: #fa7f4c;
+}
+
+.sale-order-list-inner-container {
+  background-color: #ffffff;
+  border-color: #ededed;
+  border-left: none;
+  border-right: none;
+}
+
+.sale-personal-section-index-block.bx-theme-green {
+  border: 1px solid #ededed;
+  background: #ffffff;
+}
+
+.sale-personal-section-index-block-name {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.sale-personal-section-index-block-ico {
+  font-size: 0;
+  display: block;
+}
+
+.sale-personal-section-index-block:hover svg {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.sale-order-list-title {
+  margin: 0;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "SF";
+}
+
+.auth-icon {
+  fill: #fa7f4c;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+}
+
+.bx-sap {
+  padding-bottom: 15px;
+  background-color: #ffffff;
+}
+
+.bx-sap .btn {
+  background-color: #fa7f4c;
+}
+
+.bx-sap .btn:hover {
+  background-color: #4848bc;
+}
+
+.sale-personal-account-wallet-title {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+.sale-personal-account-wallet-list-container,
+.sale-order-detail-general-head {
+  background-color: #fa7f4c;
+}
+
+.sale-order-detail-general {
+  margin-bottom: 30px;
+  border-color: #fa7f4c;
+}
+
+.sale-order-detail-about-order-inner-container-repeat-button {
+  background-color: #fa7f4c;
+}
+
+.sale-order-detail-about-order-inner-container-repeat-button:hover {
+  text-decoration: none;
+  background-color: #4848bc;
+}
+
+.sale-personal-account-wallet-currency-item {
+  font-family: "SF";
+  color: #ffffff;
+}
+
+.sale-order-detail {
+  padding: 15px 25px;
+  background-color: #ffffff;
+}
+
+.sale-acountpay-fixedpay-list .sale-acountpay-fixedpay-item {
+  background: #ffffff;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ededed;
+  -webkit-transition: border-color .3s, background .3s ease;
+  -o-transition: border-color .3s, background .3s ease;
+  -moz-transition: border-color .3s, background .3s ease;
+  transition: border-color .3s, background .3s ease;
+}
+
+.sale-acountpay-fixedpay-list .sale-acountpay-fixedpay-item:hover {
+  background: #fa7f4c;
+  border-color: #fa7f4c;
+  color: #ffffff;
+}
+
+.sale-order-detail-order-item-imgcontainer {
+  border-color: #ededed;
+}
+
+.bx_profile {
+  padding: 15px 25px;
+  background: #ffffff;
+}
+
+.bx_profile form {
+  max-width: 400px;
+}
+
+.bx_profile .form-group {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.bx_profile .form-group label {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.bx_bt_button {
+  padding: 16px 42px;
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fa7f4c;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
+  -moz-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.bx_bt_button:hover {
+  color: #ffffff;
+  background-color: #4848bc;
+  text-decoration: none;
+}
+
+.sale-order-list-container {
+  font-family: "SF";
+  background: #ffffff;
+}
+
+.sale-order-list-container .sale-order-list-accomplished-title {
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.sale-order-list-container a {
+  color: #727271;
+  text-decoration: none;
+}
+
+.sale-order-list-container a:hover {
+  color: #0f0f0f;
+  text-decoration: none;
+}
+
+.sale-order-list-accomplished-date,
+.sale-order-list-accomplished-date-number {
+  color: #ffffff;
+}
+
+.sale-order-list-accomplished-title-container {
+  background: #fa7f4c;
 }
 
 /*______ FOOTER ______*/

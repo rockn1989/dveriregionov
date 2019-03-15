@@ -1,5 +1,21 @@
 /*______ Restyle Bitrix Components ______*/
 
+.bx-authform {
+	padding: 25px;
+	max-width: none;
+	background: #ffffff;
+	form {
+		max-width: 500px;
+		label {
+			font-weight: bold;
+		}
+	}
+}
+
+.alert-danger {
+	max-width: 500px;
+}
+
 .basket-items-list {
 	padding: 0;
 }
@@ -90,7 +106,7 @@ div.bx-green .btn.btn-default:hover {
 .basket-item-amount-filed, .basket-item-block-amount.disabled .basket-item-amount-filed:hover {
 	display: inline-block;
 	vertical-align: top;
-	height: 56px;
+	height: 56px !important;
 	width: 33px;
 	font-family: "SF";
 	font-weight: 300;
@@ -272,6 +288,177 @@ div.bx-green .btn.btn-default:hover {
 			top: 1px;
 		}
 	}
+}
+
+.sale-order-list-title-container {
+	background-color: $orange;
+}
+
+.sale-order-list-inner-container {
+	background-color: #ffffff;
+	border-color: $gray-bg;
+	border-left: none;
+	border-right: none;
+}
+
+.sale-personal-section-index-block.bx-theme-green {
+	border: 1px solid $gray-bg;
+	background: #ffffff;
+}
+
+.sale-personal-section-index-block-name {
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.sale-personal-section-index-block-ico {
+	font-size: 0;
+	display: block;
+}
+
+.sale-personal-section-index-block {
+	&:hover {
+		svg {
+			transform: scale(1.05);
+		}
+	}
+}
+
+.sale-order-list-title {
+	margin: 0;
+	padding: 10px 15px;
+	color: #ffffff;
+	font-weight: 500;
+	font-family: $mainFont;
+}
+
+.auth-icon {
+	fill: $orange;
+	transition: transform .3s ease;
+}
+
+.bx-sap {
+	padding-bottom: 15px;
+	background-color: #ffffff;
+	.btn {
+		background-color: $orange;
+		&:hover {
+			background-color: #4848bc;
+		}
+	}
+}
+
+.sale-personal-account-wallet-title {
+	background-color: #ffffff;
+	color: $black;
+}
+
+.sale-personal-account-wallet-list-container,
+.sale-order-detail-general-head {
+	background-color: $orange;
+}
+
+.sale-order-detail-general {
+	margin-bottom: 30px;
+	border-color: $orange;
+}
+
+.sale-order-detail-about-order-inner-container-repeat-button {
+	background-color: $orange;
+	&:hover {
+		text-decoration: none;
+		background-color: #4848bc;
+	}
+}
+
+.sale-personal-account-wallet-currency-item {
+	font-family: $mainFont;
+	color: #ffffff;
+}
+
+.sale-order-detail {
+	padding: 15px 25px;
+	background-color: #ffffff;
+}
+
+.sale-acountpay-fixedpay-list .sale-acountpay-fixedpay-item {
+	background: #ffffff;
+	border-radius: 3px;
+	border: 1px solid #ededed;
+	transition: border-color .3s, background .3s ease;
+	&:hover {
+		background: $orange;
+		border-color: $orange;
+		color: #ffffff;
+	}
+}
+
+.sale-order-detail-order-item-imgcontainer {
+	border-color: #ededed;
+}
+
+.bx_profile {
+	padding: 15px 25px;
+	background: #ffffff;
+	form {
+		max-width: 400px;
+	}
+	.form-group {
+		margin-bottom: 15px;
+		display: block;
+		label {
+			margin-bottom: 12px;
+			font-size: 14px;
+		}
+	}
+}
+
+.bx_bt_button {
+	padding: 16px 42px;
+	display: inline-block;
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 11px;
+	font-weight: 700;
+	border-radius: 3px;
+	background-color: $orange;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transition: background-color .3s ease;
+	&:hover {
+		color: #ffffff;
+		background-color: $purpule;
+		text-decoration: none;
+	}
+}
+
+.sale-order-list-container {
+	font-family: $mainFont;
+	background: #ffffff;
+	.sale-order-list-accomplished-title {
+		margin: 10px 0;
+		color: #ffffff;
+	}
+	a {
+		color: $gray-tx;
+		text-decoration: none;
+		&:hover {
+			color: $black;
+			text-decoration: none;
+		}
+	}
+}
+
+.sale-order-list-accomplished-date,
+.sale-order-list-accomplished-date-number {
+	color: #ffffff;
+}
+
+.sale-order-list-accomplished-title-container {
+	background: $orange;
 }
 
 @media (max-width: 480px) {

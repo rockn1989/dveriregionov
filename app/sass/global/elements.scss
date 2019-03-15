@@ -1025,8 +1025,8 @@ ul[uk-accordion] {
 	span {
 		display: inline-block;
 		vertical-align: top;
-		width: 36px;
-		height: 56px;
+		width: 36px !important;
+		height: 56px !important;
 		background-color: $gray-bg;
 		font-size: 20px;
 		line-height: 56px;
@@ -1045,10 +1045,11 @@ ul[uk-accordion] {
 		}
 	}
 	input {
+		padding: 0 !important;
 		display: inline-block;
 		vertical-align: top;
-		height: 56px;
-		width: 33px;
+		height: 56px !important;
+		width: 33px !important;
 		font-family: $mainFont;
 		text-align: center;
 		background-color: $gray-bg;
@@ -1144,9 +1145,9 @@ ul[uk-accordion] {
 	}
 	.calc-controls {
 		span,input {
-			width: 25px;
-			height: 40px;
-			line-height: 40px;
+			width: 25px !important;
+			height: 40px !important;
+			line-height: 40px !important;
 		}
 	}
 	&.show {
