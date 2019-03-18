@@ -4251,6 +4251,19 @@ div.bx-green .btn.btn-default:hover {
   outline: none;
 }
 
+.basket-item-block-amount {
+  padding: 0;
+}
+
+.basket-item-block-amount .basket-item-amount-filed-block {
+  width: 33px;
+}
+
+.basket-item-block-amount .basket-item-amount-filed-block input[type="text"] {
+  padding: 0;
+  border: none;
+}
+
 .bx-authform-social {
   display: none;
 }
@@ -4572,7 +4585,7 @@ div.bx-green .btn.btn-default:hover {
 }
 
 .bx_profile {
-  padding: 15px 25px;
+  padding: 25px;
   background: #ffffff;
 }
 
@@ -4644,6 +4657,14 @@ div.bx-green .btn.btn-default:hover {
 
 .sale-order-list-accomplished-title-container {
   background: #fa7f4c;
+}
+
+.main-profile-form-buttons-block {
+  margin-bottom: 0;
+}
+
+.main-profile-social-block {
+  display: none;
 }
 
 /*______ FOOTER ______*/
@@ -4779,7 +4800,34 @@ div.bx-green .btn.btn-default:hover {
 }
 
 .main-slider .slider {
+  opacity: 0;
   overflow: hidden;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: opacity .3s, -webkit-filter .3s ease;
+  transition: opacity .3s, -webkit-filter .3s ease;
+  -o-transition: opacity .3s, filter .3s ease;
+  -moz-transition: opacity .3s, filter .3s ease;
+  transition: opacity .3s, filter .3s ease;
+  transition: opacity .3s, filter .3s ease, -webkit-filter .3s ease;
+}
+
+.main-slider .slider ~ .slider__arrows {
+  opacity: 0;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.main-slider .slider.slick-initialized {
+  opacity: 1;
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.main-slider .slider.slick-initialized ~ .slider__arrows {
+  opacity: 1;
+  -webkit-filter: blur(0);
+  filter: blur(0);
 }
 
 .main-slider .slide {

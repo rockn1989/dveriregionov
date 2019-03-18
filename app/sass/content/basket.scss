@@ -116,6 +116,17 @@ div.bx-green .btn.btn-default:hover {
 	outline: none;
 }
 
+.basket-item-block-amount {
+	padding: 0;
+	.basket-item-amount-filed-block {
+		width: 33px;
+		input[type="text"] {
+			padding: 0;
+			border: none;
+		}
+	}
+}
+
 .bx-authform-social {
 	display: none;
 }
@@ -398,7 +409,7 @@ div.bx-green .btn.btn-default:hover {
 }
 
 .bx_profile {
-	padding: 15px 25px;
+	padding: 25px;
 	background: #ffffff;
 	form {
 		max-width: 400px;
@@ -459,6 +470,14 @@ div.bx-green .btn.btn-default:hover {
 
 .sale-order-list-accomplished-title-container {
 	background: $orange;
+}
+
+.main-profile-form-buttons-block {
+	margin-bottom: 0;
+}
+
+.main-profile-social-block {
+	display: none;
 }
 
 @media (max-width: 480px) {

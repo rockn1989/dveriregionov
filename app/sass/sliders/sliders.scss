@@ -10,7 +10,22 @@
 	position: relative;
 	margin-bottom: 40px;
 	.slider {
+		opacity: 0;
 		overflow: hidden;
+		filter: blur(3px);
+		transition: opacity .3s, filter .3s ease;
+		~ .slider__arrows {
+			opacity: 0;
+			filter: blur(3px);
+		}
+		&.slick-initialized {
+			opacity: 1;
+			filter: blur(0);
+			~ .slider__arrows {
+				opacity: 1;
+				filter: blur(0);
+			}
+		}
 		@media (min-width: $mob-xs) {
 			height: 440px;
 		};
