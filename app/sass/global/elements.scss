@@ -899,6 +899,7 @@ ul[uk-accordion] {
 /*______ Pagination ______*/
 
 .uk-pagination {
+	margin-bottom: 0;
 	&.float-right {
 		@media (min-width: $mob-xs) {
 			margin: 0 auto;

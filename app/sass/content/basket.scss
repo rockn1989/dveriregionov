@@ -137,6 +137,9 @@ div.bx-green .btn.btn-default:hover {
 	border-color: #e8656d
 }
 
+.bx-filter {
+	min-width: auto;
+}
 
 .bx-filter.bx-green .bx-filter-section {
 	padding: 0;
@@ -148,6 +151,7 @@ div.bx-green .btn.btn-default:hover {
 	.bx-filter-title {
 		margin: 0;
 		padding: 20px 25px;
+		font-size: 14px;
 		border-bottom: 2px solid #ededed;
 	}
 	.bx-filter-parameters-box {
@@ -156,6 +160,7 @@ div.bx-green .btn.btn-default:hover {
 	}
 	.bx-filter-button-box {
 		.btn-themes {
+			padding: 16px 0;
 			width: 100%;
 			background-color: $orange;
 			border: none;
@@ -297,6 +302,16 @@ div.bx-green .btn.btn-default:hover {
 	.custom-checkbox {
 		&:after {
 			top: 1px;
+		}
+	}
+	.bx-filter-input-container {
+		input.min-price,
+		input.max-price {
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid #ededed;
+			border-radius: 3px;
+			background-color: transparent;
 		}
 	}
 }
