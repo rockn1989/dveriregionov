@@ -6769,7 +6769,7 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   section.page-content.page-content-img:after {
     content: '';
     position: absolute;
-    top: 5px;
+    top: 0;
     right: -137px;
     width: 537px;
     height: 537px;

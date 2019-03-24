@@ -261,4 +261,66 @@ $(function() {
 
 	svg4everybody();
 
+
+	/*______ Show modal on mousemove ______*/
+
+	var ShowModal = {
+		lastTime : 0,
+		windowSizes: {},
+		timer: null,
+		initModal: false,
+		modal: UIkit.modal($("#call-spec")),
+		addModalEvents: {
+			show: function () {
+				UIkit.util.on($("#call-spec"), 'show', function () {
+					this.initModal = true;
+					clearInterval(this.timer);
+				});
+			},
+			hide: function () {
+				UIkit.util.on($("#call-spec"), 'hide', function () {
+					this.initModal = false;
+				});
+			}
+		},
+		init: function () {
+
+			this.setWindowSize();
+
+			if(this.windowSizes.width >= 1100) {
+				this.addModalEvents.show();
+				this.addModalEvents.hide();
+
+				$(document).on('mousemove', this.mouseMove.bind(this));
+			};
+
+		},
+		setWindowSize:  function () {
+			this.windowSizes.width = $(window).innerWidth();
+			this.windowSizes.height = $(window).innerHeight();
+		},
+		getWindowSize: function () {
+			console.log(this.windowSizes.width + ':'+ this.windowSizes.height)
+		},
+		mouseMove: function (e) {
+
+			if(Date.now() - this.lastTime >= 300) {
+
+				if(((this.windowSizes.width - e.clientX) <= 100) && (e.clientY <= 100) && this.initModal === false) {
+
+					var modal = this.modal;
+
+					this.timer = setTimeout(function () {
+						modal.show();
+					}, 300);
+
+				}
+
+				this.lastTime = Date.now();
+			};
+		}
+	};
+
+	ShowModal.init();
+
 });
