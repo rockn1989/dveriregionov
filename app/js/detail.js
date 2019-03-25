@@ -170,4 +170,12 @@ $(function () {
 		: $(this).parent('.custom-select').siblings('.custom-tooltip').addClass('error');
 	});
 
+
+	/*______ Detail scroll table ______*/
+
+	$('.detail-scroll-table').mCustomScrollbar({
+			axis: "y",
+			setHeight: 200
+		});
+
 });
