@@ -36,5 +36,4 @@ $(function () {
 		$(el).css('height',$(el).find('.card-wrapper').outerHeight()+'px');
 	});
 
-
 });

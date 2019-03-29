@@ -5,6 +5,7 @@ $(function() {
 
 	/*______ Tabs events ______*/
 
+
 	var $ukSwitcherTabs = $('[uk-switcher]').eq(0),
 		$ukSwitcherTabsContent = $ukSwitcherTabs.siblings('ul.uk-switcher');
 
@@ -16,10 +17,6 @@ $(function() {
 				li = $ukSwitcherTabsContent.find('li.uk-active'),
 		tabSliderWrapper  = li.find($('.tab-slider')),
 		tabSlider = li.find('.tab-slider .slider');
-
-
-
-		/*______ В первом табе слайдер инициализируется при загрузке страницы ______*/
 
 
 		if(!tabSlider.hasClass('slick-initialized')) {
@@ -76,14 +73,73 @@ $(function() {
 					}
 				]
 			});
+
 		} else {
-			if($(window).outerWidth() >= 968) {
-				tabSlider.slick('reinit');
-			}
+			tabSlider.slick('destroy');
+
+			tabSlider.slick({
+				arrows: true,
+				dots: false,
+				cssEase: 'ease',
+				lazyLoad: 'ondemand',
+				autoplay: false,
+				autoplaySpeed: 4000,
+				speed: 800,
+				slidesToShow: 5,
+				slidesToScroll: 4,
+				prevArrow: tabSliderWrapper.find('.slide-prev'),
+				nextArrow: tabSliderWrapper.find('.slide-next'),
+				responsive: [
+					{
+						breakpoint: 1500,
+						settings: {
+							slidesToShow: 5,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 1300,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 1025,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: true,
+						}
+					},
+					{
+						breakpoint: 940,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+
 		};
 	})
 
-
+  $('.tab-slider .slider').on('setPosition', function () {
+    $(this).find('.slick-slide').height('auto');
+    var slickTrack = $(this).find('.slick-track');
+    var slickTrackHeight = $(slickTrack).height();
+    $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
+  });
 	/*______ Modal Search ______*/
 
 
@@ -321,6 +377,6 @@ $(function() {
 		}
 	};
 
-	ShowModal.init();
+	/*ShowModal.init();*/
 
 });

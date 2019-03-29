@@ -239,7 +239,23 @@
 		};
 	}
 	.card {
+		width: 100%;
 		transition: box-shadow .3s ease;
+		@media (min-width: $tablet-w) {
+			height: 100%;
+			.card-wrapper {
+				height: 100%;
+			}
+		};
+		&__img {
+			min-height: 320px;
+			img {
+				@media (min-width: $tablet-w) {
+					height: 100%;
+					max-height: 320px;
+				};
+			}
+		}
 		&:hover {
 			.card-wrapper {
 				position: relative;
@@ -487,6 +503,7 @@
 			background-color: #ffffff;
 			&__img {
 				margin-bottom: 30px;
+				padding: 0 23.5%;
 				min-height: 260px;
 				text-align: center;
 				img {

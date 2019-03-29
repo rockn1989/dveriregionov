@@ -2767,7 +2767,7 @@ section.page-content textarea {
 }
 
 .catalog-body .card__img {
-  padding: 0 23.5%;
+  /* padding: 0 23.5%; */
 }
 
 .catalog-body .card__img a {
@@ -4331,7 +4331,8 @@ div.bx-green .btn.btn-default:hover {
   border: none;
 }
 
-.bx-filter .bx-filter-button-box .btn-themes:hover {
+.bx-filter .bx-filter-button-box .btn-themes:hover,
+.bx-filter .bx-filter-button-box .btn-themes:focus {
   background-color: #4848bc;
 }
 
@@ -5047,12 +5048,17 @@ div.bx-green .btn.btn-default:hover {
 }
 
 .tab-slider .card {
+  width: 100%;
   -webkit-transition: -webkit-box-shadow .3s ease;
   transition: -webkit-box-shadow .3s ease;
   -o-transition: box-shadow .3s ease;
   -moz-transition: box-shadow .3s ease;
   transition: box-shadow .3s ease;
   transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+}
+
+.tab-slider .card__img {
+  min-height: 320px;
 }
 
 .tab-slider .card:hover {
@@ -5241,6 +5247,7 @@ div.bx-green .btn.btn-default:hover {
 
 .products-slider .slider .slide__img {
   margin-bottom: 30px;
+  padding: 0 23.5%;
   min-height: 260px;
   text-align: center;
 }
@@ -6731,6 +6738,19 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .manufactures-tabs .tab-sw a {
     padding: 30px 0;
+  }
+
+  .tab-slider .card {
+    height: 100%;
+  }
+
+  .tab-slider .card .card-wrapper {
+    height: 100%;
+  }
+
+  .tab-slider .card__img img {
+    height: 100%;
+    max-height: 320px;
   }
 }
 
