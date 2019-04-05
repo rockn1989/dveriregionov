@@ -503,11 +503,11 @@
 			background-color: #ffffff;
 			&__img {
 				margin-bottom: 30px;
-				padding: 0 23.5%;
-				min-height: 260px;
+				height: 300px;
 				text-align: center;
 				img {
 					display: inline;
+					max-height: 100%;
 				}
 			}
 			&__article {

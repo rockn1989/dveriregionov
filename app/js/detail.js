@@ -178,4 +178,17 @@ $(function () {
 			setHeight: 200
 		});
 
+	let test = {
+		width: 100,
+		height: (a, b) => {
+			if(a % b == 0) {
+				console.log('true');
+			} else {
+				return 'Another value';
+			}
+		}
+	}
+
+	let {width, height} = test;
+	console.log(width, height(4,3));
 });

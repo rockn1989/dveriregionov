@@ -682,6 +682,9 @@
 			a {
 				padding: 25px 0;
 				text-transform: none;
+				&:hover,&:focus {
+					text-decoration: none;
+				}
 				@media (min-width: $mob-xs) {
 					padding: 10px 0;
 				};
@@ -760,7 +763,7 @@
 	}
 	&-options {
 		color: #727271;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 16px;
 		font-weight: 300;
 		text-align: center;
@@ -804,6 +807,9 @@
 				padding: 21px 0;
 				font-size: 14px;
 				letter-spacing: 1px;
+				&:hover,&:focus {
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -890,6 +896,10 @@
 		border: 8px solid transparent;
 		transition: border-color .3s ease;
 		cursor: pointer;
+		img {
+			width: 65px;
+			height: 140px;
+		}
 		&.active {
 			border-color: $orange;
 			&:hover {

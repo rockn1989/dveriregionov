@@ -58,7 +58,7 @@ h3, .title-h3 {
 	border: none;
 	outline: none;
 	transition: background-color .3s ease;
-	&:hover {
+	&:hover,&:focus {
 		color: #ffffff;
 		background-color: $purpule;
 		text-decoration: none;
@@ -160,6 +160,16 @@ h3, .title-h3 {
 .white-panel {
 	padding: 70px 0 80px;
 	background-color: #ffffff;
+	&--main {
+		padding: 0;
+		&__text {
+			padding: 70px 0 80px;
+			&:empty {
+				padding: 0;
+			}
+		}
+	}
+
 	.title-h2 {
 		margin-bottom: 40px;
 	}
@@ -814,6 +824,9 @@ ul[uk-accordion] {
 			}
 		}
 	}
+	.detail-title {
+		opacity: .7;
+	}
 }
 
 
@@ -1119,7 +1132,7 @@ ul[uk-accordion] {
 			td {
 				position: sticky;
 				top: 0;
-				background: $orange;
+				background: #5d5d60;
 				color: #ffffff;
 				min-width: 75px;
 				&:nth-child(4) {

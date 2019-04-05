@@ -495,6 +495,35 @@ div.bx-green .btn.btn-default:hover {
 	display: none;
 }
 
+#bx-soa-order .bx-sls .dropdown-block input[type="text"] {
+	height: 34px;
+}
+
+#bx-soa-order .soa-property-container input[type="text"],
+#bx-soa-order .soa-property-container textarea {
+	background-color: #ffffff !important;
+}
+
+#bx-soa-order .bx-soa-location-input-container input[type="text"] {
+	height: 34px;
+	background-color: #ffffff;
+}
+
+#bx-soa-order .soa-property-container input[type="text"] {
+	height: 34px;
+	line-height: 34px;
+}
+#bx-soa-order textarea {
+	min-height: 100px;
+	resize: vertical;
+	background-color: #ffffff !important;
+}
+
+.bx-soa-section-content,
+.bx-soa-cart-total {
+	background: #ffffff;
+}
+
 @media (max-width: 480px) {
 	.basket-checkout-container {
 		.basket-checkout-block-total-price,
