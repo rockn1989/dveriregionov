@@ -224,6 +224,25 @@ h3, .title-h3 {
 	}
 }
 
+ul.anchor {
+	padding-left: 0;
+	list-style: none;
+	li {
+		a {
+			color: $orange;
+			font-size: 14px;
+		}
+	}
+}
+
+.pay-types {
+	display: flex;
+	flex-wrap: wrap;
+	img {
+		margin-right: 10px;
+		margin-bottom: 10px !important;
+	}
+}
 
 .style-door {
 	position: relative;
@@ -304,11 +323,6 @@ h3, .title-h3 {
 			color: #a7a7ad;
 			font-size: 14px;
 			transition: color .3s ease;
-		}
-		&:hover {
-			&:before {
-				color: lighten($orange, 10%);
-			}
 		}
 	}
 }
@@ -974,6 +988,9 @@ ul[uk-accordion] {
 				color: $gray-tx;
 				@media (min-width: $mob-xs) {
 					display: none;
+				};
+				@media (min-width: 1150px) {
+					display: block;
 				};
 				&:hover {
 					color: $black;

@@ -357,6 +357,32 @@ h3,
   text-decoration: none;
 }
 
+ul.anchor {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.anchor li a {
+  color: #fa7f4c;
+  font-size: 14px;
+}
+
+.pay-types {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.pay-types img {
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+}
+
 .style-door {
   position: relative;
   display: inline-block;
@@ -425,10 +451,6 @@ h3,
   -o-transition: color .3s ease;
   -moz-transition: color .3s ease;
   transition: color .3s ease;
-}
-
-.rating label:hover:before {
-  color: #fba27e;
 }
 
 /*______ Rating ______*/
@@ -1553,6 +1575,10 @@ html.uk-touch body *.uk-invisible {
   box-sizing: border-box;
 }
 
+.uk-overflow-container {
+  overflow-x: auto;
+}
+
 /*______ HEADER ______*/
 
 .top-bar {
@@ -1866,6 +1892,23 @@ html.uk-touch body *.uk-invisible {
   background-color: #4848bc;
 }
 
+.basket a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.basket a:hover {
+  text-decoration: none;
+}
+
 /*______ Mobile Header ______*/
 
 .header-mobile {
@@ -1961,6 +2004,10 @@ html.uk-touch body *.uk-invisible {
   display: block;
   font-size: 16px;
   font-family: "SF" !important;
+}
+
+.uk-offcanvas-bar .top-panel a:hover {
+  color: #727271;
 }
 
 .uk-offcanvas-bar .top-panel a:before {
@@ -2154,7 +2201,7 @@ section.page-content ol:not([class]) li:before {
   content: counter(section);
   counter-increment: section;
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 0;
   display: block;
   width: 18px;
@@ -2203,6 +2250,14 @@ section.page-content textarea {
   box-shadow: none;
   background-color: #ededed;
   border: 1px solid #ededed;
+}
+
+section.page-content .politics ol ul li {
+  padding-left: 15px;
+}
+
+section.page-content .politics ol ul li:before {
+  display: none;
 }
 
 .content {
@@ -2446,6 +2501,7 @@ section.page-content textarea {
 
 .brands-page-list .brand-item__img img {
   display: inline;
+  max-height: 100%;
 }
 
 .brands-page-list .brand-item__name {
@@ -2639,7 +2695,7 @@ section.page-content textarea {
 /*______ Revies Block ______*/
 
 .reviews-list {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .reviews-list.tabs {
@@ -2783,24 +2839,13 @@ section.page-content textarea {
   width: 100%;
 }
 
-.catalog-body .card__img {
-  /* padding: 0 23.5%; */
-}
-
 .catalog-body .card__img a {
   height: 340px;
 }
 
 .catalog-body .card__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: contain;
-  -o-object-position: center;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-  font-family: 'object-fit: cover; object-position: contain;';
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .catalog-body .card:hover {
@@ -2816,13 +2861,8 @@ section.page-content textarea {
   background-color: #ffffff;
 }
 
-.catalog-bar .custom-select {
-  margin-top: 6px;
-}
-
 .filter-btn {
   position: relative;
-  margin-top: 6px;
   display: inline-block;
   vertical-align: top;
   width: 30px;
@@ -4771,6 +4811,12 @@ div.bx-green .btn.btn-default:hover {
   background: #ffffff;
 }
 
+.smartfilter .min-price,
+.smartfilter .max-price {
+  padding: 0 12px !important;
+  font-size: 14px !important;
+}
+
 /*______ FOOTER ______*/
 
 .footer {
@@ -5165,6 +5211,7 @@ div.bx-green .btn.btn-default:hover {
 
 .brands-slider a img {
   display: inline;
+  max-height: 100%;
 }
 
 .brands-slider .slide-prev,
@@ -5280,7 +5327,7 @@ div.bx-green .btn.btn-default:hover {
 
 .products-slider {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .products-slider .slider-wrapper {
@@ -5334,6 +5381,8 @@ div.bx-green .btn.btn-default:hover {
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
+  min-height: 72px;
+  overflow: hidden;
 }
 
 .products-slider .slider .slide__price {
@@ -5412,8 +5461,31 @@ div.bx-green .btn.btn-default:hover {
   text-align: center;
 }
 
+.detail-furniture-slider .slide a {
+  margin: 0 auto;
+  width: 316px;
+  height: 316px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .detail-furniture-slider .slide img {
   display: inline-block;
+  max-height: 100%;
 }
 
 .detail-furniture-slider .slide-prev,
@@ -5547,6 +5619,11 @@ div.bx-green .btn.btn-default:hover {
   border: none;
 }
 
+.default-modal fieldset.uk-flex label,
+.default-modal fieldset.uk-flex .rating {
+  display: inline-block;
+}
+
 .default-modal fieldset:last-child {
   margin-bottom: 0;
 }
@@ -5585,6 +5662,10 @@ div.bx-green .btn.btn-default:hover {
   transform: rotate(-45deg);
   -webkit-box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
   box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
+}
+
+.default-modal label.icon-star {
+  margin-bottom: 0;
 }
 
 .default-modal input[type="text"],
@@ -5651,6 +5732,15 @@ div.bx-green .btn.btn-default:hover {
   resize: vertical;
   font-family: "SF";
   font-weight: 500;
+}
+
+.default-modal .rating {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.default-modal .rating label:hover:before {
+  color: #fba27e;
 }
 
 .payment-modal .uk-modal-dialog {
@@ -5833,6 +5923,17 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   -moz-transition: transform .3s ease, -moz-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+}
+
+.modal-politics {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.modal-politics a {
+  color: #fa7f4c;
+  text-decoration: underline;
 }
 
 /*______ FORMS ______*/
@@ -6121,6 +6222,14 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     padding: 30px 15px;
   }
 
+  .about-company-detail .stores-detail-map-desc .desc-section {
+    display: block;
+  }
+
+  .about-company-detail .stores-detail-map-wrapper #stores-detail-map {
+    height: 300px;
+  }
+
   .regions-list__body ul {
     border-bottom: 1px solid #ededed;
   }
@@ -6146,8 +6255,15 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   }
 
   .catalog-bar .custom-select {
-    margin-bottom: 25px;
     float: right;
+  }
+
+  .catalog-bar .uk-pagination {
+    margin-top: 25px;
+  }
+
+  .filter-btn {
+    margin-top: 0;
   }
 
   .detail-top-bar > * {
@@ -6677,11 +6793,16 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   }
 
   .catalog-bar .custom-select {
-    margin-bottom: 0;
+    margin-top: 6px;
     float: none;
   }
 
+  .catalog-bar .uk-pagination {
+    margin-top: 0;
+  }
+
   .filter-btn {
+    margin-top: 6px;
     margin-right: 15px;
   }
 
@@ -6948,6 +7069,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     line-height: 100px;
   }
 
+  .about-company-detail .stores-detail-map-wrapper #stores-detail-map {
+    height: 100%;
+  }
+
   .regions-list__body ul {
     border-bottom: none;
   }
@@ -7063,6 +7188,10 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .options-list__item:nth-child(5n) {
     margin-right: 0;
+  }
+
+  .left-sidebar {
+    min-width: 150px;
   }
 
   .news-list .news__img {
@@ -7200,6 +7329,13 @@ label.custom-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
 
   .detail-furniture-slider {
     border: none;
+  }
+}
+
+@media (min-width: 1150px) {
+  .uk-pagination li.uk-pagination-prev a,
+  .uk-pagination li.uk-pagination-next a {
+    display: block;
   }
 }
 

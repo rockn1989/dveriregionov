@@ -126,7 +126,7 @@ section.page-content {
 				content: counter(section);
 				counter-increment: section;
 				position: absolute;
-				top: 4px;
+				top: 3px;
 				left: 0;
 				display: block;
 				width: 18px;
@@ -166,6 +166,18 @@ section.page-content {
 		box-shadow: none;
     background-color: #ededed;
     border: 1px solid #ededed;
+	}
+	.politics {
+		ol {
+			ul {
+				li {
+					padding-left: 15px;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -467,6 +479,7 @@ section.page-content {
 			}
 			img {
 				display: inline;
+				max-height: 100%;
 			}
 		}
 		&__name {
@@ -616,6 +629,23 @@ section.page-content {
 			margin-bottom: 30px;
 		}
 	}
+	.stores-detail-map-desc {
+		.desc-section {
+			@media (min-width: $mob-xs) {
+				display: block;
+			};
+		}
+	}
+	.stores-detail-map-wrapper {
+		#stores-detail-map {
+			@media (min-width: $mob-xs) {
+				height: 300px;
+			};
+			@media (min-width: $desk-w) {
+				height: 100%;
+			};
+		}
+	}
 }
 
 .contacts-company {
@@ -732,7 +762,7 @@ section.page-content {
 /*______ Revies Block ______*/
 
 .reviews-list {
-	margin-top: 30px;
+	margin: 30px 0;
 	&.tabs {
 		margin: 0 -36px 30px;
 		.review {

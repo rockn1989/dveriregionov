@@ -215,6 +215,13 @@
 			background-color: $purpule;
 		}
 	}
+	a {
+		display: flex;
+		align-items: center;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 
@@ -310,6 +317,9 @@
 			display: block;
 			font-size: 16px;
 			font-family: $mainFont !important;
+			&:hover {
+				color: $gray-tx;
+			}
 			&:before {
 				position: absolute;
 				top: 0;

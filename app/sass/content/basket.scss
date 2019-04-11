@@ -524,6 +524,12 @@ div.bx-green .btn.btn-default:hover {
 	background: #ffffff;
 }
 
+.smartfilter .min-price,
+.smartfilter .max-price {
+	padding: 0 12px !important;
+	font-size: 14px !important;
+}
+
 @media (max-width: 480px) {
 	.basket-checkout-container {
 		.basket-checkout-block-total-price,

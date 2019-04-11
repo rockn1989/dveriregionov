@@ -46,6 +46,11 @@
 		margin-bottom: 25px;
 		padding: 0;
 		border: none;
+		&.uk-flex {
+			label,.rating {
+				display: inline-block;
+			}
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -76,6 +81,9 @@
 				transform: rotate(-45deg);
 				box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.14);
 			}
+		}
+		&.icon-star {
+			margin-bottom: 0;
 		}
 	}
 	input[type="text"],
@@ -110,6 +118,17 @@
 		resize: vertical;
 		font-family: $mainFont;
 		font-weight: 500;
+	}
+	.rating {
+		margin-top: 5px;
+		margin-left: 15px;
+		label {
+			&:hover {
+				&:before {
+					color: lighten($orange, 10%);
+				}
+			}
+		}
 	}
 }
 
@@ -251,5 +270,16 @@ label.custom-label {
 		border-right: 1px solid $orange;
 		transform: rotate(45deg) scale(0);
 		transition: transform .3s ease;
+	}
+}
+
+
+.modal-politics {
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 16px;
+	a {
+		color: $orange;
+		text-decoration: underline;
 	}
 }
